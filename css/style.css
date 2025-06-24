@@ -4,7 +4,7 @@
     display: block;
     position: fixed;
     bottom: 75px;
-    right: 17px;
+    right: 20px;
     width: 45px;
     height: 45px;
     cursor: pointer;
@@ -1550,12 +1550,6 @@ select.no_width {
     margin: 0 5px 0 0;
     font: normal normal 14px/16px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     vertical-align: middle;
-}
-.col_radio label,
-.col_checkbox label {
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
 }
 .chktext span {
     vertical-align: middle;
@@ -3160,8 +3154,8 @@ hr {
     line-height: 50px;
     color: #fff;
     text-align: center;
-    background-color: #a2d2c4;
-    border: 1px solid #d3f7e8;
+    background-color: #ec8484;
+    border: 2px solid #fff;
     /* -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
     -ms-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
@@ -3177,7 +3171,7 @@ hr {
 .btn_chat:hover,
 .btn_chat:active,
 .btn_chat:focus {
-    background-color: #00e4ff;
+    background-color: #c95c5c;
 }
 /*********** 內頁***********/
 .share_header {
@@ -5582,7 +5576,7 @@ input.btn_line:focus {
     }
     /* 視差滾動 */
     .scrollbg_box {
-        padding: 40px 0;
+        padding: 100px 0;
     }
     .scrollbg_text {
         padding: 20px 0;
@@ -5708,6 +5702,9 @@ input.btn_line:focus {
     .pagecm_text {
         width: 100%;
     }
+    .pagecm img {
+        height: 10rem;
+    }
     .pagecm_title {
         margin: 0 0 10px 0;
         font: normal bold 1.6rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -5826,7 +5823,7 @@ input.btn_line:focus {
     }
     .bg_wave_up,
     .bg_wave_down {
-        height: 70px;
+        height: 40px;
     }
     /* Type5 類型5 */
     .type5_box {
@@ -6996,6 +6993,10 @@ input.btn_line:focus {
         width: 100%;
         height: 220px;
     }
+    .type3_text .briefly,
+    .pd_info_saying .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     /* Type5 類型5 */
     .type5_box {
         padding: 5px;
@@ -7592,6 +7593,10 @@ input.btn_line:focus {
     .pd_info_pic img {
         width: 100%;
         height: 230px;
+    }
+    .type3_text .briefly,
+    .pd_info_saying .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Type5 類型5 */
     .type5_box {
@@ -8223,6 +8228,10 @@ input.btn_line:focus {
     }
     .type2_main .share_img {
         width: 120px;
+    }
+    .type3_text .briefly,
+    .pd_info_saying .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 漢堡圖 */
     /* .hamburg {
