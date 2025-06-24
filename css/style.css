@@ -3297,7 +3297,7 @@ hr {
     top: 49px;
     left: 0;
     height: 50px;
-    background: url(../images/index/bg_w_up.png?date=20250622) 0 0 repeat;
+    background: url(../images/index/bg_w_up.png?date=20250622) 0 0 repeat-x;
     background-size: auto 100%;
 }
 .scrollbg_set:after {
@@ -3307,7 +3307,7 @@ hr {
     top: -50px;
     left: 0;
     height: 50px;
-    background: url(../images/index/bg_w_down.png?date=20250622) 0 0 repeat;
+    background: url(../images/index/bg_w_down.png?date=20250622) 0 0 repeat-x;
     background-size: auto 100%;
 }
 .scrollbg_box {
@@ -4816,6 +4816,7 @@ input.btn_line:focus {
     /* background: #fff; */
 }
 .boxline_info .section_text {
+    display: flex;
     margin: 0 20px 5px 20px;
 }
 .boxline_bottom {
@@ -5333,7 +5334,7 @@ input.btn_line:focus {
     }
     input.btn_superbig,
     a.btn_superbig {
-        padding: 5px;
+        padding: 5px 10px;
         margin: 0 5px;
         font: normal normal 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
@@ -5678,7 +5679,7 @@ input.btn_line:focus {
     }
     .share_main {
         /* min-height: 500px; */
-        padding: 1rem 0 4rem 0;
+        padding: .6rem 0 4rem 0;
     }
     .share_main .w80 {
         width: calc(100% - 20px);
@@ -5693,6 +5694,7 @@ input.btn_line:focus {
     }
     .share_item {
         margin: 5px 0 0 0;
+        font: normal normal 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .share_box {
         width: calc(100% - 10px);
@@ -5769,6 +5771,10 @@ input.btn_line:focus {
         margin-top: 20px;
         padding: 10px;
     }
+    .boxline_info .section_info .section_text i,
+    .boxline_info .section_info .section_text span {
+        display: inline-block;
+    }
     /* 輪播圖 */
     .cm_textbox {
         max-width: 250px;
@@ -5789,11 +5795,11 @@ input.btn_line:focus {
         height: 50px;
     }
     .boxline_info {
-        padding: 20px;
+        padding: 10px;
     }
     /* Type3 類型3 */
     .type3_main {
-        margin: 2rem auto;
+        margin: .5rem auto;
     }
     .type3_text .type3_title,
     .pd_info_saying .pdinfo_title {
@@ -6103,6 +6109,10 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    .index .type2_main .share_box .col_3 {
+        width: calc(100% / 3 - 10px);
+        margin: 0 0 10px 0;
+    }
     /* 輪播圖 */
     .cm_textbox {
         padding: 10px;
@@ -6113,6 +6123,10 @@ input.btn_line:focus {
     /* 關於我們 */
     .section_text span {
         display: block;
+    }
+    .boxline_info .section_info .section_text i,
+    .boxline_info .section_info .section_text span {
+        display: inline-block;
     }
 }
 
@@ -6207,9 +6221,18 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    .index .type2_main .share_box .col_3 {
+        width: calc(100% / 3 - 10px);
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
     /* 關於我們 */
     .section_text span {
         display: block;
+    }
+    .boxline_info .section_info .section_text i,
+    .boxline_info .section_info .section_text span {
+        display: inline-block;
     }
 }
 
@@ -6241,7 +6264,7 @@ input.btn_line:focus {
         margin: 0 10px 10px 0;
     }
     .share_main {
-        padding: .7rem 0 7rem;
+        padding: .3rem 0 4rem;
     }
     /* 凍結表格 */
     .fixed_table.table_s {
@@ -6302,6 +6325,11 @@ input.btn_line:focus {
     }
     .pagecm_title {
         font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .index .type2_main .share_box .col_3 {
+        width: calc(100% / 3 - 10px);
+        padding: 0;
+        margin: 0 0 10px 0;
     }
     /* 商品資訊 */
     .st_page_info {
@@ -6443,10 +6471,10 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .share_main {
-        padding: .7rem 0 7rem;
+        padding: .3rem 0 4rem;
     }
     .share_main.index {
-        padding: .7rem 0 3rem;
+        padding: .3rem 0 4rem;
     }
     /* 共用元件(日曆) */
     /* input.calendar,
@@ -6525,18 +6553,33 @@ input.btn_line:focus {
     }
     .share_box .col_2,
     .share_box .col_3 {
-        width: calc(100% - 3%);
+        width: calc(100% / 2 - 5%);
         padding: 0;
         margin: 0 0 20px 0;
     }
     .share_box .col_4,
     .share_box .col_5,
     .share_box .col_6 {
-        width: calc(100% / 2 - 10%);
+        width: calc(100% / 2 - 5%);
         padding: 0;
+    }
+    .index .type2_main .share_box .col_3 {
+        width: calc(100% / 3 - 10px);
+        padding: 0;
+        margin: 0 0 10px 0;
     }
     .pagecm_title {
         font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .scrollbg_set:before {
+        content: '';
+        top: 20px;
+        height: 20px;
+    }
+    .scrollbg_set:after {
+        content: '';
+        top: -20px;
+        height: 20px;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -6745,7 +6788,7 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .share_main {
-        padding: .7rem 0 8rem;
+        padding: .2rem 0 3rem;
     }
     .share_header {
         font: italic bold 28px/32px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -6925,6 +6968,33 @@ input.btn_line:focus {
     }
     .search_box input.input_no_width {
         width: calc(150px - 9px);
+    }
+    .scrollbg_set:before {
+        content: '';
+        top: 20px;
+        height: 20px;
+    }
+    .scrollbg_set:after {
+        content: '';
+        top: -20px;
+        height: 20px;
+    }
+    .index .type2_main .share_box .col_3 {
+        width: calc(100% / 3 - 10px);
+        margin: 0 0 10px 0;
+    }
+    .type2_main .share_img {
+        width: 130px;
+    }
+    /* Type3 類型3 */
+    .type3_pic,
+    .pdinfo_pic {
+        width: 100%;
+    }
+    .type3_pic img,
+    .pd_info_pic img {
+        width: 100%;
+        height: 220px;
     }
     /* Type5 類型5 */
     .type5_box {
@@ -7283,10 +7353,10 @@ input.btn_line:focus {
         width: 100%;
     }
     .share_main {
-        padding: .5rem 0 8rem;
+        padding: .2rem 0 2rem;
     }
     .share_main.index {
-        padding: .5rem 0 4rem;
+        padding: .2rem 0 2rem;
     }
     .share_header {
         margin: 0 auto 10px;
@@ -7500,14 +7570,28 @@ input.btn_line:focus {
     .search_box input.input_no_width {
         width: calc(130px - 9px);
     }
+    .scrollbg_set:before {
+        content: '';
+        top: 20px;
+        height: 20px;
+    }
+    .scrollbg_set:after {
+        content: '';
+        top: -20px;
+        height: 20px;
+    }
+    .type2_main .share_img {
+        width: 120px;
+    }
     /* Type3 類型3 */
     .type3_pic,
     .pdinfo_pic {
-        width: 240%;
+        width: 100%;
     }
     .type3_pic img,
     .pd_info_pic img {
         width: 100%;
+        height: 230px;
     }
     /* Type5 類型5 */
     .type5_box {
@@ -7860,7 +7944,7 @@ input.btn_line:focus {
         margin: 0 5px 10px 0;
     }
     .share_main {
-        padding: .5rem 0 8rem;
+        padding: .2rem 0 2rem;
     }
     .share_title {
         font: normal normal 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -8127,6 +8211,19 @@ input.btn_line:focus {
         width: 100px;
         padding: 3px 3px 3px 6px;
     }
+    .scrollbg_set:before {
+        content: '';
+        top: 20px;
+        height: 20px;
+    }
+    .scrollbg_set:after {
+        content: '';
+        top: -20px;
+        height: 20px;
+    }
+    .type2_main .share_img {
+        width: 120px;
+    }
     /* 漢堡圖 */
     /* .hamburg {
         padding: 5px 5px 0 0;
@@ -8164,11 +8261,12 @@ input.btn_line:focus {
     /* Type3 類型3 */
     .type3_pic,
     .pdinfo_pic {
-        width: 350%;
+        width: 100%;
     }
     .type3_pic img,
     .pd_info_pic img {
         width: 100%;
+        height: 230px;
     }
     /* Type5 類型5 */
     .type5_box {
