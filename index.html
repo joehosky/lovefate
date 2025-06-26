@@ -31,6 +31,17 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      .pagecm_title > span.text_lightred {
+        position: relative;
+        /*
+      稍微向上移動文字來對齊。
+      使用 em 單位可以確保它能隨字體大小變化而縮放。
+      您可以根據實際顯示效果，微調 -0.08em 到 -0.1em 之間的值。
+    */
+        top: -0.08em;
+      }
+    </style>
     <script
       src="js/splide-2.4.12.js?date=20250620"
       type="text/javascript"
@@ -146,8 +157,18 @@
     <!-- Banner -->
     <div class="pagecm">
       <div class="pagecm_text">
-        <h2 class="pagecm_title text_white">緣起於名，心動未來</h2>
-        <h2 class="pagecm_title text_white">名定緣來，攜手而行</h2>
+        <h2 class="pagecm_title text_white">
+          <span class="text_lightred">預</span>識緣名，心動初<span
+            class="text_lightred"
+            >見</span
+          >
+        </h2>
+        <h2 class="pagecm_title text_white">
+          <span class="text_lightred">遇</span>名而緣，終成所<span
+            class="text_lightred"
+            >見</span
+          >
+        </h2>
       </div>
       <img
         src="images/banner/banner_01.jpg?date=20250620"
