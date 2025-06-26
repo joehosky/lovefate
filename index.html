@@ -179,8 +179,7 @@
           <li class="type3_btn">
             <input
               type="button"
-              value="開啟月老簿"
-              onclick="$('#popup_msg').show();"
+              value="偷看月老簿"
               class="btn_superbig btn_yellow"
             />
           </li>
@@ -918,5 +917,57 @@
 
     <!-- 彈出跳框_JS(所有頁面共用) -->
     <script src="js/all.js?date=20250620"></script>
+
+    <!-- ===== START: 新增的全螢幕影片播放器 ===== -->
+    <div id="video-overlay" class="video-overlay">
+      <video id="fullscreen-video" muted playsinline>
+        <!-- 請將 src 換成您自己的影片路徑 -->
+        <source src="/images/book-animation.mp4" type="video/mp4" />
+        您的瀏覽器不支援影片播放。
+      </video>
+    </div>
+    <!-- ===== END: 新增的全螢幕影片播放器 ===== -->
+
+    <script>
+      $(document).ready(function () {
+        // 1. 找到所有需要的元素
+        const triggerButton = $(".type3_main .btn_superbig");
+        const videoOverlay = $("#video-overlay");
+        const videoPlayer = $("#fullscreen-video")[0];
+
+        if (triggerButton.length && videoOverlay.length && videoPlayer) {
+          // 2. 綁定按鈕點擊事件
+          triggerButton.on("click", function (e) {
+            e.preventDefault(); // 阻止按鈕原本的 onclick 行為
+
+            // 【關鍵】改用 flex 顯示，確保子元素 video 可以置中
+            videoOverlay
+              .css("display", "flex")
+              .hide()
+              .fadeIn(300, function () {
+                videoPlayer.play();
+              });
+          });
+
+          // 3. 監聽影片播放結束事件
+          $(videoPlayer).on("ended", function () {
+            // 【關鍵】影片播完後，讓黑色背景淡出
+            videoOverlay.fadeOut(300);
+            // 選擇性：如果您希望播完後跳轉頁面，請取消下面這行的註解
+            // window.location.href = 'fate_chart.html';
+          });
+
+          // 4. (可選) 讓使用者點擊黑色背景也能關閉影片
+          videoOverlay.on("click", function (e) {
+            // 確保不是點到影片本身
+            if (e.target === this) {
+              videoPlayer.pause(); // 暫停影片
+              videoPlayer.currentTime = 0; // 將影片重置到開頭
+              $(this).fadeOut(300);
+            }
+          });
+        }
+      });
+    </script>
   </body>
 </html>
