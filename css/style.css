@@ -219,7 +219,7 @@
     background-color: #fff;
 }
 .bg_yellow {
-    background-color: #928c65;
+    background-color: #fbf7e0;
 }
 .bg_lightyellow {
     background-color: #fcfbe7;
@@ -234,16 +234,16 @@
     background: #6a1f22;
 }
 .bg_pink {
-    background-color: #feedef;
+    background-color: #ffe5ef;
 }
 .bg_blue {
-    background-color: #5AABBF;
+    background-color: #e5f2f7;
 }
 .bg_lightblue {
     background-color: #c4e1f3;
 }
 .bg_green {
-    background-color: #419b93;
+    background-color: #e1f4e6;
 }
 .bg_lightgreen {
     background-color: #8fdbd4;
@@ -261,7 +261,7 @@
     background-color: #888;
 }
 .bg_lightgray {
-    background-color: #f6f6f6;
+    background-color: #eee;
 }
 .bg_deepgray {
     background-color: #444;
@@ -319,6 +319,44 @@
     background: linear-gradient(135deg, #efefef 15%, #fff 16%, #f7f7f7 50%, #dfdfdf 84%, #f7f7f7 85%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f7f7f7', GradientType=1);
 }
+/* 實線外框 */
+.border_pink {
+    border: 3px solid #ffe2ec;
+}
+.border_yellow {
+    border: 3px solid #fbf7e0;
+}
+.border_blue {
+    border: 3px solid #bfe9de;
+}
+.border_green {
+    border: 3px solid #e9f6f2;
+}
+.border_lightgray {
+    border: 3px solid #ddd;
+}
+.border_gray {
+    border: 3px solid #aaa;
+}
+/* 虛線外框 */
+.border_dashed_pink {
+    border: 5px dashed #ffe2ec;
+}
+.border_dashed_yellow {
+    border: 5px dashed #fbf7e0;
+}
+.border_dashed_blue {
+    border: 5px dashed #bfe9de;
+}
+.border_dashed_green {
+    border: 5px dashed #e9f6f2;
+}
+.border_dashed_lightgray {
+    border: 5px dashed #ddd;
+}
+.border_dashed_gray {
+    border: 5px dashed #aaa;
+}
 /*********** 共用元件(按鈕) ***********/
 input.btn20,
 a.btn20 {
@@ -336,20 +374,6 @@ input.btn100,
 a.btn100 {
     width: calc(100% - 10px);
 }
-input.btn_superbig,
-a.btn_superbig {
-    padding: 0 2rem;
-    margin: 0 .5rem;
-    text-align: center;
-    font: normal normal 1.2rem/2.6rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-}
-input.btn_big,
-a.btn_big {
-    padding: 0 1.2rem;
-    margin: 0 5px 5px 0;
-    text-align: center;
-    font: normal normal 1rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-}
 input.btn_small,
 a.btn_small {
     padding: .1rem .5rem;
@@ -361,6 +385,20 @@ a.btn_small {
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
     border-radius: 50px;
+}
+input.btn_big,
+a.btn_big {
+    padding: .3rem 1rem;
+    margin: 0 5px 0 0;
+    text-align: center;
+    font: normal bold 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+input.btn_superbig,
+a.btn_superbig {
+    padding: .6rem 1rem;
+    margin: 0 5px 0 0;
+    text-align: center;
+    font: normal bold 1.2rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
 /*********** 共用按鈕顏色 ***********/
 input[type="button"]:hover,
@@ -1040,7 +1078,7 @@ table.bg_grayblue th {
 .list_number li,
 .list_roman li,
 .list_chinese li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     padding-right: 5px;
 }
 .list_dot li:last-of-type,
@@ -1701,14 +1739,14 @@ input.calendar:disabled {
     padding: 5px;
     color: #555;
     font: normal normal 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    background: url(../images/calendar/calendar.png?date=20250622) 97% 50% no-repeat #fff;
+    background: url(../images/calendar/calendar.png?date=20250626) 97% 50% no-repeat #fff;
     border: 1px solid #ddd;
     vertical-align: middle;
     cursor: pointer;
 }
 /* 禁用日曆 */
 input.calendar:disabled {
-    background: url(../images/calendar/no_calendar.png?date=20250622) 97% 50% #e6e6e6 no-repeat;
+    background: url(../images/calendar/no_calendar.png?date=20250626) 97% 50% #e6e6e6 no-repeat;
     cursor: no-drop;
 }
 .ic_datepicker {
@@ -1928,7 +1966,6 @@ input.calendar:disabled {
     margin: 0 0 10px 0;
     text-align: left;
     font: normal bold 1.3rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    /* background: #fff; */
     border-bottom: 4px solid #ddd;
 }
 .box_title::before {
@@ -2089,7 +2126,6 @@ input.calendar:disabled {
     width: calc(100% - 50px);
     margin: 10px 0;
     padding: 20px;
-    border: 5px dashed #bfe9de;
 }
 /*********** 新頁籤 ***********/
 .tabs_nav {
@@ -2156,6 +2192,104 @@ input.calendar:disabled {
     font: normal normal 16px/20px "Century Gothic", Arial, "Microsoft JhengHei", PMingLiU, sans-serif;
     word-break: break-all;
 }
+/********** 搜尋-新版真的頁籤 ************/
+/* 頁籤標題 */
+.tab_wrap {
+    display: flex;
+}
+.search_wrap .tab_label {
+    width: calc(100% / 3 - 24px);
+    padding: 5px 10px;
+    color: #999;
+    font: normal bold 1.1rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    border: 2px solid #e2d1c8;
+    border-bottom: none;
+    background: #f0ebd9;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+/* 頁籤內容 */
+.panel_wrap.search_wrap {
+    width: 100%;
+}
+.search_info_content {
+    margin: 0 auto;
+    padding: 15px;
+    word-break: break-all;
+    background-color: #fff;
+    border: 2px solid #e2d1c8;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+/* 隱藏頁籤內容 */
+.search_info_content {
+    display: none;
+}
+/* 選取頁籤標題的效果 */
+#search_info_radio1:checked~.tab_wrap [for="search_info_radio1"],
+#search_info_radio2:checked~.tab_wrap [for="search_info_radio2"],
+#search_info_radio3:checked~.tab_wrap [for="search_info_radio3"] {
+    color: #666;
+    background: #fff;
+    border: 2px solid #ddbdac;
+}
+#search_info_radio1:checked~.tab_wrap [for="search_info_radio1"]:after,
+#search_info_radio2:checked~.tab_wrap [for="search_info_radio2"]:after,
+#search_info_radio3:checked~.tab_wrap [for="search_info_radio3"]:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    border-bottom: 6px solid #fff;
+}
+/* 頁籤標題-滑鼠效果 */
+.tab_label:hover,
+.tab_label:focus,
+.tab_label:active {
+    color: #947444;
+    background: #fff7d6;
+    border: 2px solid #f7c578;
+    border-bottom: 0;
+    cursor: pointer;
+}
+/* 點選後秀出隱藏的內容 */
+#search_info_radio1:checked~.search_info_wrap .tabs_panel1,
+#search_info_radio2:checked~.search_info_wrap .tabs_panel2,
+#search_info_radio3:checked~.search_info_wrap .tabs_panel3 {
+    display: block;
+    height: 220px;
+    text-align: left;
+    font: normal normal 1rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    overflow-y: scroll;
+}
+.search_info_content li {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+}
+.search_info_content li:hover,
+.search_info_content li:focus,
+.search_info_content li:active {
+    background-color: #f0ebd9;
+}
+.search_info_content li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px dashed #ddd;
+}
 /*********** 共用列表(注意事項) ***********/
 .share_tipbox {
     width: calc(100% - 2rem);
@@ -2181,8 +2315,8 @@ input.calendar:disabled {
     font-size: 1rem;
 }
 .share_tipbox .tip_content {
-    padding: 1rem;
-    font: normal normal .95rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    padding: 10px;
+    font: normal normal 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
 /*********** 共用元件(備註、解說、注意事項) ***********/
 .share_tip {
@@ -2389,14 +2523,6 @@ i.fa-eye-slash {
     filter: alpha(opacity=50);
     opacity: .5;
 }
-/* .toolbtn1 {
-    background: url(../font-awesome/black/fa-th-solid.png?date=20250622) center center no-repeat #fff;
-    background-size: 60% auto;
-}
-.toolbtn2 {
-    background: url(../font-awesome/black/fa-bars.png?date=20250622) center center no-repeat #fff;
-    background-size: 60% auto;
-} */
 .toolbtn1:hover,
 .toolbtn1:active,
 .toolbtn1:focus,
@@ -2750,7 +2876,7 @@ hr {
     display: inline-block;
     width: 120px;
     height: 40px;
-    background: url(../images/logo_big.png?date=20250622) top left no-repeat;
+    background: url(../images/logo_big.png?date=20250626) top left no-repeat;
     background-size: 100% auto;
     vertical-align: middle;
 }
@@ -3030,7 +3156,7 @@ hr {
     z-index: 1;
 }
 .header_bg {
-    background: url(../images/index/bg_home1.jpg?date=20250622) top right no-repeat;
+    background: url(../images/index/bg_home1.jpg?date=20250626) top right no-repeat;
     background-size: cover;
 }
 .bg_overlay {
@@ -3135,13 +3261,13 @@ hr {
 .bg_wave_up {
     width: 100%;
     height: 120px;
-    background: url(../images/index/bg_wave_up.png?date=20250622) top right no-repeat;
+    background: url(../images/index/bg_wave_up.png?date=20250626) top right no-repeat;
     background-size: cover;
 }
 .bg_wave_down {
     width: 100%;
     height: 120px;
-    background: url(../images/index/bg_wave_down.png?date=20250622) top right no-repeat;
+    background: url(../images/index/bg_wave_down.png?date=20250626) top right no-repeat;
     background-size: cover;
 }
 /*********** 客服圖示***********/
@@ -3231,20 +3357,24 @@ hr {
     padding: 1rem;
 }
 .share_main.bg_01 {
-    background: url(../images/index/bg_01.jpg?date=20250622) top left #fff repeat-x;
+    background: url(../images/index/bg_01.jpg?date=20250626) top left #fff repeat-x;
     background-size: auto;
 }
 .share_main.bg_02 {
-    background: url(../images/index/bg_02.jpg?date=20250622) top left #fff repeat-x;
+    background: url(../images/index/bg_02.jpg?date=20250626) top left #fff repeat-x;
     background-size: auto;
 }
 .share_main.bg_03 {
-    background: url(../images/index/bg_03.jpg?date=20250622) top left #fff repeat-x;
-    background-size: auto;
+    background: url(../images/index/bg_03.jpg?date=20250626) top center #fff repeat-x;
+    background-size: 100% auto;
 }
 .share_main.bg_04 {
-    background: url(../images/index/bg_04.jpg?date=20250622) top left #fff repeat-x;
-    background-size: auto;
+    background: url(../images/index/bg_04.jpg?date=20250626) top center #fff no-repeat;
+    background-size: 100% auto;
+}
+.share_main.bg_05 {
+    background: url(../images/index/bg_05.jpg?date=20250626) top center #fff repeat-x;
+    background-size: 100% auto;
 }
 .share_img {
     width: 170px;
@@ -3291,7 +3421,7 @@ hr {
     top: 49px;
     left: 0;
     height: 50px;
-    background: url(../images/index/bg_w_up.png?date=20250622) 0 0 repeat-x;
+    background: url(../images/index/bg_w_up.png?date=20250626) 0 0 repeat-x;
     background-size: auto 100%;
 }
 .scrollbg_set:after {
@@ -3301,7 +3431,7 @@ hr {
     top: -50px;
     left: 0;
     height: 50px;
-    background: url(../images/index/bg_w_down.png?date=20250622) 0 0 repeat-x;
+    background: url(../images/index/bg_w_down.png?date=20250626) 0 0 repeat-x;
     background-size: auto 100%;
 }
 .scrollbg_box {
@@ -3311,13 +3441,13 @@ hr {
     overflow: hidden;
 }
 .scrollbg_box.bg1 {
-    background: url(../images/index/scrollbg1.jpg?date=20250622) center center no-repeat;
+    background: url(../images/index/scrollbg1.jpg?date=20250626) center center no-repeat;
     background-size: cover;
     /*一定要設cover或100%以上不然會看到空白*/
     background-attachment: fixed;
 }
 .scrollbg_box.bg2 {
-    background: url(../images/index/scrollbg2.jpg?date=20250622) center center no-repeat;
+    background: url(../images/index/scrollbg2.jpg?date=20250626) center center no-repeat;
     background-size: cover;
     /*一定要設cover或100%以上不然會看到空白*/
     background-attachment: fixed;
@@ -3739,7 +3869,7 @@ hr {
     word-break: break-all;
     text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
     font: normal bold 22px/24px "Century Gothic", Arial, "Microsoft JhengHei", PMingLiU, sans-serif;
-    background: url(../images/index/index_tip.svg?date=20250622) top center no-repeat;
+    background: url(../images/index/index_tip.svg?date=20250626) top center no-repeat;
     background-size: 100% auto;
     z-index: 2;
 }
@@ -3912,27 +4042,27 @@ hr {
 .btn_addcart {
     width: 25px;
     height: 25px;
-    background: url(../images/index/icon_addcart1.png?date=20250622) top center no-repeat;
+    background: url(../images/index/icon_addcart1.png?date=20250626) top center no-repeat;
     background-size: 100% auto;
     vertical-align: middle;
 }
 .btn_addcart:hover,
 .btn_addcart:active,
 .btn_addcart:focus {
-    background: url(../images/index/icon_addcart2.png?date=20250622) top center no-repeat;
+    background: url(../images/index/icon_addcart2.png?date=20250626) top center no-repeat;
     background-size: 100% auto;
 }
 .btn_addheart {
     width: 25px;
     height: 25px;
-    background: url(../images/index/icon_addheart1.png?date=20250622) top center no-repeat;
+    background: url(../images/index/icon_addheart1.png?date=20250626) top center no-repeat;
     background-size: 100% auto;
     vertical-align: middle;
 }
 .btn_addheart:hover,
 .btn_addheart:active,
 .btn_addheart:focus {
-    background: url(../images/index/icon_addheart2.png?date=20250622) top center no-repeat;
+    background: url(../images/index/icon_addheart2.png?date=20250626) top center no-repeat;
     background-size: 100% auto;
 }
 .pd_now_price {
@@ -4384,7 +4514,7 @@ hr {
     background: #dcecca;
 }
 .footer {
-    padding: 2em 0 0 0;
+    /* padding: 2em 0 0 0; */
     background: #fbfae3;
     background: -moz-linear-gradient(top, #fff 0%, #fbfae3 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #fbfae3));
@@ -4405,7 +4535,7 @@ footer a:hover {
     width: 25px;
     height: 25px;
     margin: 0 0 0 10px;
-    background: url(../images/foot_logo.png?date=20250622) center -2px no-repeat;
+    background: url(../images/foot_logo.png?date=20250626) center -2px no-repeat;
     background-size: 100%;
     vertical-align: middle;
 } */
@@ -4892,7 +5022,154 @@ input.btn_line:focus {
 .doctor_type {
     width: 100%;
     color: #ffea00;
-    font: normal bold 1rem / 1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    font: normal bold 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+/*********** 鴛鴦譜 ************/
+.profile_analysis .share_info {
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.share_main.profile_analysis {
+    padding: 0;
+}
+.profile_analysis .ca_header {
+    padding: 0 0 10px 0;
+    text-align: center;
+    font: italic bold 2rem/2.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.profile_analysis .type2_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.profile_analysis .type2_main .col_4 {
+    width: calc(100% / 4 - 15px);
+    cursor: pointer;
+}
+.profile_analysis .share_box {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.profile_list {
+    padding: 10px;
+    margin: 0 0 10px 0;
+    background: rgba(248,243,229,.5);
+    font: normal bold 1.3rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    border: 3px double #cca4a4;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+.profile_list div {
+    display: inline-block;
+    margin: 0 5px;
+}
+/*********** 命盤測算 ***********/
+.birth_chart.matchbox_set,
+.search_databox {
+    align-items: stretch; /* 讓子項目等高 */
+}
+.search_databox .search_data {
+    width: 100%;
+}
+.birth_chart .match_left,
+.birth_chart .match_right,
+.search_data {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2 - 2%);
+}
+.birth_chart .match_box,
+.search_data .match_box {
+    flex: 1; /* 讓 box 撐滿父層高度 */
+    flex-direction: column;
+}
+.birth_chart hr {
+    width: 100%;
+}
+/* 每個欄位設定 */
+.matchbox_set {
+    display: flex;
+    gap: .3rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    width: calc(100% - 10px);
+    padding: 5px;
+    font: normal normal 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.match_left,
+.match_right,
+.match_info {
+    width: 100%;
+    min-width: 0;
+}
+.match_center {
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    width: 10%;
+    color: #ef7a09;
+    text-align: center;
+    font: normal bold 1.1rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.matchmaking .match_box .btn_big.btn50 {
+    margin: 0 4px 5px 0;
+}
+.match_arrow {
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/matchmaking/arrow_horizontal.png?date=20250626);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.match_box {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: calc(100% - 25px);
+    padding: 10px;
+    margin: 0 0 5px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+.match_center .match_box {
+    align-self: center;
+    justify-content: center;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    margin: 0;
+}
+.sex_img {
+    width: 30px;
+}
+/* 配對結果 */
+.share_tipbox.match_result,
+.share_tipbox.personal_result {
+    height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.match_result .share_tipbox .tip_content,
+.personal_result .share_tipbox .tip_content {
+    padding: 0 10px;
+    font: normal normal 1rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.point_text {
+    margin: 10px 0;
+    color: #2e7c80;
+    font: italic bold 1.3rem/1.6rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
 
 /*********  以下為 手機畫面_設定  *********/
@@ -5007,10 +5284,29 @@ input.btn_line:focus {
         margin: 10px auto;
         font: normal normal 17px/22px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
-    /* 關於我們 */
-    /* .section_text span {
-        display: block;
-    } */
+    /* 鴛鴦譜 */
+    .share_main.profile_analysis {
+        min-height: 816px;
+    }
+    /* 命盤測算 */
+    .match_left,
+    .match_right,
+    .match_info {
+        flex: 1;
+        width: calc(100% / 4 - 2%);
+        min-width: 0;
+    }
+    .match_left .match_box:first-child {
+        min-height: 147px;
+    }
+    .match_left .match_box:nth-child(2) {
+        min-height: 65px;
+    }
+    .match_info #search_info_radio1:checked~.search_info_wrap .tabs_panel1,
+    .match_info #search_info_radio2:checked~.search_info_wrap .tabs_panel2,
+    .match_info #search_info_radio3:checked~.search_info_wrap .tabs_panel3 {
+        height: 166px;
+    }
     /* 跳框-共用 */
     .share_popupbox {
         -webkit-transform: translateY(-50%);
@@ -5238,13 +5534,21 @@ input.btn_line:focus {
     .cart_tb_pic img {
         height: 80px;
     }
+    /* 命盤測算 */
+    .matchmaking .col_title {
+        width: 98%;
+        margin: 0 0 5px 0;
+    }
+    .matchmaking .col_item {
+        width: 100%;
+    }
 }
 
 /* 寬度小於 1023px (平板+手機)*/
 @media screen and (max-width: 1023px) {
     /*回到頂端按鈕*/
     .go_top {
-        right: 10px;
+        right: 15px;
         bottom: 100px;
         width: 40px;
         height: 40px;
@@ -5324,12 +5628,11 @@ input.btn_line:focus {
     input.btn_big,
     a.btn_big {
         padding: 5px;
-        font: normal normal 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     input.btn_superbig,
     a.btn_superbig {
         padding: 5px 10px;
-        margin: 0 5px;
+        /* margin: 0 5px; */
         font: normal normal 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 共用圓角 */
@@ -6003,6 +6306,57 @@ input.btn_line:focus {
     .match_number .share_container_l {
         width: 99%;
     }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 200% auto;
+    }
+    .profile_list {
+        padding: 5px;
+        font: normal bold 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .share_tipbox.match_result,
+    .share_tipbox.personal_result {
+        width: calc(100% - 7%);
+        height: auto;
+        margin: 0 0 20px 0;
+        overflow: hidden;
+    }
+    .share_tipbox.match_result .tip_content,
+    .share_tipbox.personal_result .tip_content {
+        padding: 0 0 10px 0;
+    }
+    .point_text {
+        margin: 0 0 30px 0;
+        font: italic bold 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* 命盤測算 */
+    .match_left,
+    .match_center,
+    .match_right,
+    .birth_chart .match_left,
+    .birth_chart .match_right {
+        width: 100%;
+    }
+    .birth_chart .match_left,
+    .birth_chart .match_right {
+        flex: none;
+    }
+    .match_center .match_box {
+        align-content: center;
+        align-items: center;
+    }
+    .match_arrow {
+        width: 60px;
+        height: 60px;
+        background-image: url(../images/matchmaking/arrow_straight.png?date=20250626);
+    }
+    .match_result li {
+        font: normal normal .95rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .match_result.share_tipbox .tip_content {
+        padding: 0;
+        margin-left: 20px;
+    }
     /* 登入、註冊 */
     .another_login {
         padding: 7px;
@@ -6125,6 +6479,17 @@ input.btn_line:focus {
     .boxline_info .section_info .section_text span {
         display: inline-block;
     }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 160% auto;
+    }
+    .profile_list {
+        padding: 10px;
+        font: normal bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .point_text {
+        font: italic bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
 }
 
 /* 寬度介於 751px - 900px (iPad, 手機橫放) */
@@ -6230,6 +6595,14 @@ input.btn_line:focus {
     .boxline_info .section_info .section_text i,
     .boxline_info .section_info .section_text span {
         display: inline-block;
+    }
+    /* 鴛鴦譜 */
+    .profile_list {
+        padding: 10px;
+        font: normal bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .point_text {
+        font: italic bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -6424,6 +6797,14 @@ input.btn_line:focus {
         width: 48%;
         padding: 3px 0;
         margin: 2px;
+    }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 160% auto;
+    }
+    .profile_list {
+        padding: 10px;
+        font: normal bold 1.1rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -6980,6 +7361,10 @@ input.btn_line:focus {
         width: calc(100% / 3 - 10px);
         margin: 0 0 10px 0;
     }
+    .profile_analysis .type2_main .col_4 {
+        width: calc(100% / 4 - 5px);
+        margin: 0;
+    }
     .type2_main .share_img {
         width: 130px;
     }
@@ -7179,6 +7564,14 @@ input.btn_line:focus {
         padding: 3px 0;
         margin: 2px;
     }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 230% auto;
+    }
+    .share_tipbox.match_result,
+    .share_tipbox.personal_result {
+        width: calc(100% - 12%);
+    }
 }
 
 /* 寬度介於 480px - 500px */
@@ -7347,7 +7740,7 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .col_title {
-        width: 35%;
+        width: 100%;
         margin: 0 0 5px 0;
     }
     .col_item {
@@ -7367,8 +7760,8 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .share_title {
+        margin: 10px 0;
         font: normal normal 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-        margin: 10px 0 20px 0;
     }
     .share_inner {
         padding: 10px 5px;
@@ -7581,9 +7974,6 @@ input.btn_line:focus {
         top: -20px;
         height: 20px;
     }
-    .type2_main .share_img {
-        width: 120px;
-    }
     /* Type3 類型3 */
     .type3_pic,
     .pdinfo_pic {
@@ -7701,9 +8091,6 @@ input.btn_line:focus {
     .st_other_img {
         height: 130px;
     }
-    /* .card_info .card_address {
-        min-height: 150px;
-    } */
     .pdbox_big,
     .pdbox_small {
         padding: 0 0 3rem 0;
@@ -7811,6 +8198,21 @@ input.btn_line:focus {
     .doctor_name {
         padding: 0;
         font: normal normal 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 250% auto;
+    }
+    .share_tipbox.match_result,
+    .share_tipbox.personal_result {
+        width: calc(100% - 15%);
+    }
+    .profile_analysis .type2_main .col_4 {
+        width: calc(100% / 4 - 5px);
+        margin: 0;
+    }
+    .type2_main .share_img {
+        width: 120px;
     }
 }
 
@@ -8226,9 +8628,6 @@ input.btn_line:focus {
         top: -20px;
         height: 20px;
     }
-    .type2_main .share_img {
-        width: 120px;
-    }
     .type3_text .briefly,
     .pd_info_saying .briefly {
         font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -8537,6 +8936,22 @@ input.btn_line:focus {
     .doctor_name {
         padding: 0;
         font: normal normal 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* 鴛鴦譜 */
+    .share_main.bg_05.profile_analysis {
+        background-size: 250% auto;
+    }
+    .share_tipbox.match_result,
+    .share_tipbox.personal_result {
+        width: calc(100% - 15%);
+    }
+    .profile_analysis .type2_main .col_4 {
+        width: calc(100% / 4 - 10px);
+        margin: 0;
+        padding: 0;
+    }
+    .type2_main .share_img {
+        width: 120px;
     }
 }
 

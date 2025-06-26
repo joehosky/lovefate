@@ -1,77 +1,5 @@
 @charset "UTF-8";
-/*********** 命盤測算 ***********/
-.matchbox_set {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    width: calc(100% - 10px);
-    padding: 5px;
-    font: normal normal 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-}
-.match_left,
-.match_right {
-    width: calc(100% / 2 - 8%);
-}
-.match_center {
-    width: 15%;
-    color: #ab3838;
-    text-align: center;
-    font: normal bold 1.1rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-}
-.match_info {
-    width: 100%;
-}
-.match_box {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    width: calc(100% - 40px);
-    padding: 10px;
-    margin: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border-radius: 10px;
-}
-.match_left .match_box:first-child {
-    min-height: 147px;
-}
-.match_left .match_box:nth-child(2) {
-    min-height: 80px;
-}
-.match_center .match_box {
-    justify-content: center;
-    width: calc(100% - 20px);
-    padding: 0 10px;
-    margin: 0;
-}
-.bg_border_pink {
-    background-color: #ffe2ec;
-    border: 3px solid #ddd;
-}
-.bg_border_yellow {
-    background-color: #fbf7e0;
-    border: 3px solid #ddd;
-}
-.bg_border_green {
-    background: #e9f6f2;
-    border: 3px solid #ddd;
-}
-.bg_border_gray {
-    background-color: #eee;
-    border: 3px solid #ddd;
-}
-/* 配對結果 */
-.match_result {
-    display: none;
-    width: 100%;
-    padding: 0;
-}
-.match_result li {
-    font: normal normal 1.1rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-}
+/*********** ???? ***********/
 
 /*********  以下為 手機畫面_設定  *********/
 /* 寬度大於 1024px (電腦)*/
@@ -79,74 +7,44 @@
 }
 
 /* 寬度大於 1920px (電腦)*/
-@media screen and (min-width: 1920px) {
-}
+@media screen and (min-width: 1920px) {}
 
 /* 寬度介於 1301px - 1900px (ipad pro,舊電腦) */
-@media screen and (min-width: 1301px) and (max-width: 1900px) {
-}
+@media screen and (min-width: 1301px) and (max-width: 1900px) {}
 
 /* 寬度介於 1024px - 1300px (ipad) */
-@media screen and (min-width: 1024px) and (max-width: 1300px) {
-}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {}
 
 /* 寬度小於 1023px (平板+手機)*/
 @media screen and (max-width: 1023px) {
-    /* 命盤測算 */
-    .match_left,
-    .match_center,
-    .match_right {
-        width: 100%;
-    }
-    .match_center .match_box {
-        align-content: center;
-        flex-direction: column;
-    }
-    .match_result li {
-        font: normal normal .95rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    }
-    .match_result.share_tipbox .tip_content {
-        padding: 0;
-        margin-left: 20px;
-    }
 }
 
 /* 寬度介於 901px - 1023px (ipad) */
-@media screen and (min-width: 901px) and (max-width: 1023px) {
-}
+@media screen and (min-width: 901px) and (max-width: 1023px) {}
 
 /* 寬度介於 751px - 900px (iPad, 手機橫放) */
-@media screen and (min-width: 751px) and (max-width: 900px) {
-}
+@media screen and (min-width: 751px) and (max-width: 900px) {}
 
 /* 寬度介於 671px - 750px (iPad, 手機橫放) */
-@media screen and (min-width: 671px) and (max-width: 750px) {
-}
+@media screen and (min-width: 671px) and (max-width: 750px) {}
 
 /* 寬度介於 551px - 670px (手機橫放) */
-@media screen and (min-width: 551px) and (max-width: 670px) {
-}
+@media screen and (min-width: 551px) and (max-width: 670px) {}
 
 /* 寬度介於 401px - 550px (iPhone 6+) */
-@media screen and (min-width: 401px) and (max-width: 550px) {
-}
+@media screen and (min-width: 401px) and (max-width: 550px) {}
 
 /* 寬度介於 401px - 414px (iPhone 5,iPhone 6,Galaxy S5) */
-@media screen and (min-width: 401px) and (max-width: 414px) {
-}
+@media screen and (min-width: 401px) and (max-width: 414px) {}
 
 /* 寬度介於 321px - 400px (iPhone 5,iPhone 6,Galaxy S5) */
-@media screen and (min-width: 321px) and (max-width: 400px) {
-}
+@media screen and (min-width: 321px) and (max-width: 400px) {}
 
 /* 寬度小於 320px */
-@media screen and (max-width: 320px) {
-}
+@media screen and (max-width: 320px) {}
 
 /* 寬度小於 280px */
-@media screen and (max-width: 280px) {
-}
+@media screen and (max-width: 280px) {}
 
 /* 寬度小於 240px */
-@media screen and (max-width: 240px) {
-}
+@media screen and (max-width: 240px) {}
