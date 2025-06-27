@@ -41,6 +41,44 @@
     */
         top: -0.08em;
       }
+      .pagecm {
+        position: relative; /* 讓子元素 .pagecm_img 和 .pagecm_text 可以相對於它定位 */
+        overflow: hidden; /* 隱藏超出容器範圍的影片部分 */
+        height: 500px; /* 讓 Banner 高度等於視窗高度，您可以自行調整 */
+        background-color: #000; /* 影片載入前的背景色 */
+        isolation: isolate;
+      }
+
+      /* 將此樣式套用到 <video> 標籤上 */
+      .pagecm .pagecm_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 垂直與水平置中 */
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1; /* 將影片放到最底層，才不會蓋住文字 */
+      }
+
+      /* 確保文字在影片上方 */
+      .pagecm .pagecm_text {
+        position: relative; /* 或者 absolute，確保 z-index 生效 */
+        z-index: 1;
+      }
+
+      /* ===== START: 手機版最終樣式 (完整替換) ===== */
+      @media (max-width: 767px) {
+        .pagecm {
+          position: relative; /* 讓子元素 .pagecm_img 和 .pagecm_text 可以相對於它定位 */
+          overflow: hidden; /* 隱藏超出容器範圍的影片部分 */
+          height: 300px; /* 讓 Banner 高度等於視窗高度，您可以自行調整 */
+          background-color: #000; /* 影片載入前的背景色 */
+          isolation: isolate;
+        }
+      }
+      /* ===== END: 手機版最終樣式 ===== */
     </style>
     <script
       src="js/splide-2.4.12.js?date=20250620"
@@ -170,11 +208,10 @@
           >
         </h2>
       </div>
-      <img
-        src="images/banner/banner_01.jpg?date=20250620"
-        alt=""
-        class="pagecm_img"
-      />
+      <video autoplay muted loop playsinline class="pagecm_img">
+        <source src="images/banner/animation.mp4" type="video/mp4" />
+        您的瀏覽器不支援影片播放。
+      </video>
     </div>
 
     <!-- 頁面內容 -->
