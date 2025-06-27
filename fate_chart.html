@@ -14,7 +14,7 @@
     <script src="js/jquery3.5.1.min.js?date=20250620" type="text/javascript"></script>
     <!--繁中日曆JQ-->
     <script src="js/moment.min.js"></script>
-    <title>千里姻緣-開啟月老簿</title>
+    <title>千里姻緣-偷看月老簿</title>
 </head>
 <body>
     <!-- 回到頂端 -->
@@ -39,7 +39,7 @@
             <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
                 <div class="list">
                     <i class="fa-solid fa-feather"></i>
-                    <span>開啟月老簿</span>
+                    <span>偷看月老簿</span>
                 </div>
             </li>
             <!-- 登入後才會出現 -->
@@ -111,11 +111,11 @@
     <!-- 頁面內容 -->
     <div class="share_main bg_03 fate_chart">
         <div class="share_container_m">
-            <div class="share_info bg_white border_dashed_blue br30">
+            <div class="share_info border_dashed_blue br30">
                 <!-- 標題 -->
                 <div class="box_title">
                     <i class="fa-solid fa-feather"></i>
-                    <span>開啟月老簿</span>
+                    <span>偷看月老簿</span>
                 </div>
                 <ul class="matchbox_set birth_chart">
                     <!-- 左邊 -->
@@ -255,7 +255,7 @@
                             <div class="col_flex jc_bt">
                                 <input type="button" value="重新載入" class="btn_big btn33 btn_gray">
                                 <input type="button" value="刪除" onclick="$('#popup_DelConfirm').show()" class="btn_big btn33 btn_red">
-                                <input type="button" value="新增" class="btn_big btn33 btn_green">
+                                <input type="button" value="新增" onclick="$('#popup_SentSuccess').show();" class="btn_big btn33 btn_green">
                             </div>
                             <!-- 頁籤 -->
                             <div class="panel_wrap search_wrap">
@@ -344,7 +344,7 @@
                     </div>
                     <!-- 按鈕 -->
                     <div class="btn_box ai_center jc_center">
-                        <input type="submit" value="關閉" onclick="$('#popup_GeneInsights').hide();" class="btn_superbig br10 btn100 btn_gray">
+                        <input type="submit" value="關閉" onclick="$('#popup_GeneInsights').hide();" class="btn_superbig br10 btn50 btn_gray">
                     </div>
                 </div>
             </div>

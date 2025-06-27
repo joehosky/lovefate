@@ -37,7 +37,7 @@
             <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
                 <div class="list">
                     <i class="fa-solid fa-feather"></i>
-                    <span>開啟月老簿</span>
+                    <span>偷看月老簿</span>
                 </div>
             </li>
             <!-- 登入後才會出現 -->
@@ -204,90 +204,6 @@
     <!--浮動客服(視窗右下角常駐按鈕)-->
     <div class="btn_chat">
         <img src="images/index/service.png?date=20250620" alt="客服">
-    </div>
-
-    <!-- 跳框_基因解析 -->
-    <div id="popup_GeneInsights" class="popup_blackbg popup-geneInsights" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>基因解析</span>
-                    <div class="popup_close" onclick="$('#popup_GeneInsights').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="share_tipbox bg_lightyellow scroll_box">
-                        <div class="tip_title text_deepred">彼此互動中具備雙向溝通因子【積極傾聽—溝通接受】</div>
-                        <ul class="tip_content list_nostyle">
-                            <li>根據命理八字與性格特質的分析，王一博與賴曉玫之間的配對屬於穩定型佳緣，彼此在性格、價值觀與能量流動上具有一定程度的互補性。兩人的五行分別偏向木與土，在某些命理學派中認為「木克土」似乎有些相剋，但若能以陰陽調和的角度解讀，實際上代表著彼此能夠在對方身上產生成長與轉變的力量。</li>
-                            <li>在性格層面，王一博屬於外向型的人格，待人親切、感情豐富，喜歡追求新鮮感與生活中的美好細節。她是一位樂觀主動、帶有藝術氣息的女性，懂得表達情感，也希望在感情中獲得安全感與關注。而賴曉玫則相對內斂，屬於實事求是型的思考者。他不善於甜言蜜語，但做事踏實、有責任感，對感情忠誠且願意付出行動。</li>
-                            <li>這樣的組合，雖然在相處初期可能會出現節奏不一致的情況，例如王一博可能會覺得賴曉玫太過務實、缺乏浪漫，而賴曉玫則可能不太理解王一博情緒的多變與細膩，但只要雙方肯花時間理解對方的需要，這段感情會愈來愈穩固。王一博能為賴曉玫帶來活力與情感上的豐富，而賴曉玫則能給王一博提供一個安定的依靠與實質的未來規劃。</li>
-                            <li>從姻緣發展的角度來看，這段關係不屬於「一見鍾情」型，而是隨著時間與相處而日漸深厚的「細水長流型」。兩人的姻緣屬於「後緣較佳」，也就是說，隨著年齡增長與人生閱歷的積累，越能體會彼此的價值與默契。特別是在共同經歷一些生活轉折、職場挑戰或家庭責任後，雙方更容易建立深層的情感連結與信任。</li>
-                            <li>此外，兩人的家庭觀念都較為傳統，對婚姻與家庭生活有一定的期待與尊重，這將為將來的婚姻生活打下穩固的基礎。建議雙方在交往過程中，可以透過旅行、共同行動或面對計劃性的挑戰（如理財、創業等），來強化彼此的合作與默契。</li>
-                        </ul>
-                    </div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="submit" value="關閉" onclick="$('#popup_GeneInsights').hide();" class="btn_superbig br10 btn100 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跳框-成功 -->
-    <div id="popup_SentSuccess" class="popup_blackbg popup-success" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>提示</span>
-                    <div class="popup_close" onclick="$('#popup_SentSuccess').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="popup_share_title text_center">送出成功！</div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="button" value="關閉" onclick="$('#popup_SentSuccess').hide();" class="btn_superbig br10 btn50 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跳框-失敗 -->
-    <div id="popup_SentFail" class="popup_blackbg popup-fail" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>警告</span>
-                    <div class="popup_close" onclick="$('#popup_SentFail').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="popup_share_title text_center">資訊有誤，請重新檢查後再送出。</div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="button" value="關閉" onclick="$('#popup_SentFail').hide();" class="btn_superbig br10 btn50 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- 彈出跳框_JS(所有頁面共用) -->

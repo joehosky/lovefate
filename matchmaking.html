@@ -39,7 +39,7 @@
             <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
                 <div class="list">
                     <i class="fa-solid fa-feather"></i>
-                    <span>開啟月老簿</span>
+                    <span>偷看月老簿</span>
                 </div>
             </li>
             <!-- 登入後才會出現 -->
@@ -102,8 +102,8 @@
     <!-- Banner -->
     <div class="pagecm">
         <div class="pagecm_text">
-            <h2 class="pagecm_title text_white">緣來不只是巧合</h2>
-            <h2 class="pagecm_title text_white">八字合盤助你遇見真命緣人</h2>
+            <h2 class="pagecm_title text_white">牽起專屬姻緣</h2>
+            <h2 class="pagecm_title text_white">月老默默在指引</h2>
         </div>
         <img src="images/banner/banner_03.jpg?date=20250620" alt="" class="pagecm_img">
     </div>
@@ -120,7 +120,7 @@
                 <ul class="matchbox_set">
                     <!-- 左邊 -->
                     <li class="match_left">
-                        <div class="match_box bg_pink border_lightgray">
+                        <div class="match_box bg_gradientpink border_lightgray">
                             <!-- 姓名 -->
                             <div class="col_flex jc_bt">
                                 <div class="col_title">
@@ -199,7 +199,7 @@
                             </div>
                         </div>
                         <!-- 基因 -->
-                        <div class="match_box bg_lightgray border_lightgray">
+                        <div class="match_box bg_gradientgray border_lightgray">
                             <input type="button" value="可塑型基因" onclick="$('#popup_GeneInsights').show();" class="btn_big btn50 btn_lightgray">
                             <input type="button" value="目標型基因" onclick="$('#popup_GeneInsights').show();" class="btn_big btn50 btn_lightgray">
                         </div>
@@ -214,7 +214,7 @@
                     </li>
                     <!-- 右邊 -->
                     <li class="match_right">
-                        <div class="match_box bg_green border_lightgray">
+                        <div class="match_box bg_gradientgreen border_lightgray">
                             <!-- 姓名 -->
                             <div class="col_flex jc_bt">
                                 <div class="col_title">
@@ -293,14 +293,14 @@
                             </div>
                         </div>
                         <!-- 基因 -->
-                        <div class="match_box bg_lightgray border_lightgray">
+                        <div class="match_box bg_gradientgray border_lightgray">
                             <input type="button" value="目標型基因" onclick="$('#popup_GeneInsights').show();" class="btn_big btn50 btn_lightgray">
                             <input type="button" value="機會型基因" onclick="$('#popup_GeneInsights').show();" class="btn_big btn50 btn_lightgray">
                             <input type="button" value="創意型基因" onclick="$('#popup_GeneInsights').show();" class="btn_big btn50 btn_lightgray">
                         </div>
                     </li>
                     <li class="match_info">
-                        <div class="match_box bg_yellow border_lightgray">
+                        <div class="match_box bg_gradientyellow border_lightgray">
                             <!-- 頁籤 -->
                             <div class="panel_wrap search_wrap">
                                 <!-- 頁籤選取按鈕(圓點隱藏)+需對應下方 label -->
@@ -347,9 +347,9 @@
                 </ul>
                 <!-- 按鈕 -->
                 <div class="btn_box ai_center jc_center">
-                    <input type="button" value="配對數字" onclick="window.open('match_number.html','_self');" class="btn_superbig br10 btn50 btn_blue">
-                    <input type="button" value="判斷" onclick="$('#MatchResult').show();" class="btn_superbig br10 btn50 btn_yellow">
-                    <input type="button" value="看姻緣" onclick="window.open('love_fate.html','_self');" class="btn_superbig br10 btn50 btn_red">
+                    <input type="button" value="配對數字" onclick="window.open('match_number.html','_self');" class="btn_superbig br10 btn33 btn_blue">
+                    <input type="button" value="判斷" onclick="$('#MatchResult').show();" class="btn_superbig br10 btn33 btn_yellow">
+                    <input type="button" value="看姻緣" onclick="window.open('love_fate.html','_self');" class="btn_superbig br10 btn33 btn_red">
                 </div>
                 <!-- 配對結果 -->
                 <div id="MatchResult" class="share_tipbox bg_lightgray border_lightgray match_result" style="display: none;">
@@ -391,7 +391,6 @@
             <div class="share_popup_s">
                 <!-- 標題 -->
                 <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
                     <span>基因解析</span>
                     <div class="popup_close" onclick="$('#popup_GeneInsights').hide();">
                         <i class="fa-solid fa-x"></i>
@@ -411,82 +410,7 @@
                     </div>
                     <!-- 按鈕 -->
                     <div class="btn_box ai_center jc_center">
-                        <input type="submit" value="關閉" onclick="$('#popup_GeneInsights').hide();" class="btn_superbig br10 btn100 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跳框-失敗 -->
-    <div id="popup_NoDataFound" class="popup_blackbg popup-fail" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>警告</span>
-                    <div class="popup_close" onclick="$('#popup_NoDataFound').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="popup_share_title text_center">查無此資料，請重新輸入。</div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="button" value="關閉" onclick="$('#popup_NoDataFound').hide();" class="btn_superbig br10 btn50 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跳框-成功 -->
-    <div id="popup_SentSuccess" class="popup_blackbg popup-success" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>提示</span>
-                    <div class="popup_close" onclick="$('#popup_SentSuccess').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="popup_share_title text_center">送出成功！</div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="button" value="關閉" onclick="$('#popup_SentSuccess').hide();" class="btn_superbig br10 btn50 btn_gray">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 跳框-失敗 -->
-    <div id="popup_SentFail" class="popup_blackbg popup-fail" style="display: none;">
-        <div class="share_popupbox">
-            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-            <div class="share_popup_s">
-                <!-- 標題 -->
-                <div class="share_popup_header">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <span>警告</span>
-                    <div class="popup_close" onclick="$('#popup_SentFail').hide();">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-                </div>
-                <!-- 內容 -->
-                <div class="popup_sharebox bg_white">
-                    <div class="popup_share_title text_center">資訊有誤，請重新檢查後再送出。</div>
-                    <!-- 按鈕 -->
-                    <div class="btn_box ai_center jc_center">
-                        <input type="button" value="關閉" onclick="$('#popup_SentFail').hide();" class="btn_superbig br10 btn50 btn_gray">
+                        <input type="submit" value="關閉" onclick="$('#popup_GeneInsights').hide();" class="btn_superbig br10 btn50 btn_gray">
                     </div>
                 </div>
             </div>

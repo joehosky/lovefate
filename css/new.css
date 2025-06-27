@@ -1,9 +1,21 @@
 @charset "UTF-8";
-/*********** ???? ***********/
-
+/*********** 看姻緣 ***********/
+.magnifier_link {
+    display: inline-block;
+}
+.magnifier_img {
+    width: 30px;
+}
 /*********  以下為 手機畫面_設定  *********/
 /* 寬度大於 1024px (電腦)*/
 @media screen and (min-width: 1024px) {
+    .love_fate_set .match_left .match_box:first-child {
+        min-height: 100px;
+    }
+    .share_main.marriage_pattern,
+    .share_main.beyond_peak {
+        min-height: 750px;
+    }
 }
 
 /* 寬度大於 1920px (電腦)*/
@@ -38,10 +50,23 @@
 @media screen and (min-width: 401px) and (max-width: 414px) {}
 
 /* 寬度介於 321px - 400px (iPhone 5,iPhone 6,Galaxy S5) */
-@media screen and (min-width: 321px) and (max-width: 400px) {}
+@media screen and (min-width: 321px) and (max-width: 400px) {
+    .love_fate_set .match_box {
+        width: calc(100% - 20px);
+    }
+    .love_fate_set input.btn50,
+    .love_fate_set a.btn50 {
+        width: 100%;
+    }
+}
 
 /* 寬度小於 320px */
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+    .love_fate_set input.btn50,
+    .love_fate_set a.btn50 {
+        width: 100%;
+    }
+}
 
 /* 寬度小於 280px */
 @media screen and (max-width: 280px) {}

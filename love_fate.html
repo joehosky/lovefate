@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="favicon.ico?date=20250620" rel="shortcut icon" type="image/x-icon">
+    <link href="css/reset.css?date=20250620" rel="stylesheet" type="text/css">
+    <link href="css/style.css?date=20250620" rel="stylesheet" type="text/css">
+    <link href="css/new.css?date=20250620" rel="stylesheet" type="text/css">
+    <!-- FontAwesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <!-- JQuery共用檔(有用JQuery必先讀這支) -->
+    <script src="js/jquery3.5.1.min.js?date=20250620" type="text/javascript"></script>
+    <!--繁中日曆JQ-->
+    <script src="js/moment.min.js"></script>
+    <title>千里姻緣-看姻緣</title>
+</head>
+<body>
+    <!-- 回到頂端 -->
+    <div class="go_top">
+        <img src="images/gotop_b.png?date=20250620" alt="">
+    </div>
+
+    <!-- 頁首_導覽列 -->
+    <div class="navbarbox clear">
+        <!-- LOGO -->
+        <div class="logobox active" onclick="window.open('index.html','_self');">
+            <img src="images/logo.png?date=20250620" alt="" class="logo_img">
+        </div>
+        <!-- 選單 -->
+        <ul id="navbar_list" class="navlist">
+            <li class="nav_main">
+                <div class="list" onclick="window.open('index.html','_self');">
+                    <i class="fa-solid fa-house"></i>
+                    <span>首頁</span>
+                </div>
+            </li>
+            <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
+                <div class="list">
+                    <i class="fa-solid fa-feather"></i>
+                    <span>開啟月老簿</span>
+                </div>
+            </li>
+            <!-- 登入後才會出現 -->
+            <li id="MemberInfo" class="nav_main">
+                <div class="list">
+                    <i class="fa-solid fa-address-card"></i>
+                    <span>會員專區</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul class="layerbox2" style="display: none;">
+                    <li class="nav_layer2">
+                        <div class="layer2_title" onclick="window.open('member_info.html','_self');">
+                            <i class="fa-solid fa-image-portrait"></i>
+                            <span>個人資料</span>
+                        </div>
+                    </li>
+                    <li class="nav_layer2">
+                        <div class="layer2_title" onclick="window.open('reset_pw.html','_self');">
+                            <i class="fa-solid fa-pen"></i>
+                            <span>重設密碼</span>
+                        </div>
+                    </li>
+                    <li class="nav_layer2">
+                        <div class="layer2_title" onclick="window.open('line_notify.html','_self');">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Line訊息</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- 登入+註冊(登出後才會出現) -->
+            <li id="Login" class="nav_main" style="display: none;">
+                <a href="#" target="_self" onclick="$('#popup_Login').show();" class="list btn_small btn_yellow">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>登入</span>
+                </a>
+            </li>
+            <li id="Register" class="nav_main" style="display: none;">
+                <a href="#" target="_self" onclick="$('#popup_Register').show();" class="list btn_small btn_green">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>註冊</span>
+                </a>
+            </li>
+            <!-- 登出(登入後才會出現) -->
+            <li id="Logout" class="nav_main">
+                <a href="index.html" target="_self" class="list btn_small btn_red">
+                    <i class="fa-solid fa-power-off"></i>
+                    <span>登出</span>
+                </a>
+            </li>
+        </ul>
+        <!-- 手機版漢堡圖(不需程式控制，由CSS自行判斷螢幕寬度開啟或關閉) -->
+        <div onclick="hamburg(this)" class="hamburg">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <div class="pagecm">
+        <div class="pagecm_text">
+            <h2 class="pagecm_title text_white">紅線系住真情</h2>
+            <h2 class="pagecm_title text_white">相遇原來有跡可循</h2>
+        </div>
+        <img src="images/banner/banner_05.jpg?date=20250620" alt="" class="pagecm_img">
+    </div>
+
+    <!-- 頁面內容 -->
+    <div class="share_main bg_03 love_fate">
+        <div class="share_container_m">
+            <div class="share_info border_dashed_blue br30">
+                <!-- 標題+分隔線 -->
+                <div class="ca_header">
+                    <div class="ca_title">看姻緣</div>
+                    <img src="images/others/title_line_up.png?date=20250620" alt="" class="ca_img">
+                </div>
+                <!-- 內容 -->
+                <ul class="matchbox_set love_fate_set">
+                    <!-- 左邊 -->
+                    <li class="match_left">
+                        <div class="match_box bg_gradientyellow border_lightgray">
+                            <!-- 姓名 -->
+                            <div class="col_flex jc_bt">
+                                <div class="col_title">
+                                    <span>你的姓名</span>
+                                </div>
+                                <div class="col_item">
+                                    <input type="text" placeholder="" value="王曉明" class="input_no_width" required>
+                                    <img src="images/others/sex_male.png?date=20250620" alt="" class="sex_img">
+                                    <!-- 看婚象 -->
+                                    <a href="marriage_pattern.html" class="magnifier_link">
+                                        <img src="images/love_fate/magnifier.png?date=20250620" alt="" class="magnifier_img">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="col_flex jc_bt">
+                                <input type="button" value="胎碰衰" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_yellow">
+                                <input type="button" value="胎碰煞(30年大運)" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_yellow">
+                                <input type="button" value="胎碰絕" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_yellow">
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 右邊 -->
+                    <li class="match_right">
+                        <div class="match_box bg_gradientgreen border_lightgray">
+                            <!-- 姓名 -->
+                            <div class="col_flex jc_bt">
+                                <div class="col_title">
+                                    <span>配偶姓名</span>
+                                </div>
+                                <div class="col_item">
+                                    <input type="text" placeholder="" value="歐陽韋" class="input_no_width" required>
+                                    <img src="images/others/sex_female.png?date=20250620" alt="" class="sex_img">
+                                    <!-- 看婚象 -->
+                                    <a href="marriage_pattern.html" class="magnifier_link">
+                                        <img src="images/love_fate/magnifier.png?date=20250620" alt="" class="magnifier_img">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="col_flex jc_bt">
+                                <input type="button" value="胎碰財" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_green">
+                                <input type="button" value="胎碰官(30年大運)" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_green">
+                                <input type="button" value="胎碰利" onclick="window.open('beyond_peak.html','_self');" class="btn_big btn50 btn_green">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- 分隔線 -->
+                <div class="ca_header">
+                    <img src="images/others/title_line_down.png?date=20250620" alt="" class="ca_img">
+                </div>
+                <!-- 按鈕 -->
+                <div class="btn_box ai_center jc_center">
+                    <input type="button" value="返回配對" onclick="window.open('matchmaking.html','_self');" class="btn_superbig br10 btn50 btn_lightgray">
+                    <input type="button" value="判斷" onclick="$('#MatchResult').show();" class="btn_superbig br10 btn50 btn_red">
+                </div>
+                <!-- 配對結果 -->
+                <div id="MatchResult" class="share_tipbox bg_lightgray border_lightgray match_result" style="display: none;">
+                    <ul class="tip_content list_dot">
+                        <li>歐陽韋 為 王曉明 的前程提供成為黑馬的發展空間</li>
+                        <li>王曉明 為 歐陽韋 的前程提供轉機的空間與助力</li>
+                        <li>王曉明 為 歐陽韋【情義相挺】</li>
+                        <li>彼此互動中具備雙向溝通因子【積極傾聽—溝通接受】</li>
+                        <li>佳偶類型：【心願與前程相互提攜】</li>
+                        <li>佳偶類型：【出雙入對】</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <div class="footer_copyright text_center">
+            <div class="share_container_m">Copyright © 2025 千里姻緣 版權所有</div>
+        </div>
+    </footer>
+
+    <!--浮動客服(視窗右下角常駐按鈕)-->
+    <div class="btn_chat">
+        <img src="images/index/service.png?date=20250620" alt="客服">
+    </div>
+
+    <!-- 彈出跳框_JS(所有頁面共用) -->
+    <script src="js/all.js?date=20250620"></script>
+</body>
+</html>

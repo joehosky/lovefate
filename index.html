@@ -16,124 +16,6 @@
     <link href="css/splide.css?date=20250620" rel="stylesheet" type="text/css">
     <script src="js/splide-2.4.12.js?date=20250620" type="text/javascript"></script>
     <title>千里姻緣</title>
-    <style>
-        /* Banner影片設定 */
-        .videocm {
-            position: relative; /* 讓子元素(文字)可以根據它來定位 */
-            height: 500px; /* 電腦版高度設定 */
-            background-color: #000; /* 影片載入前背景色 */
-            isolation: isolate;
-            overflow: hidden; /* 隱藏超出容器範圍的影片部分 */
-        }
-        /* 文字設定 */
-        .videocm_title {
-            margin: 0 0 1rem 0;
-            font: normal bold 2.2rem/2.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            text-shadow: 0 0 5px rgba(0, 0, 0, .7);
-        }
-        .pagecm_title > span.text_lightred {
-            position: relative;
-            top: -0.08em;
-        }
-        .videocm_text {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            width: 50%;
-            text-align: center;
-            -webkit-transform: translate(-50%, -50%); /* 文字置中 */
-            -moz-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            z-index: 1; /* 確保文字在影片上方 */
-        }
-        .videocm_video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 讓影片自動裁切並填滿容器 */
-            z-index: -1; /* 將影片放到最底層，才不會蓋住文字 */
-        }
-        /* 寬度介於 1024px - 1300px (ipad) */
-        @media screen and (min-width: 1024px) and (max-width: 1300px) {
-            /* Banner影片設定 */
-            .videocm {
-                max-height: 400px;
-            }
-            .videocm_title {
-                font: normal bold 32px/40px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-        /* 寬度小於 1023px (平板+手機)*/
-        @media screen and (max-width: 1023px) {
-            /* Banner影片設定 */
-            .videocm {
-                height: 50vh; /* 動態高度，適應手機不同螢幕尺寸 */
-            }
-            .videocm_title {
-                margin: 0 0 10px 0;
-                font: normal bold 1.6rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-            .videocm_text {
-                width: 100%;
-            }
-        }
-        /* 寬度介於 671px - 750px (iPad, 手機橫放) */
-        @media screen and (min-width: 671px) and (max-width: 750px) {
-            /* Banner影片設定 */
-            .videocm_title {
-                font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-        /* 寬度介於 551px - 670px (手機橫放) */
-        @media screen and (min-width: 551px) and (max-width: 670px) {
-            /* Banner影片設定 */
-            .videocm {
-                height: 40vh; /* 動態高度，適應手機不同螢幕尺寸 */
-            }
-            .pagecm_title {
-                font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-        /* 寬度介於 401px - 550px (iPhone 6+) */
-        @media screen and (min-width: 401px) and (max-width: 550px) {
-            /* Banner影片設定 */
-            .videocm {
-                height: 35vh; /* 動態高度，適應手機不同螢幕尺寸 */
-            }
-            .pagecm_title {
-                font: normal bold 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-        /* 寬度介於 321px - 400px (iPhone 5,iPhone 6,Galaxy S5) */
-        @media screen and (min-width: 321px) and (max-width: 400px) {
-            /* Banner影片設定 */
-            .videocm {
-                height: 30vh; /* 動態高度，適應手機不同螢幕尺寸 */
-            }
-            .pagecm_title {
-                font: normal bold 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-        /* 寬度小於 320px */
-        @media screen and (max-width: 320px) {
-            /* Banner影片設定 */
-            .videocm {
-                height: 25vh; /* 動態高度，適應手機不同螢幕尺寸 */
-            }
-            .pagecm_title {
-                font: normal bold 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-            .page_text {
-                width: 95%;
-                margin: 0 auto 20px;
-                font: normal normal 16px/22px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- 回到頂端 -->
@@ -796,7 +678,7 @@
     <div id="video-overlay" class="video-overlay">
         <video id="fullscreen-video" muted playsinline>
             <!-- 請將 src 換成您自己的影片路徑 -->
-            <source src="images/book-animation.mp4" type="video/mp4"> 您的瀏覽器不支援影片播放。
+            <source src="images/index/book-animation.mp4" type="video/mp4"> 您的瀏覽器不支援影片播放。
         </video>
     </div>
     <!-- ===== END: 新增的全螢幕影片播放器 ===== -->
