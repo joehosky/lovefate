@@ -2087,7 +2087,7 @@ input.calendar:disabled {
     width: calc(100% - 20px);
     padding: 10px;
     font: normal bold 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    border-bottom: 1px solid #ececec;
+    border: 1px solid #ececec;
     cursor: pointer;
 }
 .share_tab:last-of-type {
@@ -2128,6 +2128,10 @@ input.calendar:disabled {
     width: calc(100% - 40px);
     margin: 10px 0;
     padding: 20px;
+    /* border: 1px solid #ececec; */
+}
+.mb_info .share_info,
+.password .share_info {
     border: 1px solid #ececec;
 }
 /*********** 新頁籤 ***********/
