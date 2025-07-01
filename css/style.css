@@ -2846,33 +2846,35 @@ hr {
 /*********** Banner影片設定 ***********/
 .videocm {
     position: relative; /* 讓子元素(文字)可以根據它來定位 */
-    height: 500px; /* 電腦版高度設定 */
+    height: 52vh; /* 動態高度，適應手機不同螢幕尺寸 */
     background-color: #000; /* 影片載入前背景色 */
     isolation: isolate;
     overflow: hidden; /* 隱藏超出容器範圍的影片部分 */
 }
+.videocm_box {
+    position: absolute;
+    bottom: 10%;
+    text-align: center;
+    -webkit-transform: translateX(55%); /* 文字置中 */
+    -moz-transform: translateX(55%);
+    -ms-transform: translateX(55%);
+    -o-transform: translateX(55%);
+    transform: translateX(55%);
+    z-index: 1; /* 確保文字在影片上方 */
+}
 /* 文字設定 */
 .videocm_title {
-    margin: 0 0 1rem 0;
-    font: normal bold 2.2rem/2.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0 auto;
 }
-.videocm_title > span.text_lightred {
-    position: relative;
-    top: -0.08em; /*移動文字,用em可確保它能隨字體大小變化而縮放，建議微調-0.08em到-0.1em之間的值 */
+.videocm_title span {
+    font: italic normal 7rem/7rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, .7);
 }
-.videocm_text {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    width: 50%;
-    text-align: center;
-    -webkit-transform: translate(-50%, -50%); /* 文字置中 */
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 1; /* 確保文字在影片上方 */
+.videocm_title > span.text_red {
+    font: italic bold 10rem/10rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
 .videocm_video {
     position: absolute;
@@ -3327,7 +3329,7 @@ hr {
     line-height: 50px;
     color: #fff;
     text-align: center;
-    background-color: #ec8484;
+    background-color: #ff4c4c;
     border: 2px solid #fff;
     /* -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
@@ -3344,7 +3346,7 @@ hr {
 .btn_chat:hover,
 .btn_chat:active,
 .btn_chat:focus {
-    background-color: #c95c5c;
+    background-color: #b83939;
 }
 /*********** 內頁***********/
 .share_header {
@@ -5000,6 +5002,54 @@ input.btn_line:focus {
     display: flex;
     margin: 0 20px 5px 20px;
 }
+/*********** Type6 類型6 ***********/
+.type6_main {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 15%);
+    justify-content: center;
+    margin: auto;
+}
+.type6_pic {
+    max-width: 650px;
+    max-height: 600px;
+    overflow: hidden;
+}
+.type6_info {
+    display: flex;
+    align-items: flex-start;
+    width: calc(100% / 2 - 1%);
+    justify-content: center;
+}
+.type6_main .type6_box {
+    display: inline-block;
+    width: calc(100% / 2 - 10px);
+    margin: 0 0 0 5px;
+    text-align: center;
+    vertical-align: top;
+}
+.type6_main .type6_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 10px;
+    color: #001bff;
+    font: normal bold 3rem/3rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+}
+.type6_main .type6_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.type6_main .type6_text li {
+    margin: 10px auto;
+    font: normal bold 1.5rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
 /*********** 偷看月老簿 ************/
 .birth_chart.matchbox_set,
 .search_databox {
@@ -5528,6 +5578,17 @@ input.btn_line:focus {
     #slider_essay .pd_info_txt .briefly {
         margin: 30px auto;
     }
+    /* Banner影片設定 */
+    .videocm {
+        height: 35vh;
+    }
+    .videocm_title span {
+        font: italic normal 5rem/5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 7rem/7rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
 }
 
 /* 寬度介於 1024px - 1300px (ipad) */
@@ -5571,7 +5632,7 @@ input.btn_line:focus {
         padding: 2px 3px 3px 6px;
     }
     .share_main {
-        padding: 2em 0 4em 0;
+        padding: 1em 0;
     }
     .share_box .col_2 {
         width: calc(100% / 2 - 6%);
@@ -5602,10 +5663,28 @@ input.btn_line:focus {
         font: normal bold 32px/40px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Banner影片設定 */
-    .videocm_title {
-        font: normal bold 32px/40px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm {
+        height: 25vh;
+    }
+    .videocm_box {
+        -webkit-transform: translateX(45%);
+        -moz-transform: translateX(45%);
+        -ms-transform: translateX(45%);
+        -o-transform: translateX(45%);
+        transform: translateX(45%);
+    }
+    .videocm_title span {
+        font: italic normal 4rem/4rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 6rem/6rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Type3 類型3+商品明細 */
+    .type3_main {
+        margin: 1rem auto;
+        padding: 0;
+    }
     .type3_text {
         top: 10%;
     }
@@ -5614,6 +5693,15 @@ input.btn_line:focus {
     }
     .type3_text.type3_right {
         right: 5%;
+    }
+    /* Type6 類型6 */
+    .type6_main .col_2.type6_info {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+    }
+    .share_box .col_2.type6_pic {
+        width: calc(100% - 2%);
     }
     /* 商品資訊 */
     .store_page .share_box {
@@ -6128,7 +6216,7 @@ input.btn_line:focus {
     }
     .share_main {
         /* min-height: 500px; */
-        padding: .6rem 0 4rem 0;
+        padding: 0;
     }
     .share_main .w80 {
         width: calc(100% - 20px);
@@ -6230,14 +6318,21 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 50vh; /* 動態高度，適應手機不同螢幕尺寸 */
+        height: 50vh;
     }
-    .videocm_title {
-        margin: 0 0 10px 0;
-        font: normal bold 1.6rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm_box {
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        transform: translateX(25%);
     }
-    .videocm_text {
-        width: 100%;
+    .videocm_title span {
+        font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 5.1rem/5.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 輪播圖 */
     .cm_textbox {
@@ -6263,7 +6358,7 @@ input.btn_line:focus {
     }
     /* Type3 類型3 */
     .type3_main {
-        margin: .5rem auto;
+        margin: 0 auto;
     }
     .type3_text .type3_title,
     .pd_info_saying .pdinfo_title {
@@ -6298,6 +6393,22 @@ input.btn_line:focus {
     }
     .type5_main .share_img {
         width: 80px;
+    }
+    /* Type6 類型6 */
+    .type6_main {
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .type6_main .type6_title {
+        width: 100px;
+        height: 100px;
+        font: normal bold 2.5rem/2.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+    }
+    .type6_main .type6_text li {
+        margin: 5px auto;
+        font: normal bold 1.2rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 關於我們 */
     .section_title {
@@ -6632,10 +6743,26 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    /* Banner影片設定 */
+    .videocm {
+        height: 20vh;
+    }
+    .videocm_box {
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        transform: translateX(50%);
+    }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
         width: calc(100% / 3 - 10px);
         margin: 0 0 10px 0;
+    }
+    /* Type3 類型3 */
+    .type3_pic,
+    .pdinfo_pic {
+        width: 100%;
     }
     /* 輪播圖 */
     .cm_textbox {
@@ -6756,11 +6883,33 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    /* Banner影片設定 */
+    .videocm {
+        height: 20vh;
+    }
+    .videocm_box {
+        -webkit-transform: translateX(35%);
+        -moz-transform: translateX(35%);
+        -ms-transform: translateX(35%);
+        -o-transform: translateX(35%);
+        transform: translateX(35%);
+    }
+    .videocm_title span {
+        font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 5rem/5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
         width: calc(100% / 3 - 10px);
         padding: 0;
         margin: 0 0 10px 0;
+    }
+    /* Type3 類型3 */
+    .type3_pic,
+    .pdinfo_pic {
+        width: 100%;
     }
     /* 關於我們 */
     .section_text span {
@@ -6877,8 +7026,22 @@ input.btn_line:focus {
         font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Banner影片設定 */
-    .videocm_title {
-        font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm {
+        height: 20vh;
+    }
+    .videocm_box {
+        -webkit-transform: translateX(50%);
+        -moz-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        -o-transform: translateX(50%);
+        transform: translateX(25%);
+    }
+    .videocm_title span {
+        font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 5.1rem/5.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
@@ -7015,7 +7178,10 @@ input.btn_line:focus {
         padding: .3rem 0 4rem;
     }
     .share_main.index {
-        padding: .3rem 0 5rem;
+        padding: .2rem 0;
+    }
+    .share_main.index.last {
+        padding: .2rem 0 4rem;
     }
     /* 共用元件(日曆) */
     /* input.calendar,
@@ -7142,16 +7308,29 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 35vh; /* 動態高度，適應手機不同螢幕尺寸 */
+        height: 20vh;
     }
-    .videocm_title {
-        font: normal bold 1.4rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm_title span {
+        font: italic normal 2.5rem/2.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 4rem/4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
         width: calc(100% / 3 - 10px);
         padding: 0;
         margin: 0 0 10px 0;
+    }
+    /* Type6 類型6 */
+    .type6_main .col_2.type6_info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .type6_main .type6_title {
+        width: 90px;
+        height: 90px;
     }
     /* 會員資料 */
     .member .share_container_m,
@@ -7319,7 +7498,10 @@ input.btn_line:focus {
         padding: .2rem 0 3rem;
     }
     .share_main.index {
-        padding: .2rem 0 5rem;
+        padding: .2rem 0;
+    }
+    .share_main.index.last {
+        padding: .2rem 0 4rem;
     }
     .share_header {
         font: italic bold 28px/32px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -7518,10 +7700,20 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 30vh; /* 動態高度，適應手機不同螢幕尺寸 */
+        height: 20vh;
     }
-    .videocm_title {
-        font: normal bold 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm_box {
+        -webkit-transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        -o-transform: translateX(20%);
+        transform: translateX(20%);
+    }
+    .videocm_title span {
+        font: italic normal 2.2rem/2.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 3.7rem/3.7rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 線框圖文 */
     .boxline_title .title_s {
@@ -7567,6 +7759,25 @@ input.btn_line:focus {
     }
     .type5_main .col_2 {
         width: calc(100% - 2%);
+    }
+    /* Type6 類型6 */
+    .type6_main {
+        width: 96%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .type6_main .col_2.type6_info {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+        margin: 0 auto;
+    }
+    .share_box .col_2.type6_pic {
+        width: calc(100% - 10%);
+    }
+    .type6_main .type6_text li {
+        margin: 5px auto;
+        font: normal bold 1.2rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -7938,7 +8149,10 @@ input.btn_line:focus {
         padding: .2rem 0 2rem;
     }
     .share_main.index {
-        padding: .2rem 0 5rem;
+        padding: .2rem 0;
+    }
+    .share_main.index.last {
+        padding: .2rem 0 4rem;
     }
     .share_header {
         margin: 0 auto 10px;
@@ -8173,10 +8387,20 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 25vh; /* 動態高度，適應手機不同螢幕尺寸 */
+        height: 20vh;
     }
-    .videocm_title {
-        font: normal bold 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm_box {
+        -webkit-transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        -o-transform: translateX(20%);
+        transform: translateX(20%);
+    }
+    .videocm_title span {
+        font: italic normal 2rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 3rem/3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 共用樣式 */
     .box_title {
@@ -8200,6 +8424,11 @@ input.btn_line:focus {
         width: 120px;
     }
     /* Type3 類型3 */
+    .type3_text .type3_title,
+    .pd_info_saying .pdinfo_title {
+        margin: 0 auto;
+        font: normal bold 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     .type3_pic,
     .pdinfo_pic {
         width: 100%;
@@ -8219,6 +8448,24 @@ input.btn_line:focus {
     /* Type5 類型5 */
     .type5_box {
         padding: 5px;
+    }
+    /* Type6 類型6 */
+    .type6_main {
+        width: 96%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .type6_main .col_2.type6_info {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+    .share_box .col_2.type6_pic {
+        width: calc(100% - 2%);
+    }
+    .type6_main .type6_title {
+        width: 100px;
+        height: 100px;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -8604,6 +8851,12 @@ input.btn_line:focus {
     .share_main {
         padding: .2rem 0 2rem;
     }
+    .share_main.index {
+        padding: .2rem 0;
+    }
+    .share_main.index.last {
+        padding: .2rem 0 4rem;
+    }
     .share_title {
         font: normal normal 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
@@ -8930,11 +9183,20 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 25vh; /* 動態高度，適應手機不同螢幕尺寸 */
+        height: 20vh;
     }
-    .videocm_title {
-                margin: 0;
-        font: normal bold 1.1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .videocm_box {
+        -webkit-transform: translateX(5%);
+        -moz-transform: translateX(5%);
+        -ms-transform: translateX(5%);
+        -o-transform: translateX(5%);
+        transform: translateX(5%);
+    }
+    .videocm_title span {
+        font: italic normal 2rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 3rem/3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 線框圖文 */
     .boxline_title .title_s {
@@ -8982,6 +9244,29 @@ input.btn_line:focus {
     /* Type5 類型5 */
     .type5_box {
         padding: 2px;
+    }
+    /* Type6 類型6 */
+    .type6_main {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .type6_main .col_2.type6_info {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: 0;
+    }
+    .share_box .col_2.type6_pic {
+        width: calc(100% - 2%);
+    }
+    .type6_main .type6_title {
+        width: 90px;
+        height: 90px;
+        font: normal bold 2rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_main .type6_text li {
+        font: normal bold 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 登入、註冊 */
     .another_login span {
@@ -9303,6 +9588,54 @@ input.btn_line:focus {
     .search_box input.input_no_width {
         width: 80px;
     }
+    /* Banner影片設定 */
+    .videocm {
+        height: 15vh;
+    }
+    .videocm_box {
+        -webkit-transform: translateX(10%);
+        -moz-transform: translateX(10%);
+        -ms-transform: translateX(10%);
+        -o-transform: translateX(10%);
+        transform: translateX(10%);
+    }
+    .videocm_title span {
+        font: italic normal 1.8rem/1.8rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 2.8rem/2.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* 線框圖文 */
+    .boxline_top {
+        height: 30px;
+        -webkit-border-radius: 20px 20px 0 0;
+        -moz-border-radius: 20px 20px 0 0;
+        -ms-border-radius: 20px 20px 0 0;
+        -o-border-radius: 20px 20px 0 0;
+        border-radius: 20px 20px 0 0;
+    }
+    .boxline_bottom {
+        height: 30px;
+        -webkit-border-radius: 0 0 20px 20px;
+        -moz-border-radius: 0 0 20px 20px;
+        -ms-border-radius: 0 0 20px 20px;
+        -o-border-radius: 0 0 20px 20px;
+        border-radius: 0 0 20px 20px;
+    }
+    .boxline_title .title_s {
+        padding: 0 30px;
+        font: normal normal .9rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .boxline_title .title_b {
+        padding: 0 10px;
+        letter-spacing: 2px;
+        font: normal bold 1.2rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* Type6 類型6 */
+    .type6_main .type6_title {
+        width: 80px;
+        height: 80px;
+    }
     /* 服務兌換 */
     .products .col_6 {
         width: calc(100% - 2%);
@@ -9362,6 +9695,16 @@ input.btn_line:focus {
     .search_box input.input_no_width {
         width: 70px;
         padding: 3px 3px 3px 6px;
+    }
+    /* Banner影片設定 */
+    .videocm {
+        height: 25vh;
+    }
+    .videocm_title span {
+        font: italic normal 1.5rem/1.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .videocm_title > span.text_red {
+        font: italic bold 2.5rem/2.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 會員資料 */
     .member .share_tabbox i,
