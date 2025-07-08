@@ -1,694 +1,435 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes"
-    />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <link
-      href="favicon.ico?date=20250620"
-      rel="shortcut icon"
-      type="image/x-icon"
-    />
-    <link href="css/reset.css?date=20250620" rel="stylesheet" type="text/css" />
-    <link href="css/style.css?date=20250620" rel="stylesheet" type="text/css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="favicon.ico?date=20250708" rel="shortcut icon" type="image/x-icon">
+    <link href="css/reset.css?date=20250708" rel="stylesheet" type="text/css">
+    <link href="css/style.css?date=20250708" rel="stylesheet" type="text/css">
     <!-- FontAwesome CDN -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
     <!-- JQuery共用檔(有用JQuery必先讀這支) -->
-    <script
-      src="js/jquery3.5.1.min.js?date=20250620"
-      type="text/javascript"
-    ></script>
+    <script src="js/jquery3.5.1.min.js?date=20250708" type="text/javascript"></script>
     <!--繁中日曆JQ-->
-    <script src="js/moment.min.js?date=20250620"></script>
+    <script src="js/moment.min.js?date=20250708"></script>
     <title>千里姻緣-偷看月老簿</title>
-  </head>
-  <body>
+</head>
+<body>
     <!-- 回到頂端 -->
     <div class="go_top">
-      <img src="images/gotop_b.png?date=20250620" alt="" />
+        <img src="images/gotop_b.png?date=20250708" alt="">
     </div>
 
     <!-- 頁首_導覽列 -->
     <div class="navbarbox clear">
-      <!-- LOGO -->
-      <div class="logobox active" onclick="window.open('index.html','_self');">
-        <img src="images/logo.png?date=20250620" alt="" class="logo_img" />
-      </div>
-      <!-- 選單 -->
-      <ul id="navbar_list" class="navlist">
-        <li class="nav_main">
-          <div class="list" onclick="window.open('index.html','_self');">
-            <i class="fa-solid fa-house"></i>
-            <span>首頁</span>
-          </div>
-        </li>
-        <li
-          id="FateChart"
-          class="nav_main"
-          onclick="window.open('fate_chart.html','_self');"
-        >
-          <div class="list">
-            <i class="fa-solid fa-feather"></i>
-            <span>偷看月老簿</span>
-          </div>
-        </li>
-        <!-- 登入後才會出現 -->
-        <li id="MemberInfo" class="nav_main">
-          <div class="list">
-            <i class="fa-solid fa-address-card"></i>
-            <span>會員專區</span>
-            <i class="fa-solid fa-caret-down"></i>
-          </div>
-          <ul class="layerbox2" style="display: none">
-            <li class="nav_layer2">
-              <div
-                class="layer2_title"
-                onclick="window.open('member_info.html','_self');"
-              >
-                <i class="fa-solid fa-image-portrait"></i>
-                <span>個人資料</span>
-              </div>
+        <!-- LOGO -->
+        <div class="logobox active" onclick="window.open('index.html','_self');">
+            <img src="images/logo.png?date=20250708" alt="" class="logo_img">
+        </div>
+        <!-- 選單 -->
+        <ul id="navbar_list" class="navlist">
+            <li class="nav_main">
+                <div class="list" onclick="window.open('index.html','_self');">
+                    <i class="fa-solid fa-house"></i>
+                    <span>首頁</span>
+                </div>
             </li>
-            <li class="nav_layer2">
-              <div
-                class="layer2_title"
-                onclick="window.open('password.html','_self');"
-              >
-                <i class="fa-solid fa-pen"></i>
-                <span>重設密碼</span>
-              </div>
+            <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
+                <div class="list">
+                    <i class="fa-solid fa-feather"></i>
+                    <span>偷看月老簿</span>
+                </div>
             </li>
-          </ul>
-        </li>
-        <!-- 登入+註冊(登出後才會出現) -->
-        <li id="Login" class="nav_main" style="display: none">
-          <a
-            href="#"
-            target="_self"
-            onclick="$('#popup_Login').show();"
-            class="list btn_small btn_yellow"
-          >
-            <i class="fa-solid fa-circle-user"></i>
-            <span>登入</span>
-          </a>
-        </li>
-        <li id="Register" class="nav_main" style="display: none">
-          <a
-            href="#"
-            target="_self"
-            onclick="$('#popup_Register').show();"
-            class="list btn_small btn_green"
-          >
-            <i class="fa-solid fa-user-plus"></i>
-            <span>註冊</span>
-          </a>
-        </li>
-        <!-- 登出(登入後才會出現) -->
-        <li id="Logout" class="nav_main">
-          <a href="index.html" target="_self" class="list btn_small btn_red">
-            <i class="fa-solid fa-power-off"></i>
-            <span>登出</span>
-          </a>
-        </li>
-      </ul>
-      <!-- 手機版漢堡圖(不需程式控制，由CSS自行判斷螢幕寬度開啟或關閉) -->
-      <div onclick="hamburg(this)" class="hamburg">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
+            <!-- 登入後才會出現 -->
+            <li id="MemberInfo" class="nav_main">
+                <div class="list">
+                    <i class="fa-solid fa-address-card"></i>
+                    <span>會員專區</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <ul class="layerbox2" style="display: none;">
+                    <li class="nav_layer2">
+                        <div class="layer2_title" onclick="window.open('member_info.html','_self');">
+                            <i class="fa-solid fa-image-portrait"></i>
+                            <span>個人資料</span>
+                        </div>
+                    </li>
+                    <li class="nav_layer2">
+                        <div class="layer2_title" onclick="window.open('password.html','_self');">
+                            <i class="fa-solid fa-pen"></i>
+                            <span>重設密碼</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- 登入+註冊(登出後才會出現) -->
+            <li id="Login" class="nav_main" style="display: none;">
+                <a href="#" target="_self" onclick="$('#popup_Login').show();" class="list btn_small btn_yellow">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <span>登入</span>
+                </a>
+            </li>
+            <li id="Register" class="nav_main" style="display: none;">
+                <a href="#" target="_self" onclick="$('#popup_Register').show();" class="list btn_small btn_green">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>註冊</span>
+                </a>
+            </li>
+            <!-- 登出(登入後才會出現) -->
+            <li id="Logout" class="nav_main">
+                <a href="index.html" target="_self" class="list btn_small btn_red">
+                    <i class="fa-solid fa-power-off"></i>
+                    <span>登出</span>
+                </a>
+            </li>
+        </ul>
+        <!-- 手機版漢堡圖(不需程式控制，由CSS自行判斷螢幕寬度開啟或關閉) -->
+        <div onclick="hamburg(this)" class="hamburg">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </div>
 
     <!-- Banner -->
     <div class="pagecm">
-      <div class="pagecm_text">
-        <h2 class="pagecm_title text_white">緣來不只是巧合</h2>
-        <h2 class="pagecm_title text_white">月老助你遇見命定緣人</h2>
-      </div>
-      <img
-        src="images/banner/banner_02.jpg?date=20250620"
-        alt=""
-        class="pagecm_img"
-      />
+        <div class="pagecm_text">
+            <h2 class="pagecm_title text_white">緣來不只是巧合</h2>
+            <h2 class="pagecm_title text_white">月老助你遇見命定緣人</h2>
+        </div>
+        <img src="images/banner/banner_02.jpg?date=20250708" alt="" class="pagecm_img">
     </div>
 
     <!-- 頁面內容 -->
     <div class="share_main bg_03 fate_chart">
-      <div class="share_container_m">
-        <div class="share_info border_dashed_blue br30">
-          <!-- 標題 -->
-          <div class="box_title">
-            <i class="fa-solid fa-feather"></i>
-            <span>偷看月老簿</span>
-          </div>
-          <ul class="matchbox_set birth_chart">
-            <!-- 左邊 -->
-            <li class="match_left">
-              <div class="match_box bg_pink border_lightgray">
-                <!-- 姓名 -->
-                <div class="col_flex jc_bt">
-                  <div class="col_title">
-                    <span>姓名</span>
-                  </div>
-                  <div class="col_item">
-                    <input
-                      type="text"
-                      placeholder="輸入姓名"
-                      value=""
-                      class="input50"
-                      required
-                    />
-                    <input
-                      type="button"
-                      value="搜尋"
-                      onclick="$('#popup_SentFail').show();"
-                      class="btn_big btn50 btn_blue"
-                    />
-                  </div>
+        <div class="share_container_m">
+            <div class="share_info border_dashed_blue br30">
+                <!-- 標題 -->
+                <div class="box_title">
+                    <i class="fa-solid fa-feather"></i>
+                    <span>偷看月老簿</span>
                 </div>
-                <!-- 姓氏類別 -->
-                <div class="col_flex">
-                  <div class="col_title">
-                    <span>姓氏類別</span>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Single1">
-                      <input
-                        type="radio"
-                        id="Single1"
-                        name="Surname1"
-                        class="radio_box"
-                        checked
-                      />
-                      <span>單姓</span>
-                    </label>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Compound1">
-                      <input
-                        type="radio"
-                        id="Compound1"
-                        name="Surname1"
-                        class="radio_box"
-                      />
-                      <span>複姓</span>
-                    </label>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Double1">
-                      <input
-                        type="radio"
-                        id="Double1"
-                        name="Surname1"
-                        class="radio_box"
-                      />
-                      <span>雙姓</span>
-                    </label>
-                  </div>
-                </div>
-                <!-- 開始時間 -->
-                <div class="col_flex jc_bt">
-                  <div class="col_title">
-                    <span>國曆生日</span>
-                  </div>
-                  <!-- 挑選日期(國曆-JQ版) -->
-                  <div class="col_item">
-                    <input
-                      type="text"
-                      id="pkdate_1"
-                      placeholder="輸入生日(如:1990-01-01)"
-                      value=""
-                      class="input100 calendar"
-                    />
-                  </div>
-                </div>
-                <!--繁中日曆JQ-->
-                <script src="js/ion.calendar.min.js"></script>
-                <script>
-                  //第1個input欄位
-                  $(function () {
-                    $("#pkdate_1").each(function () {
-                      $(this).ionDatePicker({
-                        lang: "zh-cn",
-                        format: "YYYY-MM-DD",
-                      });
-                    });
-                  });
-                </script>
-                <!-- 性別 -->
-                <div class="col_flex">
-                  <div class="col_title">
-                    <span>性別</span>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Man1">
-                      <input
-                        type="radio"
-                        id="Man1"
-                        name="Gender1"
-                        class="radio_box"
-                        checked
-                      />
-                      <span>男</span>
-                      <img
-                        src="images/others/sex_male.png?date=20250620"
-                        alt=""
-                        class="sex_img"
-                      />
-                    </label>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Woman1">
-                      <input
-                        type="radio"
-                        id="Woman1"
-                        name="Gender1"
-                        class="radio_box"
-                      />
-                      <span>女</span>
-                      <img
-                        src="images/others/sex_female.png?date=20250620"
-                        alt=""
-                        class="sex_img"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <!-- 居住地 -->
-                <div class="col_flex jc_bt">
-                  <div class="col_title text_left">
-                    <span>居住地</span>
-                  </div>
-                  <div class="col_item flex jc_bt">
-                    <select class="select100">
-                      <option value="">請選擇</option>
-                      <option value="">台灣</option>
-                      <option value="">中國</option>
-                      <option value="">香港</option>
-                      <option value="">澳門</option>
-                      <option value="">日本</option>
-                      <option value="">新加坡</option>
-                      <option value="">越南</option>
-                    </select>
-                  </div>
-                </div>
-                <hr />
-                <!-- 選擇類別 -->
-                <div class="col_flex">
-                  <div class="col_title">
-                    <span>選擇類別</span>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Friends">
-                      <input
-                        type="radio"
-                        id="Friends"
-                        name="relation"
-                        class="radio_box"
-                        checked
-                      />
-                      <span>親友</span>
-                    </label>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Client">
-                      <input
-                        type="radio"
-                        id="Client"
-                        name="relation"
-                        class="radio_box"
-                      />
-                      <span>客戶</span>
-                    </label>
-                  </div>
-                  <div class="col_radio">
-                    <label for="Employee">
-                      <input
-                        type="radio"
-                        id="Employee"
-                        name="relation"
-                        class="radio_box"
-                      />
-                      <span>員工</span>
-                    </label>
-                  </div>
-                </div>
-                <!-- 按鈕 -->
-                <div class="col_flex">
-                  <input
-                    type="button"
-                    value="清除"
-                    class="btn_superbig btn50 btn_gray"
-                  />
-                  <input
-                    type="button"
-                    value="執行"
-                    onclick="$('#popup_Confirm').show()"
-                    class="btn_superbig btn50 btn_orange"
-                  />
-                </div>
-              </div>
-            </li>
-            <!-- 右邊 -->
-            <li class="match_right">
-              <div class="match_box bg_yellow border_lightgray">
-                <!-- 按鈕 -->
-                <div class="col_flex jc_bt">
-                  <input
-                    type="button"
-                    value="重新載入"
-                    class="btn_big btn33 btn_gray"
-                  />
-                  <input
-                    type="button"
-                    value="刪除"
-                    onclick="$('#popup_DelConfirm').show()"
-                    class="btn_big btn33 btn_red"
-                  />
-                  <input
-                    type="button"
-                    value="新增"
-                    onclick="$('#popup_SentSuccess').show();"
-                    class="btn_big btn33 btn_green"
-                  />
-                </div>
-                <!-- 頁籤 -->
-                <div class="panel_wrap search_wrap">
-                  <!-- 頁籤選取按鈕(圓點隱藏)+需對應下方 label -->
-                  <input
-                    type="radio"
-                    id="search_info_radio1"
-                    name="panel_radio"
-                    class="panel_control"
-                    checked
-                  />
-                  <input
-                    type="radio"
-                    id="search_info_radio2"
-                    name="panel_radio"
-                    class="panel_control"
-                  />
-                  <input
-                    type="radio"
-                    id="search_info_radio3"
-                    name="panel_radio"
-                    class="panel_control"
-                  />
-                  <!-- 頁籤選取按鈕 -->
-                  <div class="tab_wrap">
-                    <label for="search_info_radio1" class="tab_label">
-                      <span>親 友</span>
-                    </label>
-                    <label for="search_info_radio2" class="tab_label">
-                      <span>客 戶</span>
-                    </label>
-                    <label for="search_info_radio3" class="tab_label">
-                      <span>員 工</span>
-                    </label>
-                  </div>
-                  <!-- 頁籤-內容 -->
-                  <div class="search_info_wrap">
-                    <ul class="search_info_content tabs_panel1">
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>歐陽韋</span
-                        >，<span>複姓</span>，<span>1990-07-30</span>，<span>女</span>，<span
-                          >嘉義</span
-                        >
-                      </li>
-                      <li>
-                        <span>陳凱</span
-                        >，<span>單姓</span>，<span>1977-05-23</span>，<span>男</span>，<span
-                          >台北</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                      <li>
-                        <span>王曉明</span
-                        >，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span
-                          >桃園</span
-                        >
-                      </li>
-                    </ul>
-                    <ul class="search_info_content tabs_panel2">
-                      <li>
-                        <span>沈雷亞</span
-                        >，<span>單姓</span>，<span>1968-04-21</span>，<span>女</span>，<span
-                          >高雄</span
-                        >
-                      </li>
-                      <li>
-                        <span>張簡承</span
-                        >，<span>複姓</span>，<span>1952-12-25</span>，<span>女</span>，<span
-                          >新竹</span
-                        >
-                      </li>
-                    </ul>
-                    <ul class="search_info_content tabs_panel3">
-                      <li>
-                        <span>陳佳夜</span
-                        >，<span>單姓</span>，<span>1985-12-27</span>，<span>女</span>，<span
-                          >台中</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
+                <ul class="matchbox_set birth_chart">
+                    <!-- 左邊 -->
+                    <li class="match_left">
+                        <div class="match_box bg_pink border_lightgray">
+                            <!-- 姓名 -->
+                            <div class="col_flex jc_bt">
+                                <div class="col_title">
+                                    <span>姓名</span>
+                                </div>
+                                <div class="col_item">
+                                    <input type="text" placeholder="輸入姓名" value="" class="input50" required>
+                                    <input type="button" value="搜尋" onclick="$('#popup_SentFail').show();" class="btn_big btn50 btn_blue">
+                                </div>
+                            </div>
+                            <!-- 姓氏類別 -->
+                            <div class="col_flex">
+                                <div class="col_title">
+                                    <span>姓氏類別</span>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Single1">
+                                        <input type="radio" id="Single1" name="Surname1" class="radio_box" checked>
+                                        <span>單姓</span>
+                                    </label>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Compound1">
+                                        <input type="radio" id="Compound1" name="Surname1" class="radio_box">
+                                        <span>複姓</span>
+                                    </label>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Double1">
+                                        <input type="radio" id="Double1" name="Surname1" class="radio_box">
+                                        <span>雙姓</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 開始時間 -->
+                            <div class="col_flex jc_bt">
+                                <div class="col_title">
+                                    <span>國曆生日</span>
+                                </div>
+                                <!-- 挑選日期(國曆-JQ版) -->
+                                <div class="col_item">
+                                    <input type="text" id="pkdate_1" placeholder="輸入生日(如:1990-01-01)" value="" class="input100 calendar">
+                                </div>
+                            </div>
+                            <!--繁中日曆JQ-->
+                            <script src="js/ion.calendar.min.js"></script>
+                            <script>
+                                //第1個input欄位
+                                $(function(){
+                                    $("#pkdate_1").each(function(){
+                                        $(this).ionDatePicker({
+                                            lang: "zh-cn",
+                                            format: "YYYY-MM-DD"
+                                        });
+                                    });
+                                });
+                            </script>
+                            <!-- 性別 -->
+                            <div class="col_flex">
+                                <div class="col_title">
+                                    <span>性別</span>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Man1">
+                                        <input type="radio" id="Man1" name="Gender1" class="radio_box" checked>
+                                        <span>男</span>
+                                        <img src="images/others/sex_male.png?date=20250708" alt="" class="sex_img">
+                                    </label>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Woman1">
+                                        <input type="radio" id="Woman1" name="Gender1" class="radio_box">
+                                        <span>女</span>
+                                        <img src="images/others/sex_female.png?date=20250708" alt="" class="sex_img">
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 居住地 -->
+                            <div class="col_flex jc_bt">
+                                <div class="col_title text_left">
+                                    <span>居住地</span>
+                                </div>
+                                <div class="col_item flex jc_bt">
+                                    <select class="select100">
+                                        <option value="">請選擇</option>
+                                        <option value="">台灣</option>
+                                        <option value="">中國</option>
+                                        <option value="">香港</option>
+                                        <option value="">澳門</option>
+                                        <option value="">日本</option>
+                                        <option value="">新加坡</option>
+                                        <option value="">越南</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- 選擇類別 -->
+                            <div class="col_flex">
+                                <div class="col_title">
+                                    <span>選擇類別</span>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Friends">
+                                        <input type="radio" id="Friends" name="relation" class="radio_box" checked>
+                                        <span>親友</span>
+                                    </label>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Client">
+                                        <input type="radio" id="Client" name="relation" class="radio_box">
+                                        <span>客戶</span>
+                                    </label>
+                                </div>
+                                <div class="col_radio">
+                                    <label for="Employee">
+                                        <input type="radio" id="Employee" name="relation" class="radio_box">
+                                        <span>員工</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 按鈕 -->
+                            <div class="col_flex">
+                                <input type="button" value="清除" class="btn_superbig btn50 btn_gray">
+                                <input type="button" value="執行" onclick="$('#popup_Confirm').show()" class="btn_superbig btn50 btn_orange">
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 右邊 -->
+                    <li class="match_right">
+                        <div class="match_box bg_yellow border_lightgray">
+                            <!-- 按鈕 -->
+                            <div class="col_flex jc_bt">
+                                <input type="button" value="重新載入" class="btn_big btn33 btn_gray">
+                                <input type="button" value="刪除" onclick="$('#popup_DelConfirm').show()" class="btn_big btn33 btn_red">
+                                <input type="button" value="新增" onclick="$('#popup_SentSuccess').show();" class="btn_big btn33 btn_green">
+                            </div>
+                            <!-- 頁籤 -->
+                            <div class="panel_wrap search_wrap">
+                            <!-- 頁籤選取按鈕(圓點隱藏)+需對應下方 label -->
+                            <input type="radio" id="search_info_radio1" name="panel_radio" class="panel_control" checked>
+                            <input type="radio" id="search_info_radio2" name="panel_radio" class="panel_control">
+                            <input type="radio" id="search_info_radio3" name="panel_radio" class="panel_control">
+                            <!-- 頁籤選取按鈕 -->
+                            <div class="tab_wrap">
+                                <label for="search_info_radio1" class="tab_label">
+                                    <span>親 友</span>
+                                </label>
+                                <label for="search_info_radio2" class="tab_label">
+                                    <span>客 戶</span>
+                                </label>
+                                <label for="search_info_radio3" class="tab_label">
+                                    <span>員 工</span>
+                                </label>
+                            </div>
+                            <!-- 頁籤-內容 -->
+                            <div class="search_info_wrap">
+                                <ul class="search_info_content tabs_panel1">
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>歐陽韋</span>，<span>複姓</span>，<span>1990-07-30</span>，<span>女</span>，<span>嘉義</span></li>
+                                    <li><span>陳凱</span>，<span>單姓</span>，<span>1977-05-23</span>，<span>男</span>，<span>台北</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                    <li><span>王曉明</span>，<span>單姓</span>，<span>1979-01-10</span>，<span>男</span>，<span>桃園</span></li>
+                                </ul>
+                                <ul class="search_info_content tabs_panel2">
+                                    <li><span>沈雷亞</span>，<span>單姓</span>，<span>1968-04-21</span>，<span>女</span>，<span>高雄</span></li>
+                                    <li><span>張簡承</span>，<span>複姓</span>，<span>1952-12-25</span>，<span>女</span>，<span>新竹</span></li>
+                                </ul>
+                                <ul class="search_info_content tabs_panel3">
+                                    <li><span>陳佳夜</span>，<span>單姓</span>，<span>1985-12-27</span>，<span>女</span>，<span>台中</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- 頁尾 -->
     <footer class="footer">
-      <div class="footer_copyright text_center">
-        <div class="share_container_m">Copyright © 2025 千里姻緣 版權所有</div>
-      </div>
+        <div class="footer_copyright text_center">
+            <div class="share_container_m">Copyright © 2025 千里姻緣 版權所有</div>
+        </div>
     </footer>
 
     <!-- 手機版_頁尾 -->
     <div class="mobile_footer">
-      <a href="index.html" target="_self" class="link_list">
-        <i class="fa-solid fa-house"></i>
-        <div>首頁</div>
-      </a>
-      <a href="fate_chart.html" target="_self" class="link_list">
-        <i class="fa-solid fa-hand-holding-heart"></i>
-        <div>偷看月老簿</div>
-      </a>
-      <a href="member_info.html" target="_self" class="link_list">
-        <i class="fa-solid fa-user"></i>
-        <div>會員專區</div>
-      </a>
+        <a href="index.html" target="_self" class="link_list">
+            <i class="fa-solid fa-house"></i>
+            <div>首頁</div>
+        </a>
+        <a href="fate_chart.html" target="_self" class="link_list">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <div>偷看月老簿</div>
+        </a>
+        <a href="member_info.html" target="_self" class="link_list">
+            <i class="fa-solid fa-user"></i>
+            <div>會員專區</div>
+        </a>
     </div>
 
     <!--浮動客服(視窗右下角常駐按鈕)-->
     <div class="btn_chat">
-      <img src="images/index/service.png?date=20250620" alt="客服" />
+        <img src="images/index/service.png?date=20250708" alt="客服">
     </div>
 
     <!-- 跳框_確認刪除 -->
-    <div
-      id="popup_DelConfirm"
-      class="popup_blackbg popup-delconfirm"
-      style="display: none"
-    >
-      <div class="share_popupbox">
-        <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-        <div class="share_popup_s">
-          <!-- 標題 -->
-          <div class="share_popup_header">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span>提示</span>
-            <div class="popup_close" onclick="$('#popup_DelConfirm').hide();">
-              <i class="fa-solid fa-x"></i>
+    <div id="popup_DelConfirm" class="popup_blackbg popup-delconfirm" style="display: none;">
+        <div class="share_popupbox">
+            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
+            <div class="share_popup_s">
+                <!-- 標題 -->
+                <div class="share_popup_header">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>提示</span>
+                    <div class="popup_close" onclick="$('#popup_DelConfirm').hide();">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <!-- 內容 -->
+                <div class="popup_sharebox bg_white">
+                    <div class="popup_share_title text_center">確認要刪除此資料？</div>
+                    <!-- 按鈕 -->
+                    <div class="btn_box ai_center jc_center">
+                        <input type="button" value="關閉" onclick="$('#popup_DelConfirm').hide()" class="btn_superbig br10 btn50 btn_gray">
+                        <input type="submit" value="確認刪除" onclick="$('#popup_SentSuccess').show();" class="btn_superbig br10 btn50 btn_red">
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- 內容 -->
-          <div class="popup_sharebox bg_white">
-            <div class="popup_share_title text_center">確認要刪除此資料？</div>
-            <!-- 按鈕 -->
-            <div class="btn_box ai_center jc_center">
-              <input
-                type="button"
-                value="關閉"
-                onclick="$('#popup_DelConfirm').hide()"
-                class="btn_superbig br10 btn50 btn_gray"
-              />
-              <input
-                type="submit"
-                value="確認刪除"
-                onclick="$('#popup_SentSuccess').show();"
-                class="btn_superbig br10 btn50 btn_red"
-              />
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- 跳框_再次確認 -->
-    <div
-      id="popup_Confirm"
-      class="popup_blackbg popup-confirm"
-      style="display: none"
-    >
-      <div class="share_popupbox">
-        <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-        <div class="share_popup_s">
-          <!-- 標題 -->
-          <div class="share_popup_header">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span>提示</span>
-            <div class="popup_close" onclick="$('#popup_Confirm').hide();">
-              <i class="fa-solid fa-x"></i>
+    <div id="popup_Confirm" class="popup_blackbg popup-confirm" style="display: none;">
+        <div class="share_popupbox">
+            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
+            <div class="share_popup_s">
+                <!-- 標題 -->
+                <div class="share_popup_header">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>提示</span>
+                    <div class="popup_close" onclick="$('#popup_Confirm').hide();">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <!-- 內容 -->
+                <div class="popup_sharebox bg_white">
+                    <div class="popup_share_title text_center">請確認填寫的資料都正確嗎？</div>
+                    <!-- 按鈕 -->
+                    <div class="btn_box ai_center jc_center">
+                        <input type="button" value="關閉" onclick="$('#popup_Confirm').hide()" class="btn_superbig br10 btn50 btn_gray">
+                        <input type="submit" value="確認" onclick="window.open('profile_analysis.html','_self');" class="btn_superbig br10 btn50 btn_red">
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- 內容 -->
-          <div class="popup_sharebox bg_white">
-            <div class="popup_share_title text_center">
-              請確認填寫的資料都正確嗎？
-            </div>
-            <!-- 按鈕 -->
-            <div class="btn_box ai_center jc_center">
-              <input
-                type="button"
-                value="關閉"
-                onclick="$('#popup_Confirm').hide()"
-                class="btn_superbig br10 btn50 btn_gray"
-              />
-              <input
-                type="submit"
-                value="確認"
-                onclick="window.open('profile_analysis.html','_self');"
-                class="btn_superbig br10 btn50 btn_red"
-              />
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- 跳框-成功 -->
-    <div
-      id="popup_SentSuccess"
-      class="popup_blackbg popup-success"
-      style="display: none"
-    >
-      <div class="share_popupbox">
-        <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-        <div class="share_popup_s">
-          <!-- 標題 -->
-          <div class="share_popup_header">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span>提示</span>
-            <div class="popup_close" onclick="$('#popup_SentSuccess').hide();">
-              <i class="fa-solid fa-x"></i>
+    <div id="popup_SentSuccess" class="popup_blackbg popup-success" style="display: none;">
+        <div class="share_popupbox">
+            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
+            <div class="share_popup_s">
+                <!-- 標題 -->
+                <div class="share_popup_header">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>提示</span>
+                    <div class="popup_close" onclick="$('#popup_SentSuccess').hide();">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <!-- 內容 -->
+                <div class="popup_sharebox bg_white">
+                    <div class="popup_share_title text_center">成功！</div>
+                    <!-- 按鈕 -->
+                    <div class="btn_box ai_center jc_center">
+                        <input type="button" value="關閉" onclick="$('#popup_SentSuccess').hide();" class="btn_superbig br10 btn50 btn_gray">
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- 內容 -->
-          <div class="popup_sharebox bg_white">
-            <div class="popup_share_title text_center">成功！</div>
-            <!-- 按鈕 -->
-            <div class="btn_box ai_center jc_center">
-              <input
-                type="button"
-                value="關閉"
-                onclick="$('#popup_SentSuccess').hide();"
-                class="btn_superbig br10 btn50 btn_gray"
-              />
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- 跳框-失敗 -->
-    <div
-      id="popup_SentFail"
-      class="popup_blackbg popup-fail"
-      style="display: none"
-    >
-      <div class="share_popupbox">
-        <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
-        <div class="share_popup_s">
-          <!-- 標題 -->
-          <div class="share_popup_header">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span>警告</span>
-            <div class="popup_close" onclick="$('#popup_SentFail').hide();">
-              <i class="fa-solid fa-x"></i>
+    <div id="popup_SentFail" class="popup_blackbg popup-fail" style="display: none;">
+        <div class="share_popupbox">
+            <!-- share_popup_s可以指定框的大小，最小s，中m，大l -->
+            <div class="share_popup_s">
+                <!-- 標題 -->
+                <div class="share_popup_header">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span>警告</span>
+                    <div class="popup_close" onclick="$('#popup_SentFail').hide();">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </div>
+                <!-- 內容 -->
+                <div class="popup_sharebox bg_white">
+                    <div class="popup_share_title text_center">查無此資料，請重新輸入。</div>
+                    <!-- 按鈕 -->
+                    <div class="btn_box ai_center jc_center">
+                        <input type="button" value="關閉" onclick="$('#popup_SentFail').hide();" class="btn_superbig br10 btn50 btn_gray">
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- 內容 -->
-          <div class="popup_sharebox bg_white">
-            <div class="popup_share_title text_center">
-              查無此資料，請重新輸入。
-            </div>
-            <!-- 按鈕 -->
-            <div class="btn_box ai_center jc_center">
-              <input
-                type="button"
-                value="關閉"
-                onclick="$('#popup_SentFail').hide();"
-                class="btn_superbig br10 btn50 btn_gray"
-              />
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- 彈出跳框_JS(所有頁面共用) -->
-    <script src="js/all.js?date=20250620"></script>
-  </body>
+    <script src="js/all.js?date=20250708"></script>
+</body>
 </html>

@@ -4236,7 +4236,7 @@ hr {
     color: #888;
     text-align: left;
 }
-.type3_text li,
+.type3_text li
 .pd_info_saying li {
     margin: 0 0 5px 0;
 }
@@ -4249,7 +4249,7 @@ hr {
 .pd_info_saying .mb30 {
     margin: 0 0 30px 0;
 }
-.type3_text .type3_title,
+.type3_text .type3_title
 .pd_info_saying .pdinfo_title {
     color: #555;
     font: normal bold 28px/30px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -4267,7 +4267,7 @@ hr {
 .pdinfo_price .pd_now_price {
     font: normal bold 30px/30px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
-.type3_text .briefly,
+.type3_text .briefly
 .pd_info_saying .briefly {
     color: #555;
     margin: 15px auto;
@@ -4277,7 +4277,7 @@ hr {
 .pdinfo_title span {
     display: block;
 }
-.type3_text .briefly span,
+.type3_text .briefly span
 .pd_info_saying .briefly span {
     display: block;
     margin: 0 0 15px 0;
@@ -5038,6 +5038,7 @@ input.btn_line:focus {
     color: #001bff;
     font: normal bold 3rem/3rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, .1);
 }
 .type6_main .type6_text {
     display: flex;
@@ -5049,6 +5050,35 @@ input.btn_line:focus {
 .type6_main .type6_text li {
     margin: 10px auto;
     font: normal bold 1.5rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.type6_text2 .briefly span {
+    display: block;
+    margin: 0 0 15px 0;
+}
+.type6_title2 span {
+    display: block;
+}
+.type6_text2 .briefly {
+    color: #555;
+    margin: 15px auto;
+    font: normal normal 16px/18px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.type6_text2 .type6_title2 {
+    color: #555;
+    font: normal bold 28px/30px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+}
+.type6_text2 .type6_title2 {
+    margin: 10px auto;
+}
+.type6_text2 li {
+    margin: 0 0 5px 0;
+}
+.type6_text2 .type6_btn {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 5;
 }
 /*********** 偷看月老簿 ************/
 .birth_chart.matchbox_set,
@@ -5512,13 +5542,18 @@ input.btn_line:focus {
     .type3_text.type3_right {
         right: 5%;
     }
-    .type3_text .type3_title,
+    .type3_text .type3_title
     .pd_info_saying .pdinfo_title {
         font: normal bold 28px/32px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
-    .type3_text .briefly,
+    .type3_text .briefly
     .pd_info_saying .briefly {
         font: normal normal 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type4_pic {
+        max-width: 680px;
+        max-height: 600px;
+        overflow: hidden;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -5551,6 +5586,13 @@ input.btn_line:focus {
     .share_main.line,
     .share_main.password {
         min-height: 752px;
+    }
+    /* Type6 類型6 */
+    .type6_text2 .type6_title2 {
+        font: normal bold 28px/32px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .briefly {
+        font: normal normal 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -6409,6 +6451,16 @@ input.btn_line:focus {
     .type6_main .type6_text li {
         margin: 5px auto;
         font: normal bold 1.2rem/1.2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .type6_title2 {
+        margin: 10px auto 0;
+        font: normal bold 24px/28px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .briefly span {
+        margin: 0 0 10px 0;
+    }
+    .type6_text2 {
+        padding: 10px;
     }
     /* 關於我們 */
     .section_title {
@@ -7323,6 +7375,11 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     /* Type6 類型6 */
+    .type6_main {
+        width: 96%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .type6_main .col_2.type6_info {
         display: flex;
         justify-content: space-between;
@@ -7331,6 +7388,14 @@ input.btn_line:focus {
     .type6_main .type6_title {
         width: 90px;
         height: 90px;
+    }
+    .share_box .col_2.type6_pic {
+        width: calc(100% - 10%);
+    }
+    .share_box .col_2.type6_text2 {
+        width: calc(100% - 3%);
+        padding: 0;
+        margin: 0 0 20px 0;
     }
     /* 會員資料 */
     .member .share_container_m,
@@ -7778,6 +7843,12 @@ input.btn_line:focus {
     .type6_main .type6_text li {
         margin: 5px auto;
         font: normal bold 1.2rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .index .type6_btn .btn_superbig {
+        padding: 5px 15px;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -8424,7 +8495,7 @@ input.btn_line:focus {
         width: 120px;
     }
     /* Type3 類型3 */
-    .type3_text .type3_title,
+    .type3_text .type3_title
     .pd_info_saying .pdinfo_title {
         margin: 0 auto;
         font: normal bold 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -8438,7 +8509,7 @@ input.btn_line:focus {
         width: 100%;
         height: 230px;
     }
-    .type3_text .briefly,
+    .type3_text .briefly
     .pd_info_saying .briefly {
         font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
@@ -8466,6 +8537,16 @@ input.btn_line:focus {
     .type6_main .type6_title {
         width: 100px;
         height: 100px;
+    }
+    .type6_text2 .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .type6_title2 {
+        margin: 0 auto;
+        font: normal bold 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .index .type6_btn .btn_superbig {
+        padding: 5px 15px;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -9267,6 +9348,16 @@ input.btn_line:focus {
     }
     .type6_main .type6_text li {
         font: normal bold 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .type6_title2 {
+        margin: 0 auto;
+        font: normal bold 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .type6_text2 .briefly {
+        font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .index .type6_btn .btn_superbig {
+        padding: 5px 15px;
     }
     /* 登入、註冊 */
     .another_login span {
