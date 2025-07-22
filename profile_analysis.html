@@ -1,271 +1,395 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
-    <meta name="mobile-web-app-capable" content="yes">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
     <!-- #####異動的資料#####(改favicon.ico圖，所以要改日期才能看到新版) -->
-    <link href="favicon.ico?date=20250721" rel="shortcut icon" type="image/x-icon">
-    <link href="css/reset.css?date=20250721" rel="stylesheet" type="text/css">
-    <link href="css/style.css?date=20250721" rel="stylesheet" type="text/css">
+    <link
+      href="favicon.ico?date=20250721"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="css/reset.css?date=20250721" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?date=20250721" rel="stylesheet" type="text/css" />
     <!-- FontAwesome CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- JQuery共用檔(有用JQuery必先讀這支) -->
-    <script src="js/jquery3.5.1.min.js?date=20250721" type="text/javascript"></script>
+    <script
+      src="js/jquery3.5.1.min.js?date=20250721"
+      type="text/javascript"
+    ></script>
     <title>千里姻緣-鴛鴦譜</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 回到頂端 -->
     <div class="go_top">
-        <img src="images/gotop_b.png?date=20250721" alt="">
+      <img src="images/gotop_b.png?date=20250721" alt="" />
     </div>
 
     <!-- 頁首_導覽列 -->
     <div class="navbarbox clear">
-        <!-- LOGO -->
-        <div class="logobox active" onclick="window.open('index.html','_self');">
-            <img src="images/logo.png?date=20250721" alt="" class="logo_img">
-        </div>
-        <!-- 選單 -->
-        <ul id="navbar_list" class="navlist">
-            <li class="nav_main">
-                <div class="list" onclick="window.open('index.html','_self');">
-                    <i class="fa-solid fa-house"></i>
-                    <span>首頁</span>
-                </div>
+      <!-- LOGO -->
+      <div class="logobox active" onclick="window.open('index.html','_self');">
+        <img src="images/logo.png?date=20250721" alt="" class="logo_img" />
+      </div>
+      <!-- 選單 -->
+      <ul id="navbar_list" class="navlist">
+        <li class="nav_main">
+          <div class="list" onclick="window.open('index.html','_self');">
+            <i class="fa-solid fa-house"></i>
+            <span>首頁</span>
+          </div>
+        </li>
+        <li
+          id="FateChart"
+          class="nav_main"
+          onclick="window.open('fate_chart.html','_self');"
+        >
+          <div class="list">
+            <i class="fa-solid fa-feather"></i>
+            <span>偷看鴛鴦簿</span>
+          </div>
+        </li>
+        <!-- 登入後才會出現 -->
+        <li id="MemberInfo" class="nav_main">
+          <div class="list">
+            <i class="fa-solid fa-address-card"></i>
+            <span>會員專區</span>
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <ul class="layerbox2" style="display: none">
+            <li class="nav_layer2">
+              <div
+                class="layer2_title"
+                onclick="window.open('member_info.html','_self');"
+              >
+                <i class="fa-solid fa-image-portrait"></i>
+                <span>個人資料</span>
+              </div>
             </li>
-            <li id="FateChart" class="nav_main" onclick="window.open('fate_chart.html','_self');">
-                <div class="list">
-                    <i class="fa-solid fa-feather"></i>
-                    <span>偷看月老簿</span>
-                </div>
+            <li class="nav_layer2">
+              <div
+                class="layer2_title"
+                onclick="window.open('password.html','_self');"
+              >
+                <i class="fa-solid fa-pen"></i>
+                <span>重設密碼</span>
+              </div>
             </li>
-            <!-- 登入後才會出現 -->
-            <li id="MemberInfo" class="nav_main">
-                <div class="list">
-                    <i class="fa-solid fa-address-card"></i>
-                    <span>會員專區</span>
-                    <i class="fa-solid fa-caret-down"></i>
-                </div>
-                <ul class="layerbox2" style="display: none;">
-                    <li class="nav_layer2">
-                        <div class="layer2_title" onclick="window.open('member_info.html','_self');">
-                            <i class="fa-solid fa-image-portrait"></i>
-                            <span>個人資料</span>
-                        </div>
-                    </li>
-                    <li class="nav_layer2">
-                        <div class="layer2_title" onclick="window.open('password.html','_self');">
-                            <i class="fa-solid fa-pen"></i>
-                            <span>重設密碼</span>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-            <!-- 登入+註冊(登出後才會出現) -->
-            <li id="Login" class="nav_main" style="display: none;">
-                <a href="#" target="_self" onclick="$('#popup_Login').show();" class="list btn_small btn_yellow">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <span>登入</span>
-                </a>
-            </li>
-            <li id="Register" class="nav_main" style="display: none;">
-                <a href="#" target="_self" onclick="$('#popup_Register').show();" class="list btn_small btn_green">
-                    <i class="fa-solid fa-user-plus"></i>
-                    <span>註冊</span>
-                </a>
-            </li>
-            <!-- 登出(登入後才會出現) -->
-            <li id="Logout" class="nav_main">
-                <a href="index.html" target="_self" class="list btn_small btn_red">
-                    <i class="fa-solid fa-power-off"></i>
-                    <span>登出</span>
-                </a>
-            </li>
-        </ul>
-        <!-- 手機版漢堡圖(不需程式控制，由CSS自行判斷螢幕寬度開啟或關閉) -->
-        <div onclick="hamburg(this)" class="hamburg">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
+          </ul>
+        </li>
+        <!-- 登入+註冊(登出後才會出現) -->
+        <li id="Login" class="nav_main" style="display: none">
+          <a
+            href="#"
+            target="_self"
+            onclick="$('#popup_Login').show();"
+            class="list btn_small btn_yellow"
+          >
+            <i class="fa-solid fa-circle-user"></i>
+            <span>登入</span>
+          </a>
+        </li>
+        <li id="Register" class="nav_main" style="display: none">
+          <a
+            href="#"
+            target="_self"
+            onclick="$('#popup_Register').show();"
+            class="list btn_small btn_green"
+          >
+            <i class="fa-solid fa-user-plus"></i>
+            <span>註冊</span>
+          </a>
+        </li>
+        <!-- 登出(登入後才會出現) -->
+        <li id="Logout" class="nav_main">
+          <a href="index.html" target="_self" class="list btn_small btn_red">
+            <i class="fa-solid fa-power-off"></i>
+            <span>登出</span>
+          </a>
+        </li>
+      </ul>
+      <!-- 手機版漢堡圖(不需程式控制，由CSS自行判斷螢幕寬度開啟或關閉) -->
+      <div onclick="hamburg(this)" class="hamburg">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </div>
 
     <!-- 頁面內容 -->
     <div class="share_main bg_05 profile_analysis">
-        <div class="share_container_m">
-            <div class="share_info">
-                <!-- 版型2 -->
-                <div class="type2_main">
-                    <!-- 標題 -->
-                    <div class="ca_header">
-                        <img src="images/others/title_line.png?date=20250721" alt="" class="ca_img">
-                    </div>
-                    <!-- #####異動的資料#####(class="ca_header"裡面新增一個 profile，方便css控制) -->
-                    <!-- 人物資料 -->
-                    <div class="ca_header profile">
-                        <div class="profile_list">
-                            <div>【歐陽韋】</div>
-                            <div>
-                                <span>女</span><img src="images/others/sex_female.png?date=20250721" alt="" class="sex_img">
-                            </div>
-                            <div>生日【1990-07-30】</div>
-                            <!-- #####異動的資料#####(原資料刪除) -->
-                            <!-- <div>出生地【嘉義】</div> -->
-                        </div>
-                        <!-- 分隔線 -->
-                        <img src="images/others/title_line_up.png?date=20250721" alt="" class="ca_img">
-                    </div>
-                    <!-- 內容 -->
-                    <div class="share_box">
-                        <div class="col_4" onclick="$('#ProfileAnalysis1').show(),$('#ProfileAnalysis2, #ProfileAnalysis3').hide();">
-                            <!-- #####新增的資料##### -->
-                            <div class="profile_icon">
-                                <div class="profile_text">伴侶磁場</div>
-                                <img src="images/others/type2_icon01.png?date=20250721" alt="" class="profile_pic">
-                            </div>
-                            <!-- #####異動的資料#####(原資料刪除) -->
-                            <!-- <img src="images/others/type2_icon01.png?date=20250721" alt="" class="share_img">
+      <div class="share_container_m">
+        <div class="share_info">
+          <!-- 版型2 -->
+          <div class="type2_main">
+            <!-- 標題 -->
+            <div class="ca_header">
+              <img
+                src="images/others/title_line.png?date=20250721"
+                alt=""
+                class="ca_img"
+              />
+            </div>
+            <!-- #####異動的資料#####(class="ca_header"裡面新增一個 profile，方便css控制) -->
+            <!-- 人物資料 -->
+            <div class="ca_header profile">
+              <div class="profile_list">
+                <div>【歐陽韋】</div>
+                <div>
+                  <span>女</span
+                  ><img
+                    src="images/others/sex_female.png?date=20250721"
+                    alt=""
+                    class="sex_img"
+                  />
+                </div>
+                <div>生日【1990-07-30】</div>
+                <!-- #####異動的資料#####(原資料刪除) -->
+                <!-- <div>出生地【嘉義】</div> -->
+              </div>
+              <!-- 分隔線 -->
+              <img
+                src="images/others/title_line_up.png?date=20250721"
+                alt=""
+                class="ca_img"
+              />
+            </div>
+            <!-- 內容 -->
+            <div class="share_box">
+              <div
+                class="col_4"
+                onclick="$('#ProfileAnalysis1').show(),$('#ProfileAnalysis2, #ProfileAnalysis3').hide();"
+              >
+                <!-- #####新增的資料##### -->
+                <div class="profile_icon">
+                  <div class="profile_text">伴侶磁場</div>
+                  <img
+                    src="images/others/type2_icon01.png?date=20250721"
+                    alt=""
+                    class="profile_pic"
+                  />
+                </div>
+                <!-- #####異動的資料#####(原資料刪除) -->
+                <!-- <img src="images/others/type2_icon01.png?date=20250721" alt="" class="share_img">
                             <ul class="share_space">
                                 <li class="share_title text_bold">選擇</li>
                             </ul> -->
-                        </div>
-                        <div class="col_4" onclick="$('#ProfileAnalysis2').show(),$('#ProfileAnalysis1, #ProfileAnalysis3').hide();">
-                            <!-- #####新增的資料##### -->
-                            <div class="profile_icon">
-                                <div class="profile_text">婚姻現象</div>
-                                <img src="images/others/type2_icon02.png?date=20250721" alt="" class="profile_pic">
-                            </div>
-                            <!-- #####異動的資料#####(原資料刪除) -->
-                            <!-- <img src="images/others/type2_icon02.png?date=20250721" alt="" class="share_img">
+              </div>
+              <div
+                class="col_4"
+                onclick="$('#ProfileAnalysis2').show(),$('#ProfileAnalysis1, #ProfileAnalysis3').hide();"
+              >
+                <!-- #####新增的資料##### -->
+                <div class="profile_icon">
+                  <div class="profile_text">婚姻現象</div>
+                  <img
+                    src="images/others/type2_icon02.png?date=20250721"
+                    alt=""
+                    class="profile_pic"
+                  />
+                </div>
+                <!-- #####異動的資料#####(原資料刪除) -->
+                <!-- <img src="images/others/type2_icon02.png?date=20250721" alt="" class="share_img">
                             <ul class="share_space">
                                 <li class="share_title text_bold">婚象</li>
                             </ul> -->
-                        </div>
-                        <div class="col_4" onclick="$('#ProfileAnalysis3').show(),$('#ProfileAnalysis1, #ProfileAnalysis2').hide();">
-                            <!-- #####新增的資料##### -->
-                            <div class="profile_icon">
-                                <div class="profile_text">桃花觸機</div>
-                                <img src="images/others/type2_icon03.png?date=20250721" alt="" class="profile_pic">
-                            </div>
-                            <!-- #####異動的資料#####(原資料刪除) -->
-                            <!-- <img src="images/others/type2_icon03.png?date=20250721" alt="" class="share_img">
+              </div>
+              <div
+                class="col_4"
+                onclick="$('#ProfileAnalysis3').show(),$('#ProfileAnalysis1, #ProfileAnalysis2').hide();"
+              >
+                <!-- #####新增的資料##### -->
+                <div class="profile_icon">
+                  <div class="profile_text">桃花觸機</div>
+                  <img
+                    src="images/others/type2_icon03.png?date=20250721"
+                    alt=""
+                    class="profile_pic"
+                  />
+                </div>
+                <!-- #####異動的資料#####(原資料刪除) -->
+                <!-- <img src="images/others/type2_icon03.png?date=20250721" alt="" class="share_img">
                             <ul class="share_space">
                                 <li class="share_title text_bold">桃花</li>
                             </ul> -->
-                        </div>
-                        <div class="col_4" onclick="window.open('matchmaking.html','_self');">
-                            <!-- #####新增的資料##### -->
-                            <div class="profile_icon">
-                                <div class="profile_text">優適配對</div>
-                                <img src="images/others/type2_icon04.png?date=20250721" alt="" class="profile_pic">
-                            </div>
-                            <!-- #####異動的資料#####(原資料刪除) -->
-                            <!-- <img src="images/others/type2_icon04.png?date=20250721" alt="" class="share_img">
+              </div>
+              <div
+                class="col_4"
+                onclick="window.open('matchmaking.html','_self');"
+              >
+                <!-- #####新增的資料##### -->
+                <div class="profile_icon">
+                  <div class="profile_text">優適配對</div>
+                  <img
+                    src="images/others/type2_icon04.png?date=20250721"
+                    alt=""
+                    class="profile_pic"
+                  />
+                </div>
+                <!-- #####異動的資料#####(原資料刪除) -->
+                <!-- <img src="images/others/type2_icon04.png?date=20250721" alt="" class="share_img">
                             <ul class="share_space">
                                 <li class="share_title text_bold">配對</li>
                             </ul> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- #####異動的資料#####(原資料刪除) -->
-                <!-- 分隔線 -->
-                <!-- <div class="ca_header">
+              </div>
+            </div>
+          </div>
+          <!-- #####異動的資料#####(原資料刪除) -->
+          <!-- 分隔線 -->
+          <!-- <div class="ca_header">
                     <img src="images/others/title_line_down.png?date=20250708" alt="" class="ca_img">
                 </div> -->
-                <!-- 伴侶磁場 -->
-                <div id="ProfileAnalysis1" class="share_tipbox bg_yellow border_lightgray personal_result" style="display: none;">
-                    <ul class="tip_content list_nostyle">
-                        <li>【女】婚姻宮數字：4</li>
-                        <li>在婚配的過程中，婚前的選擇是非常重要的。然而從每一個人的夫妻宮便可以看出配偶的特性，可以做為婚前選擇的參考依據。</li>
-                        <li>從夫妻宮可以看出「老公」是屬於具備雄心壯志和適合往外地發展的類型，也代表著他很適合在政治環境、官場或者大型機構去發展。因此，很適合從週遭環境、同學、交友或同儕去尋找這種類型的男士，從中挑選所喜歡的對象去經營這段因緣。</li>
-                        <li>婚姻宮的重點多落在人格與地格，代表個人情感表達與戀愛互動模式。人格21象徵「表面自信，內在壓抑」的情感特質，在感情初期可能較為被動，容易遇到不對等的互動模式，甚至在戀愛中扮演過度付出的一方。這樣的婚姻宮暗示需先學會愛自己，才能吸引到真正懂得珍惜的人。</li>
-                        <li>地格24為大吉，屬於「天賜之緣」，是極為難得的好婚姻配置，代表內在對愛情懷抱信念、樂觀且具備幸福體質。這表示只要願意敞開心門，婚運會逐年提升，特別容易吸引善良、包容型的對象。這是一組「內隱感性、外表堅強」的典型命格，愛情雖起步慢，但一旦建立關係，將穩定且值得信任。</li>
-                        <li>外格20與總格40雖屬凶數，但並非全然負面，反而揭示了婚姻中的成長課題：如何處理孤獨感、如何在婚姻中保有自我。這代表在婚姻生活中，容易因太在意對方而忽略自己，或在人群中感覺孤單。因此建議在婚姻中保留自我空間，維持身心獨立感，才能讓關係更長久。</li>
-                        <li>總結而言，婚姻宮屬於潛力型幸福格局，愛情的發展需要時間與緣份成熟，不屬於閃婚型或速配戀情。適合與重視心靈連結、願意溝通的對象發展長期伴侶關係，並在婚姻中共同學習與成長。若能善用地格的吉氣，未來婚姻將有很高機率步入穩定幸福的方向。</li>
-                        <li>交往過程中多留意，若發現對方有不良習慣者，如酗酒、染毒、好賭或有暴力傾向，便不適合發展戀情，以免讓你的人生變調。</li>
-                    </ul>
+          <!-- 伴侶磁場 -->
+          <div
+            id="ProfileAnalysis1"
+            class="share_tipbox bg_yellow border_lightgray personal_result"
+            style="display: none"
+          >
+            <ul class="tip_content list_nostyle">
+              <li>【女】婚姻宮數字：4</li>
+              <li>
+                在婚配的過程中，婚前的選擇是非常重要的。然而從每一個人的夫妻宮便可以看出配偶的特性，可以做為婚前選擇的參考依據。
+              </li>
+              <li>
+                從夫妻宮可以看出「老公」是屬於具備雄心壯志和適合往外地發展的類型，也代表著他很適合在政治環境、官場或者大型機構去發展。因此，很適合從週遭環境、同學、交友或同儕去尋找這種類型的男士，從中挑選所喜歡的對象去經營這段因緣。
+              </li>
+              <li>
+                婚姻宮的重點多落在人格與地格，代表個人情感表達與戀愛互動模式。人格21象徵「表面自信，內在壓抑」的情感特質，在感情初期可能較為被動，容易遇到不對等的互動模式，甚至在戀愛中扮演過度付出的一方。這樣的婚姻宮暗示需先學會愛自己，才能吸引到真正懂得珍惜的人。
+              </li>
+              <li>
+                地格24為大吉，屬於「天賜之緣」，是極為難得的好婚姻配置，代表內在對愛情懷抱信念、樂觀且具備幸福體質。這表示只要願意敞開心門，婚運會逐年提升，特別容易吸引善良、包容型的對象。這是一組「內隱感性、外表堅強」的典型命格，愛情雖起步慢，但一旦建立關係，將穩定且值得信任。
+              </li>
+              <li>
+                外格20與總格40雖屬凶數，但並非全然負面，反而揭示了婚姻中的成長課題：如何處理孤獨感、如何在婚姻中保有自我。這代表在婚姻生活中，容易因太在意對方而忽略自己，或在人群中感覺孤單。因此建議在婚姻中保留自我空間，維持身心獨立感，才能讓關係更長久。
+              </li>
+              <li>
+                總結而言，婚姻宮屬於潛力型幸福格局，愛情的發展需要時間與緣份成熟，不屬於閃婚型或速配戀情。適合與重視心靈連結、願意溝通的對象發展長期伴侶關係，並在婚姻中共同學習與成長。若能善用地格的吉氣，未來婚姻將有很高機率步入穩定幸福的方向。
+              </li>
+              <li>
+                交往過程中多留意，若發現對方有不良習慣者，如酗酒、染毒、好賭或有暴力傾向，便不適合發展戀情，以免讓你的人生變調。
+              </li>
+            </ul>
+          </div>
+          <!-- 婚姻現象 -->
+          <div
+            id="ProfileAnalysis2"
+            class="share_tipbox bg_green border_lightgray personal_result"
+            style="display: none"
+          >
+            <ul class="tip_content list_nostyle">
+              <li>
+                你的婚象是屬於波折型的，意味著要進入婚姻階段或者在婚姻的過程中會碰到特殊狀況或阻礙，這種阻礙來自於你不同於傳統的想法與看法。譬如:「老少配」、「姐弟戀」等等，因年齡的差距而導致婚姻有所波折。
+              </li>
+              <li>
+                如果婚姻的結合是屬於夫妻年齡有點差距，搭配組合是「老夫少妻」或「姐弟戀」的情況，夫妻緣將可延續長久；另一種情況是夫妻彼此是事業夥伴或搭擋，或是擁有相同的工作理念，這樣的緣份也能延續長久。
+              </li>
+              <li>
+                從姓名五格來看，影響婚象的重點在於人格21與地格24。人格21為孤剋數，代表在感情中容易遭遇內外落差，例如內心渴望被理解與陪伴，但現實中卻常處於付出多、回應少的關係中。這種格局的女性在戀愛關係中常常以理性為表，實則情感豐富，擁有強烈的情緒共鳴能力。你很難對感情敷衍，若非真心投入，便寧可單身。
+              </li>
+              <li>
+                對地，地格24為極佳婚姻數，被稱為「柔順吉祥格」，代表內心向往和諧、重視家庭情感，並具備將婚姻經營得有聲有色的能力。這組數字展現的婚象是一位懂得照顧對方情緒、願意陪伴成長的理想伴侶。然而，這樣的婚象也意味著對方若無法給予相同回應，便容易形成內在失衡，導致情緒疲乏或產生逃避傾向。
+              </li>
+              <li>
+                姓名中外格20與總格40皆為凶數，這樣的組合呈現一種「愛在心中口難開」的婚姻樣態。你可能在關係中習慣默默承受、或對於情感表達有遲疑與保留。在婚姻中，這樣的特質容易讓另一半感覺距離感加深，久而久之形成溝通不良。婚象提醒：「傾聽固然重要，但適時表達更能維繫愛的流動。」
+              </li>
+              <li>
+                此外，名字整體結構偏向柔性，婚姻圖像偏向靜水流深、質樸純粹型，不屬於戲劇化或快速燃燒的戀情，而是慢慢相處後自然產生信任與依賴的關係。適合與性格溫和、有同理心與長期目標的對象發展婚姻。
+              </li>
+              <li>
+                整體而言，你的婚象透露出一段需要細水長流經營的婚姻旅程。你不急於將就，更不願將愛交付在膚淺的關係中。當遇到真正願意傾聽、理解、願意並肩走過風雨的伴侶時，這段婚姻便將轉化為充滿安全感與深層連結的關係，成就穩定且值得信賴的愛情生活。
+              </li>
+            </ul>
+          </div>
+          <!-- 桃花觸機 -->
+          <div
+            id="ProfileAnalysis3"
+            class="share_tipbox bg_pink border_lightgray personal_result"
+            style="display: none"
+          >
+            <!-- #####新增的資料##### -->
+            <!-- 居住地 -->
+            <div class="ca_header live_place">
+              <div class="profile_list">
+                <div class="col_title text_left">
+                  <span>居住地</span>
                 </div>
-                <!-- 婚姻現象 -->
-                <div id="ProfileAnalysis2" class="share_tipbox bg_green border_lightgray personal_result" style="display: none;">
-                    <ul class="tip_content list_nostyle">
-                        <li>你的婚象是屬於波折型的，意味著要進入婚姻階段或者在婚姻的過程中會碰到特殊狀況或阻礙，這種阻礙來自於你不同於傳統的想法與看法。譬如:「老少配」、「姐弟戀」等等，因年齡的差距而導致婚姻有所波折。</li>
-                        <li>如果婚姻的結合是屬於夫妻年齡有點差距，搭配組合是「老夫少妻」或「姐弟戀」的情況，夫妻緣將可延續長久；另一種情況是夫妻彼此是事業夥伴或搭擋，或是擁有相同的工作理念，這樣的緣份也能延續長久。</li>
-                        <li>從姓名五格來看，影響婚象的重點在於人格21與地格24。人格21為孤剋數，代表在感情中容易遭遇內外落差，例如內心渴望被理解與陪伴，但現實中卻常處於付出多、回應少的關係中。這種格局的女性在戀愛關係中常常以理性為表，實則情感豐富，擁有強烈的情緒共鳴能力。你很難對感情敷衍，若非真心投入，便寧可單身。</li>
-                        <li>對地，地格24為極佳婚姻數，被稱為「柔順吉祥格」，代表內心向往和諧、重視家庭情感，並具備將婚姻經營得有聲有色的能力。這組數字展現的婚象是一位懂得照顧對方情緒、願意陪伴成長的理想伴侶。然而，這樣的婚象也意味著對方若無法給予相同回應，便容易形成內在失衡，導致情緒疲乏或產生逃避傾向。</li>
-                        <li>姓名中外格20與總格40皆為凶數，這樣的組合呈現一種「愛在心中口難開」的婚姻樣態。你可能在關係中習慣默默承受、或對於情感表達有遲疑與保留。在婚姻中，這樣的特質容易讓另一半感覺距離感加深，久而久之形成溝通不良。婚象提醒：「傾聽固然重要，但適時表達更能維繫愛的流動。」</li>
-                        <li>此外，名字整體結構偏向柔性，婚姻圖像偏向靜水流深、質樸純粹型，不屬於戲劇化或快速燃燒的戀情，而是慢慢相處後自然產生信任與依賴的關係。適合與性格溫和、有同理心與長期目標的對象發展婚姻。</li>
-                        <li>整體而言，你的婚象透露出一段需要細水長流經營的婚姻旅程。你不急於將就，更不願將愛交付在膚淺的關係中。當遇到真正願意傾聽、理解、願意並肩走過風雨的伴侶時，這段婚姻便將轉化為充滿安全感與深層連結的關係，成就穩定且值得信賴的愛情生活。</li>
-                    </ul>
+                <div class="col_item flex jc_bt">
+                  <select class="select100">
+                    <option value="">請選擇</option>
+                    <option value="">台灣</option>
+                    <option value="">中國</option>
+                    <option value="">香港</option>
+                    <option value="">澳門</option>
+                    <option value="">日本</option>
+                    <option value="">新加坡</option>
+                    <option value="">越南</option>
+                  </select>
                 </div>
-                <!-- 桃花觸機 -->
-                <div id="ProfileAnalysis3" class="share_tipbox bg_pink border_lightgray personal_result" style="display: none;">
-                    <!-- #####新增的資料##### -->
-                    <!-- 居住地 -->
-                    <div class="ca_header live_place">
-                        <div class="profile_list">
-                            <div class="col_title text_left">
-                                <span>居住地</span>
-                            </div>
-                            <div class="col_item flex jc_bt">
-                                <select class="select100">
-                                    <option value="">請選擇</option>
-                                    <option value="">台灣</option>
-                                    <option value="">中國</option>
-                                    <option value="">香港</option>
-                                    <option value="">澳門</option>
-                                    <option value="">日本</option>
-                                    <option value="">新加坡</option>
-                                    <option value="">越南</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="tip_content list_nostyle">
-                        <li>＊＊＊＊＊【外在桃花氣場】＊＊＊＊＊</li>
-                        <li>從姓名學的角度來看，簡潔俐落，字義沉穩而不失動感，蘊含著強烈的個人魅力與戀愛主導力。五格數理中，外格與地格皆為大吉之數，代表與生俱來的吸引力與人際光環，是標準的桃花能量格局。</li>
-                        <li>在性格層面，理性、自信與果斷，對於感情表達不羞澀、願意主動靠近心儀對象；同時也顯示出偏好明確、乾脆的感情關係，不喜歡曖昧拉扯或模糊不清的情境。這樣的特質常讓你在戀愛關係中自然處於主導位置，吸引依賴型或欣賞型對象靠近。</li>
-                        <li>地格與外格同是「春風得意格」，具備出色的表達力、親和力與高人氣，常在人群中散發光芒，屬於異性緣極佳、戀愛運強勁的類型。這樣的格局也象徵容易在職場、人際活動中邂逅桃花，屬於「越忙越有愛情運」的配置，戀情往往伴隨事業發展同步進行。</li>
-                        <li>總格為17畫，屬於希望數，代表成長性與未來運穩定，顯示其感情觀將隨年齡歷練而更加成熟，從熱烈追求轉為尋找真正能共同前行的人生伴侶。此格也代表戀愛觀中帶有目標導向與遠見，戀情若要長久發展，需建立在互相支持與共同成長的基礎上。</li>
-                        <li>整體而言，「王一博」這個名字展現出強烈的個人魅力與戀愛行動力。桃花運旺，感情表現主動、明快，特別適合在熱鬧或有目標性的環境中觸發緣分。不過，熱情來得快、也可能散得快，需謹慎篩選對象，避免落入短暫熱戀後的冷淡局面。若能以穩定、理解為基礎來經營感情，將更容易遇見值得託付終身的良緣。</li>
-                    </ul>
-                </div>
-                <!-- 廢話 -->
-                <!-- <h4 class="point_text">婚前重於選擇，婚後重於經營</h4> -->
+              </div>
             </div>
+            <ul class="tip_content list_nostyle">
+              <li>＊＊＊＊＊【外在桃花氣場】＊＊＊＊＊</li>
+              <li>
+                從姓名學的角度來看，簡潔俐落，字義沉穩而不失動感，蘊含著強烈的個人魅力與戀愛主導力。五格數理中，外格與地格皆為大吉之數，代表與生俱來的吸引力與人際光環，是標準的桃花能量格局。
+              </li>
+              <li>
+                在性格層面，理性、自信與果斷，對於感情表達不羞澀、願意主動靠近心儀對象；同時也顯示出偏好明確、乾脆的感情關係，不喜歡曖昧拉扯或模糊不清的情境。這樣的特質常讓你在戀愛關係中自然處於主導位置，吸引依賴型或欣賞型對象靠近。
+              </li>
+              <li>
+                地格與外格同是「春風得意格」，具備出色的表達力、親和力與高人氣，常在人群中散發光芒，屬於異性緣極佳、戀愛運強勁的類型。這樣的格局也象徵容易在職場、人際活動中邂逅桃花，屬於「越忙越有愛情運」的配置，戀情往往伴隨事業發展同步進行。
+              </li>
+              <li>
+                總格為17畫，屬於希望數，代表成長性與未來運穩定，顯示其感情觀將隨年齡歷練而更加成熟，從熱烈追求轉為尋找真正能共同前行的人生伴侶。此格也代表戀愛觀中帶有目標導向與遠見，戀情若要長久發展，需建立在互相支持與共同成長的基礎上。
+              </li>
+              <li>
+                整體而言，「王一博」這個名字展現出強烈的個人魅力與戀愛行動力。桃花運旺，感情表現主動、明快，特別適合在熱鬧或有目標性的環境中觸發緣分。不過，熱情來得快、也可能散得快，需謹慎篩選對象，避免落入短暫熱戀後的冷淡局面。若能以穩定、理解為基礎來經營感情，將更容易遇見值得託付終身的良緣。
+              </li>
+            </ul>
+          </div>
+          <!-- 廢話 -->
+          <!-- <h4 class="point_text">婚前重於選擇，婚後重於經營</h4> -->
         </div>
+      </div>
     </div>
 
     <!-- 頁尾 -->
     <footer class="footer">
-        <div class="footer_copyright text_center">
-            <div class="share_container_m">Copyright © 2025 千里姻緣 版權所有</div>
-        </div>
+      <div class="footer_copyright text_center">
+        <div class="share_container_m">Copyright © 2025 千里姻緣 版權所有</div>
+      </div>
     </footer>
 
     <!-- 手機版_頁尾 -->
     <div class="mobile_footer">
-        <a href="index.html" target="_self" class="link_list">
-            <i class="fa-solid fa-house"></i>
-            <div>首頁</div>
-        </a>
-        <a href="fate_chart.html" target="_self" class="link_list">
-            <i class="fa-solid fa-hand-holding-heart"></i>
-            <div>偷看月老簿</div>
-        </a>
-        <a href="member_info.html" target="_self" class="link_list">
-            <i class="fa-solid fa-user"></i>
-            <div>會員專區</div>
-        </a>
+      <a href="index.html" target="_self" class="link_list">
+        <i class="fa-solid fa-house"></i>
+        <div>首頁</div>
+      </a>
+      <a href="fate_chart.html" target="_self" class="link_list">
+        <i class="fa-solid fa-hand-holding-heart"></i>
+        <div>偷看鴛鴦簿</div>
+      </a>
+      <a href="member_info.html" target="_self" class="link_list">
+        <i class="fa-solid fa-user"></i>
+        <div>會員專區</div>
+      </a>
     </div>
 
     <!--浮動客服(視窗右下角常駐按鈕)-->
     <div class="btn_chat">
-        <img src="images/index/service.png?date=20250721" alt="客服">
+      <img src="images/index/service.png?date=20250721" alt="客服" />
     </div>
 
     <!-- 彈出跳框_JS(所有頁面共用) -->
     <script src="js/all.js?date=20250721"></script>
-</body>
+  </body>
 </html>
