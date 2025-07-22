@@ -4791,7 +4791,7 @@ input.btn_line:focus {
     text-align: center;
     z-index: 5;
 }
-/*********** 偷看月老簿 ************/
+/*********** 偷看鴛鴦簿 ************/
 .birth_chart.matchbox_set,
 .search_databox {
     align-items: stretch; /* 讓子項目等高 */
@@ -4890,7 +4890,7 @@ input.btn_line:focus {
     color: #2e7c80;
     font: italic bold 1.3rem/1.6rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
-/* 偷看月老簿(影片) */
+/* 偷看鴛鴦簿(影片) */
 .video-overlay {
     display: none; /* 預設隱藏 */
     position: fixed; /* 使用 Flexbox 來將內部元素置中 */
@@ -4956,9 +4956,9 @@ input.btn_line:focus {
     justify-content: center;
     width: calc(100% - 20px);
     padding: 10px;
-    margin: 0 0 10px 0;
-    background: #f8f3e5;
+    margin: 0 auto 10px;
     font: normal bold 1.3rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    background: #f8f3e5;
     border: 3px double #cca4a4;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -5217,7 +5217,7 @@ input.btn_line:focus {
     .share_main.profile_analysis {
         min-height: 700px;
     }
-    /* 偷看月老簿 */
+    /* 偷看鴛鴦簿 */
     .match_left,
     .match_right,
     .match_info {
@@ -5532,7 +5532,7 @@ input.btn_line:focus {
     .cart_tb_pic img {
         height: 80px;
     }
-    /* 偷看月老簿 */
+    /* 偷看鴛鴦簿 */
     .matchmaking .col_title {
         width: 98%;
         margin: 0 0 5px 0;
@@ -6310,6 +6310,7 @@ input.btn_line:focus {
         background-size: 150% auto;
     }
     .profile_list {
+        width: 90%;
         padding: 5px;
         font: normal bold 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
@@ -6333,9 +6334,9 @@ input.btn_line:focus {
         text-shadow: -1px -1px 2px rgba(0, 0, 0, .2), 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px rgba(0, 0, 0, .4), 0 3px 2px rgba(0, 0, 0, .3), 0 4px 2px rgba(0, 0, 0, .2), 0 5px 2px rgba(0, 0, 0, .1);
     }
     .sex_img {
-        width: 25px;
+        width: 18px;
     }
-    /* 偷看月老簿 */
+    /* 偷看鴛鴦簿 */
     .match_left,
     .match_center,
     .match_right,
@@ -6671,7 +6672,7 @@ input.btn_line:focus {
     }
     /* 鴛鴦譜 */
     .profile_list {
-        padding: 10px;
+        width: 80%;
         font: normal bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .point_text {
@@ -6807,7 +6808,7 @@ input.btn_line:focus {
         background-size: 160% auto;
     }
     .profile_list {
-        padding: 10px;
+        width: 80%;
         font: normal bold 1.1rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 配對數字關係 */
@@ -7126,7 +7127,10 @@ input.btn_line:focus {
     }
     /* 鴛鴦譜 */
     .share_main.profile_analysis {
-        background-size: 200% auto;
+        background-size: 150% auto;
+    }
+    .ca_header.profile {
+        margin: 90px auto 0;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
@@ -7608,7 +7612,10 @@ input.btn_line:focus {
     }
     /* 鴛鴦譜 */
     .share_main.profile_analysis {
-        background-size: 200% auto;
+        background-size: 160% auto;
+    }
+    .ca_header.profile {
+        margin: 90px auto 0;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
@@ -7619,6 +7626,9 @@ input.btn_line:focus {
     }
     .profile_text {
         font: italic normal 1.4rem/1.6rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .sex_img {
+        width: 18px;
     }
     /* 配對數字關係 */
     .match_number .num_tbbox {
@@ -8315,17 +8325,26 @@ input.btn_line:focus {
     }
     /* 鴛鴦譜 */
     .share_main.profile_analysis {
-        background-size: 220% auto;
+        background-size: 150% auto;
+    }
+    .ca_header.profile {
+        margin: 70px auto 0;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
         width: calc(100% - 15%);
     }
-    .profile_text {
-        font: italic normal 1.1rem/1.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    .profile_list {
+        font: normal bold 15px/18px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .profile_list .col_title {
         width: 25%;
+    }
+    .profile_text {
+        font: italic normal 1.1rem/1.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .sex_img {
+        width: 16px;
     }
     /* 看姻緣 */
     .ca_header .ca_title {
@@ -9150,23 +9169,28 @@ input.btn_line:focus {
         padding: 0;
     }
     .share_main.profile_analysis {
-        background-size: 200% auto;
+        background-size: 130% auto;
+    }
+    .ca_header.profile {
+        margin: 40px auto 0;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
         width: calc(100% - 15%);
     }
+    .profile_list {
+        flex-direction: column;
+        width: 80%;
+        font: normal bold 14px/16px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     .profile_list .col_title {
         width: 28%;
-    }
-    .profile_list {
-        font: normal bold 15px/18px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .profile_text {
         font: italic normal 1rem/1.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .sex_img {
-        width: 20px;
+        width: 15px;
     }
     /* 看姻緣 */
     .love_fate_set input.btn50,
@@ -9348,9 +9372,6 @@ input.btn_line:focus {
         border-right: 0;
     }
     /* 鴛鴦譜 */
-    .profile_list {
-        flex-direction: column;
-    }
     .profile_text {
         font: italic normal 14px/16px "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
