@@ -382,8 +382,6 @@ a.btn_small {
     font: normal normal .9rem/1.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
 }
 input.btn_big,
@@ -409,10 +407,6 @@ input[type="submit"]:hover,
 input[type="submit"]:active,
 input[type="submit"]:focus,
 input[type="submit"].selected {
-    -webkit-transition: opacity .3s ease;
-    -moz-transition: opacity .3s ease;
-    -ms-transition: opacity .3s ease;
-    -o-transition: opacity .3s ease;
     transition: opacity .3s ease;
 }
 input.btn_yellow,
@@ -610,22 +604,16 @@ a.btn_white.selected {
 .br5 {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
 }
 .br10 {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .br20 {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
     border-radius: 20px;
 }
 .br30 {
@@ -638,22 +626,16 @@ a.btn_white.selected {
 .br40 {
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
     border-radius: 40px;
 }
 .br50 {
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
 }
 .br-circle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
 }
 /*********** 共用元件(表格) ***********/
@@ -669,7 +651,6 @@ a.btn_white.selected {
 .fixed_table {
     table-layout: fixed; /*首列永遠固定於上*/
     font: normal normal 16px/18px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    /* background-color: #fff; */
     border: 1px solid #ddd;
     overflow: auto;
 }
@@ -836,7 +817,6 @@ table.bg_grayblue th {
 .share_div_tb {
     position: relative;
     width: 100%;
-    /* min-height: 100px; */
     margin: 10px auto 20px;
     text-align: left;
     font: normal normal 15px/17px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -931,10 +911,6 @@ table.bg_grayblue th {
     margin: 0 0 5px 0;
     font: normal normal 14px/16px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     text-decoration: none;
-    -webkit-transition: color .3s ease;
-    -moz-transition: color .3s ease;
-    -ms-transition: color .3s ease;
-    -o-transition: color .3s ease;
     transition: color .3s ease;
 }
 .tb_item_list input.btn_small {
@@ -947,7 +923,6 @@ table.bg_grayblue th {
     list-style: disc;
     padding: 0 0 0 20px;
     margin: 0 0 5px 0;
-    /* background: #fff; */
 }
 .tb_item_subs li {
     width: 97%;
@@ -956,7 +931,6 @@ table.bg_grayblue th {
     color: #777;
     text-align: left;
     font: normal normal 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    /* background: #fff; */
     border-bottom: 0;
 }
 .tb_item_money {
@@ -981,8 +955,6 @@ table.bg_grayblue th {
     font: normal bold 14px/13px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
     vertical-align: top;
     cursor: pointer;
@@ -1437,8 +1409,6 @@ br {
     word-break: break-word;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
     border-radius: 3px;
     vertical-align: middle;
 }
@@ -1460,28 +1430,8 @@ input[type="email"] {
     font: normal normal 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
 }
-/* input.input20,
-input.input33,
-input.input50,
-input.input100,
-select.select33,
-select.select50,
-select.select100 {
-    display: flex;
-    flex-direction: row;
-    width: calc(100% - 12px);
-    padding: 5px;
-    color: #555;
-    font: normal normal 1rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    vertical-align: middle;
-    cursor: pointer;
-} */
 input.no_width,
 input.input_no_width,
 select.no_width,
@@ -1687,12 +1637,8 @@ select.no_width {
     margin: 0 auto 10px;
     padding: 10px 20px;
     text-align: left;
-    /* background: #f5f5f5;
-    border: 3px dotted #d9d9d9; */
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .share_caption {
@@ -1703,11 +1649,6 @@ select.no_width {
     color: #555;
     text-align: left;
     font: normal bold 1.1rem/1.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    /* background: #57c1b2;
-    background: -moz-linear-gradient(left,  #57c1b2 25%, #c4f9f2 50%, #fff 100%);
-    background: -webkit-linear-gradient(left,  #57c1b2 25%,#c4f9f2 50%,#fff 100%);
-    background: linear-gradient(to right,  #57c1b2 25%,#c4f9f2 50%,#fff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57c1b2', endColorstr='#fff',GradientType=1 ); */
     border-bottom: 3px solid #777;
     vertical-align: middle;
 }
@@ -1859,15 +1800,11 @@ input.calendar:disabled {
 .ic_dayset tr:last-child>td:first-child {
     -webkit-border-radius: 0 0 0 5px;
     -moz-border-radius: 0 0 0 5px;
-    -ms-border-radius: 0 0 0 5px;
-    -o-border-radius: 0 0 0 5px;
     border-radius: 0 0 0 5px;
 }
 .ic_dayset tr:last-child>td:last-child {
     -webkit-border-radius: 0 0 5px 0;
     -moz-border-radius: 0 0 5px 0;
-    -ms-border-radius: 0 0 5px 0;
-    -o-border-radius: 0 0 5px 0;
     border-radius: 0 0 5px 0;
 }
 .ic_weekset td {
@@ -1986,7 +1923,6 @@ input.calendar:disabled {
     margin: 0 5px;
     padding: 10px 0;
     text-align: left;
-    /* background-color: #fff; */
 }
 /* 隱藏選取的radio(圓點) */
 .panel_control {
@@ -2001,26 +1937,11 @@ input.calendar:disabled {
     padding: 10px;
     margin: 0;
     text-align: center;
-    /* background-color: #ddd;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    -ms-border-radius: 5px 5px 0 0;
-    -o-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0; */
 }
 /* 頁籤內容 */
 .tabs_container {
     margin: 0 auto;
     padding: 20px;
-    /* border-top: 2px solid #777;
-    background: #fff;
-    -webkit-border-radius: 0 5px 5px 5px;
-    -moz-border-radius: 0 5px 5px 5px;
-    -ms-border-radius: 0 5px 5px 5px;
-    -o-border-radius: 0 5px 5px 5px;
-    border-radius: 0 5px 5px 5px; */
 }
 .tabs_panel {
     display: none;
@@ -2029,10 +1950,6 @@ input.calendar:disabled {
     font: normal normal 16px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     word-break: break-all;
 }
-/* 隱藏頁籤內容 */
-/* .pdtab_content {
-    display: none;
-} */
 /* 選取頁籤標題的效果 */
 #pdtab_radio1:checked~.tab_wrap [for="pdtab_radio1"],
 #pdtab_radio2:checked~.tab_wrap [for="pdtab_radio2"],
@@ -2128,7 +2045,6 @@ input.calendar:disabled {
     width: calc(100% - 40px);
     margin: 10px 0;
     padding: 20px;
-    /* border: 1px solid #ececec; */
 }
 .mb_info .share_info,
 .password .share_info {
@@ -2159,8 +2075,6 @@ input.calendar:disabled {
     font: normal bold 18px/20px "Century Gothic", Arial, "Microsoft JhengHei", PMingLiU, sans-serif;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
     vertical-align: middle;
     cursor: pointer;
@@ -2188,8 +2102,6 @@ input.calendar:disabled {
     border-top: 5px solid #f38844;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .tabs_panel {
@@ -2214,8 +2126,6 @@ input.calendar:disabled {
     background: #f0ebd9;
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
-    -ms-border-radius: 10px 10px 0 0;
-    -o-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
     cursor: pointer;
 }
@@ -2231,8 +2141,6 @@ input.calendar:disabled {
     border: 2px solid #e2d1c8;
     -webkit-border-radius: 0 0 10px 10px;
     -moz-border-radius: 0 0 10px 10px;
-    -ms-border-radius: 0 0 10px 10px;
-    -o-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
 }
 /* 隱藏頁籤內容 */
@@ -2303,8 +2211,6 @@ input.calendar:disabled {
     padding: 1rem;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .share_tipbox .tip_title {
@@ -2363,15 +2269,7 @@ i.fa-eye-slash {
 .reflash i:hover,
 .reflash i:active,
 .reflash i:focus {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg);
-    -webkit-transition: transform 1s linear;
-    -moz-transition: transform 1s linear;
-    -ms-transition: transform 1s linear;
-    -o-transition: transform 1s linear;
     transition: transform 1s linear;
 }
 /*********** 共用元件(頁碼) ***********/
@@ -2390,17 +2288,11 @@ i.fa-eye-slash {
     padding: 8px 12px;
     text-align: center;
     color: #888;
+    font: normal bold 16px/15px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     border: 1px solid #ddd;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
-    font: normal bold 16px/15px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    -webkit-transition: background-color .3s;
-    -moz-transition: background-color .3s;
-    -ms-transition: background-color .3s;
-    -o-transition: background-color .3s;
     transition: background-color .3s;
     text-decoration: none;
 }
@@ -2466,10 +2358,6 @@ i.fa-eye-slash {
     height: 6px;
     border-top: 1px solid #888;
     border-right: 1px solid #888;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 .sort {
@@ -2523,8 +2411,6 @@ i.fa-eye-slash {
     border: 1px solid #ccc;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
@@ -2597,23 +2483,13 @@ hr {
     background-color: #fff;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
-    -webkit-transition: transform .4s;
-    -moz-transition: transform .4s;
-    -ms-transition: transform .4s;
-    -o-transition: transform .4s;
     transition: transform .4s;
     cursor: pointer;
 }
 .popup_close:hover,
 .popup_close:active,
 .popup_close:focus {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 .share_popupbox {
@@ -2705,8 +2581,6 @@ hr {
     background-color: #eaeaea;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
 }
 /********* 註冊 ***********/
@@ -2820,7 +2694,7 @@ hr {
 .pagecm_title {
     margin: 0 0 1rem 0;
     font: normal bold 2.2rem/2.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    text-shadow: 0 0 5px rgba(0, 0, 0, .8);
 }
 .pagecm_item,
 .pagecm_item p {
@@ -2853,13 +2727,11 @@ hr {
 }
 .videocm_box {
     position: absolute;
+    right: 50%;
     bottom: 10%;
+    width: 80%;
     text-align: center;
-    -webkit-transform: translateX(55%); /* 文字置中 */
-    -moz-transform: translateX(55%);
-    -ms-transform: translateX(55%);
-    -o-transform: translateX(55%);
-    transform: translateX(55%);
+    transform: translateX(50%); /* 文字置中 */
     z-index: 1; /* 確保文字在影片上方 */
 }
 /* 文字設定 */
@@ -2867,14 +2739,17 @@ hr {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    width: 100%;
     margin: 0 auto;
 }
 .videocm_title span {
+    margin: 0 3px;
+    letter-spacing: 2px;
     font: italic normal 7rem/7rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, .7);
 }
 .videocm_title > span.text_red {
-    font: italic bold 10rem/10rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    font: italic bold 10rem/10rem "PMingLiU", sans-serif;
 }
 .videocm_video {
     position: absolute;
@@ -2943,8 +2818,6 @@ hr {
     padding: 2px 3px 3px 6px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
 }
 .search_box .btn_search {
@@ -2958,8 +2831,6 @@ hr {
     border: 0;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -3002,10 +2873,6 @@ hr {
     -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
     -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .2);
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
     transition: all .2s linear;
 }
 .sticky+.page_content {
@@ -3020,8 +2887,6 @@ hr {
     background: #fff;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
     border-radius: 7px;
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .2);
@@ -3055,10 +2920,6 @@ hr {
 .nav_layer3:active,
 .nav_layer3:focus {
     background: #ffd8b0;
-    -webkit-transition: all .3s linear;
-    -moz-transition: all .3s linear;
-    -ms-transition: all .3s linear;
-    -o-transition: all .3s linear;
     transition: all .3s linear;
 }
 .layerbox2 i,
@@ -3097,13 +2958,7 @@ hr {
     background-color: #000;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
-    -webkit-transition: .4s;
-    -moz-transition: .4s;
-    -ms-transition: .4s;
-    -o-transition: .4s;
     transition: .4s;
 }
 .menu {
@@ -3140,8 +2995,6 @@ hr {
     background: #f00;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
@@ -3157,10 +3010,6 @@ hr {
     margin: 6px 0;
 }
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-5px, 5px);
-    -moz-transform: rotate(-45deg) translate(-5px, 5px);
-    -ms-transform: rotate(-45deg) translate(-5px, 5px);
-    -o-transform: rotate(-45deg) translate(-5px, 5px);
     transform: rotate(-45deg) translate(-5px, 5px);
 }
 .change .bar2 {
@@ -3169,10 +3018,6 @@ hr {
     opacity: 0;
 }
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    -moz-transform: rotate(45deg) translate(-8px, -8px);
-    -ms-transform: rotate(45deg) translate(-8px, -8px);
-    -o-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
 /* 輪播圖 */
@@ -3188,8 +3033,6 @@ hr {
     background: rgba(255, 255, 255, .5);
     -webkit-border-radius: 5px;
     -moz-border-radius: .5rem;
-    -ms-border-radius: .5rem;
-    -o-border-radius: .5rem;
     border-radius: .5rem;
 }
 .cm_title {
@@ -3229,10 +3072,6 @@ hr {
     top: 50%;
     right: 0;
     left: 0;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 4;
 }
@@ -3264,9 +3103,6 @@ hr {
     width: 20%;
     font-size: 1.2rem;
 }
-/* .layer2_title span {
-    margin-left: 5px;
-} */
 .nav_flag {
     width: 30px;
 }
@@ -3331,14 +3167,8 @@ hr {
     text-align: center;
     background-color: #ff4c4c;
     border: 2px solid #fff;
-    /* -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
-    -ms-box-shadow: 0 0 3px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 3px rgba(0, 0, 0, .5); */
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
     cursor: pointer;
     z-index: 15;
@@ -3370,10 +3200,6 @@ hr {
     width: 200px;
     height: 1px;
     background: #aaa;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 .share_header:after {
@@ -3381,10 +3207,6 @@ hr {
     width: 15px;
     height: 15px;
     background: #ffc100;
-    -webkit-transform: rotate(45deg) translate(-50%, -50%);
-    -moz-transform: rotate(45deg) translate(-50%, -50%);
-    -ms-transform: rotate(45deg) translate(-50%, -50%);
-    -o-transform: rotate(45deg) translate(-50%, -50%);
     transform: rotate(45deg) translate(-50%, -50%);
 }
 .share_title,
@@ -3515,53 +3337,6 @@ hr {
 .sb_text {
     font: normal normal 24px/30px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
 }
-/*********** 標題 ***********/
-/* .page_title {
-    position: relative;
-    margin: 1rem auto 2rem;
-    padding: 0 0 5px 15px;
-    letter-spacing: 2px;
-    font: normal bold 26px/30px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    z-index: 2;
-}
-.page_title .sen_title {
-    display: inline-block;
-    vertical-align: middle;
-}
-.page_title:before,
-.page_title:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    z-index: 9;
-}
-.page_title:before {
-    width: 200px;
-    height: 3px;
-    background: #ff9c7c;
-    bottom: 0;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-.page_title:after {
-    height: 15px;
-    width: 15px;
-    background: #777;
-    bottom: -11px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: rotate(45deg) translateX(-50%);
-    -moz-transform: rotate(45deg) translateX(-50%);
-    -ms-transform: rotate(45deg) translateX(-50%);
-    -o-transform: rotate(45deg) translateX(-50%);
-    transform: rotate(45deg) translateX(-50%);
-} */
 .page_title {
     position: relative;
     margin: 1rem auto 2rem;
@@ -3699,8 +3474,6 @@ hr {
     background: #26afce;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
 }
 .writing_title:after {
@@ -3713,8 +3486,6 @@ hr {
     background: #f96120;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
 }
 .writing_ul,
@@ -3741,22 +3512,12 @@ hr {
     background: #fffce0;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
     border-radius: 30px;
     -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
     -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
     -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
     box-shadow: 1px 1px 8px rgba(0, 0, 0, .2);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
     transform: scale(1);
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -ms-transition: all .2s;
-    -o-transition: all .2s;
     transition: all .2s;
 }
 .store .card_box {
@@ -3768,8 +3529,6 @@ hr {
     text-align: center;
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
-    -ms-border-radius: 30px 30px 0 0;
-    -o-border-radius: 30px 30px 0 0;
     border-radius: 30px 30px 0 0;
     overflow: hidden;
 }
@@ -3778,20 +3537,10 @@ hr {
     height: 150px;
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
-    -ms-border-radius: 30px 30px 0 0;
-    -o-border-radius: 30px 30px 0 0;
     border-radius: 30px 30px 0 0;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
     transition: all .5s;
 }
 .card_box:hover .card_pic img {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
     transform: scale(1.2);
 }
 .card_info {
@@ -3801,8 +3550,6 @@ hr {
     background-color: #fff;
     -webkit-border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
-    -ms-border-radius: 0 0 30px 30px;
-    -o-border-radius: 0 0 30px 30px;
     border-radius: 0 0 30px 30px;
 }
 .card_info .card_title {
@@ -3836,8 +3583,6 @@ hr {
     border: 2px solid #ccc;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .pdbox_big .pd_items,
@@ -3849,8 +3594,6 @@ hr {
     border: 1px solid #e1e1e1;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
     border-radius: 15px;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, .2);
@@ -3896,14 +3639,12 @@ hr {
     color: #fff;
     text-align: center;
     word-break: break-all;
+    font: normal bold 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .5);
     background-color: #f00;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
     border-radius: 3px;
-    text-shadow: 0 0 3px rgba(0, 0, 0, .5);
-    font: normal bold 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     z-index: 2;
 }
 .flag_top {
@@ -3949,14 +3690,8 @@ hr {
     border: 0;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, .6);
-    -webkit-transition: background-color .3s;
-    -moz-transition: background-color .3s;
-    -ms-transition: background-color .3s;
-    -o-transition: background-color .3s;
     transition: background-color .3s;
     cursor: pointer;
 }
@@ -4338,8 +4073,6 @@ hr {
     border: 1px solid #ffb100;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
     vertical-align: middle;
 }
@@ -4364,13 +4097,7 @@ hr {
     border-bottom: 1px solid #d6d6d6;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
-    -webkit-transition: border-color .15s ease-in-out;
-    -moz-transition: border-color .15s ease-in-out;
-    -ms-transition: border-color .15s ease-in-out;
-    -o-transition: border-color .15s ease-in-out;
     transition: border-color .15s ease-in-out;
     vertical-align: middle;
     z-index: 9;
@@ -4386,8 +4113,6 @@ hr {
     border: 1px solid #d6d6d6;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
     border-radius: 0;
     vertical-align: middle;
     cursor: pointer;
@@ -4526,8 +4251,6 @@ hr {
     border: 1px solid #ccc;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .type5_main .share_img {
@@ -4667,13 +4390,7 @@ input.btn_line {
     border: 0;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
     border-radius: 50px;
-    -webkit-transition: all ease-in .15s;
-    -moz-transition: all ease-in .15s;
-    -ms-transition: all ease-in .15s;
-    -o-transition: all ease-in .15s;
     transition: all ease-in .15s;
     vertical-align: middle;
     -moz-appearance: none;
@@ -4852,8 +4569,6 @@ input.btn_line:focus {
     word-break: break-word;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
     border-radius: 3px;
 }
 .pay_tips .title {
@@ -4961,8 +4676,6 @@ input.btn_line:focus {
     border-bottom: none;
     -webkit-border-radius: 30px 30px 0 0;
     -moz-border-radius: 30px 30px 0 0;
-    -ms-border-radius: 30px 30px 0 0;
-    -o-border-radius: 30px 30px 0 0;
     border-radius: 30px 30px 0 0;
 }
 .boxline_bottom {
@@ -4975,8 +4688,6 @@ input.btn_line:focus {
     border-left: 4px solid #ffbfbf;
     -webkit-border-radius: 0 0 30px 30px;
     -moz-border-radius: 0 0 30px 30px;
-    -ms-border-radius: 0 0 30px 30px;
-    -o-border-radius: 0 0 30px 30px;
     border-radius: 0 0 30px 30px;
 }
 .boxline_title {
@@ -5150,8 +4861,6 @@ input.btn_line:focus {
     margin: 0 0 5px 0;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .match_center .match_box {
@@ -5213,6 +4922,9 @@ input.btn_line:focus {
     padding: 0;
 }
 .ca_header {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 0 0 10px 0;
     text-align: center;
 }
@@ -5234,10 +4946,15 @@ input.btn_line:focus {
 }
 .profile_analysis .share_box {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 10px;
     padding: 0;
 }
 .profile_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 0 0 10px 0;
     background: #f8f3e5;
@@ -5245,13 +4962,25 @@ input.btn_line:focus {
     border: 3px double #cca4a4;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
     border-radius: 10px;
 }
 .profile_list div {
-    display: inline-block;
     margin: 0 5px;
+}
+.profile_icon {
+    position: relative;
+    width: 100%;
+    max-width: 180px;
+}
+.profile_text {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin: 0 auto;
+    color: #fff;
+    font: italic normal 2.4rem/2.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, .2), 0 1px 0 rgba(0, 0, 0, .5), 0 2px 0 rgba(0, 0, 0, .4), 0 3px 0 rgba(0, 0, 0, .3), 0 4px 0 rgba(0, 0, 0, .2), 0 5px 0 rgba(0, 0, 0, .1);
+    transform: translate(50%, -50%);
 }
 /*********** 看姻緣 ***********/
 .magnifier_link {
@@ -5449,6 +5178,10 @@ input.btn_line:focus {
     .header_box {
         min-height: 500px;
     }
+    /* Banner影片設定 */
+    .videocm_title span {
+        letter-spacing: 10px;
+    }
     /* Type3 類型3+商品明細 */
     .type3_text {
         position: absolute;
@@ -5482,7 +5215,7 @@ input.btn_line:focus {
     }
     /* 鴛鴦譜 */
     .share_main.profile_analysis {
-        min-height: 816px;
+        min-height: 700px;
     }
     /* 偷看月老簿 */
     .match_left,
@@ -5521,10 +5254,6 @@ input.btn_line:focus {
     }
     /* 跳框-共用 */
     .share_popupbox {
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
         transform: translateY(-50%);
     }
 }
@@ -5594,6 +5323,14 @@ input.btn_line:focus {
     .type6_text2 .briefly {
         font: normal normal 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
+    /* Banner影片設定 */
+    .videocm_title span {
+        letter-spacing: 15px;
+    }
+    /* 鴛鴦譜 */
+    .share_main.profile_analysis {
+        min-height: 816px;
+    }
 }
 
 /* 寬度介於 1301px - 1900px (ipad pro,舊電腦) */
@@ -5609,6 +5346,9 @@ input.btn_line:focus {
     }
     .tbbox {
         overflow: auto;
+    }
+    .share_main.profile_analysis {
+        padding: 0 0 5rem 0;
     }
     /* 相簿輪播 */
     #slider_essay .pd_info_txt {
@@ -5629,7 +5369,7 @@ input.btn_line:focus {
         text-shadow: 0 0 5px rgba(0, 0, 0, .7);
     }
     .videocm_title > span.text_red {
-        font: italic bold 7rem/7rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 7rem/7rem "PMingLiU", sans-serif;
     }
 }
 
@@ -5673,8 +5413,8 @@ input.btn_line:focus {
     .search_box input.input_no_width {
         padding: 2px 3px 3px 6px;
     }
-    .share_main {
-        padding: 1em 0;
+    .share_main.profile_analysis {
+        padding: 0 0 5rem 0;
     }
     .share_box .col_2 {
         width: calc(100% / 2 - 6%);
@@ -5691,7 +5431,6 @@ input.btn_line:focus {
         margin: 0 5px 0 0;
     }
     .nav_main .list {
-        /* padding: 0 0 0 8px; */
         font: normal normal 15px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .navbarbox {
@@ -5708,19 +5447,12 @@ input.btn_line:focus {
     .videocm {
         height: 25vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(45%);
-        -moz-transform: translateX(45%);
-        -ms-transform: translateX(45%);
-        -o-transform: translateX(45%);
-        transform: translateX(45%);
-    }
     .videocm_title span {
         font: italic normal 4rem/4rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
         text-shadow: 0 0 5px rgba(0, 0, 0, .7);
     }
     .videocm_title > span.text_red {
-        font: italic bold 6rem/6rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 6rem/6rem "PMingLiU", sans-serif;
     }
     /* Type3 類型3+商品明細 */
     .type3_main {
@@ -5807,6 +5539,16 @@ input.btn_line:focus {
     }
     .matchmaking .col_item {
         width: 100%;
+    }
+    /* 鴛鴦譜 */
+    .share_main.bg_05 {
+        background-size: 130% auto;
+    }
+    .profile_icon {
+        max-width: 150px;
+    }
+    .profile_text {
+        font: italic normal 1.8rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -5898,43 +5640,32 @@ input.btn_line:focus {
     input.btn_superbig,
     a.btn_superbig {
         padding: 5px 15px;
-        /* margin: 0 5px; */
         font: normal normal 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 共用圓角 */
     .br10 {
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         border-radius: 5px;
     }
     .br20 {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
         border-radius: 10px;
     }
     .br30 {
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
         border-radius: 15px;
     }
     .br40 {
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
         border-radius: 20px;
     }
     .br50 {
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
         border-radius: 25px;
     }
     /* 共用樣式 */
@@ -5984,7 +5715,6 @@ input.btn_line:focus {
     .textarea100,
     select.no_width {
         padding: 2px 5px;
-        /* font: normal normal 17px/17px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif; */
     }
     .input50,
     .select50,
@@ -6016,16 +5746,10 @@ input.btn_line:focus {
     .col_9 .chktext,
     .col_10 .chktext {
         margin: 0 0 5px 0;
-        /* font: normal normal 17px/17px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif; */
     }
     .col_1 .chktext {
         margin: 0 5px 5px 0;
     }
-    /* 共用元件(日曆) */
-    /* input.calendar,
-    input.calendar:disabled {
-        font-size: 16px;
-    } */
     /* 頁碼 */
     .pagination li a {
         margin: 0 5px 0 0;
@@ -6040,7 +5764,7 @@ input.btn_line:focus {
     }
     /* 共用頁籤 */
     .flex_tabbox .share_tab {
-        width: calc(100% / 2 - 11px);
+        width: calc(100% / 2 - 12px);
         padding: 5px;
         margin: 0;
         font: normal bold .95rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
@@ -6048,9 +5772,6 @@ input.btn_line:focus {
     .share_tab:last-of-type {
         border-bottom: 1px solid #ececec;
     }
-    /* .flex_tabbox .share_tab:nth-child(even) {
-        border-right: 0;
-    } */
     .share_tabbox {
         flex-direction: row;
         width: calc(100% - 10px);
@@ -6062,7 +5783,7 @@ input.btn_line:focus {
         border-right: 1px solid #ececec;
     }
     .share_info {
-        width: calc(100% - 20px);
+        width: calc(100% - 30px);
         padding: 10px;
     }
     .table_tab {
@@ -6106,7 +5827,6 @@ input.btn_line:focus {
     }
     /* 共用(假表格) */
     .share_div_tb {
-        /* margin: 10px auto 20px; */
         font: normal normal 14px/17px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .item_w10 {
@@ -6189,12 +5909,7 @@ input.btn_line:focus {
     .logobox,
     .nav_main,
     .sticky .nav_main {
-        /* width: calc(100% - 10px); */
         text-align: left;
-        -webkit-transition: .2s;
-        -moz-transition: .2s;
-        -ms-transition: .2s;
-        -o-transition: .2s;
         transition: .2s;
     }
     .logobox {
@@ -6242,8 +5957,6 @@ input.btn_line:focus {
         text-align: left;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
-        -ms-border-radius: 0;
-        -o-border-radius: 0;
         border-radius: 0;
     }
     .nav_main .list {
@@ -6257,8 +5970,7 @@ input.btn_line:focus {
         padding: 0;
     }
     .share_main {
-        /* min-height: 500px; */
-        padding: 0;
+        padding: 0 0 5rem 0;
     }
     .share_main .w80 {
         width: calc(100% - 20px);
@@ -6306,8 +6018,6 @@ input.btn_line:focus {
         width: calc(100% / 3 - 10px);
         -webkit-border-radius: 15px;
         -moz-border-radius: 15px;
-        -ms-border-radius: 15px;
-        -o-border-radius: 15px;
         border-radius: 15px;
     }
     .card_pic img {
@@ -6315,8 +6025,6 @@ input.btn_line:focus {
         height: 120px;
         -webkit-border-radius: 15px 15px 0 0;
         -moz-border-radius: 15px 15px 0 0;
-        -ms-border-radius: 15px 15px 0 0;
-        -o-border-radius: 15px 15px 0 0;
         border-radius: 15px 15px 0 0;
     }
     .card_info {
@@ -6324,8 +6032,6 @@ input.btn_line:focus {
         font: normal normal .9rem/1.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
         -webkit-border-radius: 0 0 15px 15px;
         -moz-border-radius: 0 0 15px 15px;
-        -ms-border-radius: 0 0 15px 15px;
-        -o-border-radius: 0 0 15px 15px;
         border-radius: 0 0 15px 15px;
     }
     .card_info .card_title {
@@ -6348,9 +6054,12 @@ input.btn_line:focus {
         display: inline-block;
     }
     /* banner */
+    .pagecm img {
+        height: 13rem;
+    }
     .pagecm_title {
-        margin: 0 0 10px 0;
-        font: normal bold 1.6rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        margin: 0 0 5px 0;
+        font: normal bold 1.5rem/1.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .pagecm_text {
         width: 100%;
@@ -6362,19 +6071,12 @@ input.btn_line:focus {
     .videocm {
         height: 50vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(50%);
-        -moz-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        -o-transform: translateX(50%);
-        transform: translateX(25%);
-    }
     .videocm_title span {
         font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
         text-shadow: 0 0 5px rgba(0, 0, 0, .7);
     }
     .videocm_title > span.text_red {
-        font: italic bold 5.1rem/5.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 5.1rem/5.1rem "PMingLiU", sans-serif;
     }
     /* 輪播圖 */
     .cm_textbox {
@@ -6382,8 +6084,6 @@ input.btn_line:focus {
         padding: 5px;
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
         border-radius: 5px;
     }
     .cm_title {
@@ -6581,13 +6281,6 @@ input.btn_line:focus {
         width: 98%;
         padding: 5px 0 0 0;
     }
-    /* .sum {
-        font: normal bold 19px/23px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    }
-    .sum.line {
-        padding: 5px 10px 0 10px;
-        margin: 5px auto;
-    } */
     /* 訂單明細 */
     .tip_title {
         width: 90px;
@@ -6611,12 +6304,10 @@ input.btn_line:focus {
     .tipbox {
         width: 98%;
     }
-    /* .pay_info {
-        font: normal bold 18px/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    } */
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
-        background-size: 200% auto;
+    .share_main.profile_analysis {
+        padding: 0 0 5rem 0;
+        background-size: 150% auto;
     }
     .profile_list {
         padding: 5px;
@@ -6636,6 +6327,13 @@ input.btn_line:focus {
     .point_text {
         margin: 0 0 30px 0;
         font: italic bold 1rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_text {
+        font: italic normal 1.8rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        text-shadow: -1px -1px 2px rgba(0, 0, 0, .2), 0 1px 2px rgba(0, 0, 0, .5), 0 2px 2px rgba(0, 0, 0, .4), 0 3px 2px rgba(0, 0, 0, .3), 0 4px 2px rgba(0, 0, 0, .2), 0 5px 2px rgba(0, 0, 0, .1);
+    }
+    .sex_img {
+        width: 25px;
     }
     /* 偷看月老簿 */
     .match_left,
@@ -6775,9 +6473,6 @@ input.btn_line:focus {
         margin: 0 10px 10px 0;
     }
     /* 漢堡圖 */
-    /* .hamburg {
-        padding: 10px 10px 0 0;
-    } */
     .bar1,
     .bar2,
     .bar3 {
@@ -6795,16 +6490,16 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    /* banner */
+    .pagecm img {
+        height: 15rem;
+    }
+    .pagecm_title {
+        font: normal bold 1.6rem/2rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     /* Banner影片設定 */
     .videocm {
         height: 20vh;
-    }
-    .videocm_box {
-        -webkit-transform: translateX(50%);
-        -moz-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        -o-transform: translateX(50%);
-        transform: translateX(50%);
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
@@ -6832,8 +6527,8 @@ input.btn_line:focus {
         display: inline-block;
     }
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
-        background-size: 160% auto;
+    .share_main.profile_analysis {
+        background-size: 150% auto;
     }
     .profile_list {
         padding: 10px;
@@ -6841,6 +6536,15 @@ input.btn_line:focus {
     }
     .point_text {
         font: italic bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_analysis .share_box {
+        width: 80%;
+    }
+    .profile_icon {
+        width: 90%;
+    }
+    .profile_text {
+        font: italic normal 1.6rem/1.8rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -6915,9 +6619,6 @@ input.btn_line:focus {
         width: 25%;
     }
     /* 漢堡圖 */
-    /* .hamburg {
-        padding: 10px 10px 0 0;
-    } */
     .bar1,
     .bar2,
     .bar3 {
@@ -6935,22 +6636,19 @@ input.btn_line:focus {
     .card_box {
         width: calc(100% / 8 - 5px);
     }
+    /* banner */
+    .pagecm img {
+        height: 13rem;
+    }
     /* Banner影片設定 */
     .videocm {
         height: 20vh;
-    }
-    .videocm_box {
-        -webkit-transform: translateX(35%);
-        -moz-transform: translateX(35%);
-        -ms-transform: translateX(35%);
-        -o-transform: translateX(35%);
-        transform: translateX(35%);
     }
     .videocm_title span {
         font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 5rem/5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 5rem/5rem "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
@@ -6978,6 +6676,15 @@ input.btn_line:focus {
     }
     .point_text {
         font: italic bold 1.2rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_analysis .share_box {
+        width: 80%;
+    }
+    .profile_icon {
+        width: 90%;
+    }
+    .profile_text {
+        font: italic normal 1.5rem/1.7rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 配對數字關係 */
     .match_number .num_tbbox {
@@ -7014,7 +6721,7 @@ input.btn_line:focus {
         margin: 0 10px 10px 0;
     }
     .share_main {
-        padding: .3rem 0 4rem;
+        padding: .3rem 0 5rem;
     }
     /* 凍結表格 */
     .fixed_table.table_s {
@@ -7063,9 +6770,6 @@ input.btn_line:focus {
     .navbarbox {
         padding: 0;
     }
-    /* .hamburg {
-        padding: 10px 10px 0 0;
-    } */
     .bar1,
     .bar2,
     .bar3 {
@@ -7081,19 +6785,12 @@ input.btn_line:focus {
     .videocm {
         height: 20vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(50%);
-        -moz-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        -o-transform: translateX(50%);
-        transform: translateX(25%);
-    }
     .videocm_title span {
         font: italic normal 3.5rem/3.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
         text-shadow: 0 0 5px rgba(0, 0, 0, .7);
     }
     .videocm_title > span.text_red {
-        font: italic bold 5.1rem/5.1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 5.1rem/5.1rem "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
@@ -7106,7 +6803,7 @@ input.btn_line:focus {
         margin: 0 0 0 10px;
     }
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
+    .share_main.profile_analysis {
         background-size: 160% auto;
     }
     .profile_list {
@@ -7139,30 +6836,10 @@ input.btn_line:focus {
         align-items: flex-start;
         flex-direction: row;
     }
-    /* .member .share_tab,
-    .password .share_tab,
-    .time_passbook .share_tab,
-    .transfer_log .share_tab,
-    .exchange_log .share_tab,
-    .line .share_tab {
-        width: calc(100% / 2 - 40px);
-        height: 26px;
-        line-height: 26px;
-        margin: 0 10px 5px 0;
-        padding: 0 5px 5px 25px;
-    } */
     .share_tab.selected:after {
         content: "";
         top: 8px;
     }
-    /* .mb_info,
-    .pw_info,
-    .log_info,
-    .line_info {
-        width: 96%;
-        margin: 5px auto;
-        padding: 5px 0 4rem 0;
-    } */
     /* 頁尾 */
     .footer .flex {
         flex-direction: column;
@@ -7216,10 +6893,6 @@ input.btn_line:focus {
     .col_10 {
         width: calc(100% / 5 - 2%);
     }
-    /* .col_inline,
-    .radio_inline {
-        margin: 0 10px 10px 0;
-    } */
     .col_1 .chktext {
         margin: 0 5px 10px 0;
     }
@@ -7227,7 +6900,7 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .share_main {
-        padding: .3rem 0 4rem;
+        padding: .3rem 0 5rem;
     }
     .share_main.index {
         padding: .2rem 0;
@@ -7235,11 +6908,6 @@ input.btn_line:focus {
     .share_main.index.last {
         padding: .2rem 0 4rem;
     }
-    /* 共用元件(日曆) */
-    /* input.calendar,
-    input.calendar:disabled {
-        font-size: 16px;
-    } */
     /* 凍結表格 */
     .fixed_table.table_s {
         min-width: 250px;
@@ -7300,9 +6968,6 @@ input.btn_line:focus {
     .navbarbox {
         padding: 0;
     }
-    /* .hamburg {
-        padding: 10px 10px 0 0;
-    } */
     .bar1,
     .bar2,
     .bar3 {
@@ -7360,13 +7025,13 @@ input.btn_line:focus {
     }
     /* Banner影片設定 */
     .videocm {
-        height: 20vh;
+        height: 160px;
     }
     .videocm_title span {
         font: italic normal 2.5rem/2.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 4rem/4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 3.6rem/3.6rem "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
     .index .type2_main .share_box .col_3 {
@@ -7417,30 +7082,10 @@ input.btn_line:focus {
         align-items: flex-start;
         flex-direction: row;
     }
-    /* .member .share_tab,
-    .password .share_tab,
-    .time_passbook .share_tab,
-    .transfer_log .share_tab,
-    .exchange_log .share_tab,
-    .line .share_tab {
-        width: calc(100% / 3 - 40px);
-        height: 26px;
-        line-height: 26px;
-        margin: 0 10px 5px 0;
-        padding: 0 5px 5px 25px;
-    } */
     .share_tab.selected:after {
         content: "";
         top: 8px;
     }
-    /* .mb_info,
-    .pw_info,
-    .log_info,
-    .line_info {
-        width: 96%;
-        margin: 5px auto;
-        padding: 5px 0 4rem 0;
-    } */
     /* 服務兌換 */
     .pdbox_big .col_5 .pd_picture {
         height: 170px;
@@ -7473,14 +7118,29 @@ input.btn_line:focus {
         margin: 20px 0 10px 0;
     }
     /* 跳框-共用 */
-    /* .share_popupbox {
-        top: 0;
-    } */
     .share_popup_s {
         min-width: 480px;
     }
     .popup_sharebox {
         padding: 1rem;
+    }
+    /* 鴛鴦譜 */
+    .share_main.profile_analysis {
+        background-size: 200% auto;
+    }
+    .share_tipbox.match_result,
+    .share_tipbox.personal_result {
+        width: calc(100% - 12%);
+    }
+    .ca_header.profile,
+    .ca_header.live_place {
+        width: 90%;
+    }
+    .profile_analysis .share_box {
+        width: 90%;
+    }
+    .profile_text {
+        font: italic normal 1.5rem/1.7rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
 
@@ -7560,7 +7220,7 @@ input.btn_line:focus {
         margin: 0 0 10px 0;
     }
     .share_main {
-        padding: .2rem 0 3rem;
+        padding: .2rem 0 5rem;
     }
     .share_main.index {
         padding: .2rem 0;
@@ -7767,18 +7427,11 @@ input.btn_line:focus {
     .videocm {
         height: 20vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(20%);
-        -moz-transform: translateX(20%);
-        -ms-transform: translateX(20%);
-        -o-transform: translateX(20%);
-        transform: translateX(20%);
-    }
     .videocm_title span {
         font: italic normal 2.2rem/2.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 3.7rem/3.7rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 3.7rem/3.7rem "PMingLiU", sans-serif;
     }
     /* 線框圖文 */
     .boxline_title .title_s {
@@ -7900,30 +7553,10 @@ input.btn_line:focus {
         align-items: flex-start;
         flex-direction: row;
     }
-    /* .member .share_tab,
-    .password .share_tab,
-    .time_passbook .share_tab,
-    .transfer_log .share_tab,
-    .exchange_log .share_tab,
-    .line .share_tab {
-        width: calc(100% / 3 - 40px);
-        height: 26px;
-        line-height: 26px;
-        margin: 0 10px 5px 0;
-        padding: 0 5px 5px 25px;
-    } */
     .share_tab.selected:after {
         content: "";
         top: 8px;
     }
-    /* .mb_info,
-    .pw_info,
-    .log_info,
-    .line_info {
-        width: 96%;
-        margin: 5px auto;
-        padding: 5px 0 4rem 0;
-    } */
     /* 聯絡我們 */
     .contact .col_title {
         width: 99%;
@@ -7934,9 +7567,6 @@ input.btn_line:focus {
         width: 100%;
     }
     /* 服務兌換 */
-    /* .card_info .card_address {
-        min-height: 270px;
-    } */
     .pdbox_big,
     .pdbox_small {
         padding: 0 0 3rem 0;
@@ -7977,12 +7607,18 @@ input.btn_line:focus {
         padding: 0;
     }
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
-        background-size: 230% auto;
+    .share_main.profile_analysis {
+        background-size: 200% auto;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
         width: calc(100% - 12%);
+    }
+    .profile_list .col_title {
+        width: 25%;
+    }
+    .profile_text {
+        font: italic normal 1.4rem/1.6rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 配對數字關係 */
     .match_number .num_tbbox {
@@ -8107,6 +7743,10 @@ input.btn_line:focus {
     .match_number th {
         font: normal bold 1.2rem/1.4rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
+    /* 鴛鴦譜 */
+    .profile_text {
+        font: italic normal 1.3rem/1.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
 }
 
 /* 寬度介於 321px - 400px (iPhone 5,iPhone 6,Galaxy S5) */
@@ -8216,8 +7856,12 @@ input.btn_line:focus {
     .col_item {
         width: 100%;
     }
+    .col_title,
+    .col_item {
+        font: normal normal 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     .share_main {
-        padding: .2rem 0 2rem;
+        padding: .2rem 0 5rem 0;
     }
     .share_main.index {
         padding: .2rem 0;
@@ -8460,18 +8104,11 @@ input.btn_line:focus {
     .videocm {
         height: 20vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(20%);
-        -moz-transform: translateX(20%);
-        -ms-transform: translateX(20%);
-        -o-transform: translateX(20%);
-        transform: translateX(20%);
-    }
     .videocm_title span {
         font: italic normal 2rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 3rem/3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 3rem/3rem "PMingLiU", sans-serif;
     }
     /* 共用樣式 */
     .box_title {
@@ -8610,30 +8247,10 @@ input.btn_line:focus {
         align-items: flex-start;
         flex-direction: row;
     }
-    /* .member .share_tab,
-    .password .share_tab,
-    .time_passbook .share_tab,
-    .transfer_log .share_tab,
-    .exchange_log .share_tab,
-    .line .share_tab {
-        width: calc(100% / 3 - 40px);
-        height: 26px;
-        line-height: 26px;
-        margin: 0 10px 5px 0;
-        padding: 0 5px 5px 25px;
-    } */
     .share_tab.selected:after {
         content: "";
         top: 8px;
     }
-    /* .mb_info,
-    .pw_info,
-    .log_info,
-    .line_info {
-        width: 96%;
-        margin: 5px auto;
-        padding: 5px 0 4rem 0;
-    } */
     .mb_info .share_inner,
     .pw_info .share_inner,
     .line_info .share_inner {
@@ -8697,12 +8314,18 @@ input.btn_line:focus {
         font: normal bold 18px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
-        background-size: 250% auto;
+    .share_main.profile_analysis {
+        background-size: 220% auto;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
         width: calc(100% - 15%);
+    }
+    .profile_text {
+        font: italic normal 1.1rem/1.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_list .col_title {
+        width: 25%;
     }
     /* 看姻緣 */
     .ca_header .ca_title {
@@ -8922,6 +8545,10 @@ input.btn_line:focus {
     .col_item {
         width: 100%;
     }
+    .col_title,
+    .col_item {
+        font: normal normal 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     .col_item.flex {
         align-items: flex-start;
         flex-wrap: wrap;
@@ -8930,7 +8557,7 @@ input.btn_line:focus {
         font: normal bold 20px/24px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .share_main {
-        padding: .2rem 0 2rem;
+        padding: .2rem 0 5rem 0;
     }
     .share_main.index {
         padding: .2rem 0;
@@ -9017,7 +8644,7 @@ input.btn_line:focus {
     }
     input.btn50,
     a.btn50 {
-        width: 99%;
+        width: 49%;
     }
     input.input50,
     select.select50 {
@@ -9025,13 +8652,14 @@ input.btn_line:focus {
     }
     input.btn_big,
     a.btn_big {
-        margin: 3px 0;
-        font: normal normal .95rem/1.3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        margin: 1px;
+        padding: 3px 0;
+        font: normal normal .9rem/1rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     input.btn_superbig,
     a.btn_superbig {
         padding: 5px;
-        margin: 0;
+        margin: 0 0 5px 0;
         font: normal normal 1rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .check_code input.input50 {
@@ -9221,10 +8849,6 @@ input.btn_line:focus {
         top: -20px;
         height: 20px;
     }
-    /* 漢堡圖 */
-    /* .hamburg {
-        padding: 5px 5px 0 0;
-    } */
     /* 輪播輪播圖 */
     .cm_textbox {
         bottom: 10%;
@@ -9266,18 +8890,11 @@ input.btn_line:focus {
     .videocm {
         height: 20vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(5%);
-        -moz-transform: translateX(5%);
-        -ms-transform: translateX(5%);
-        -o-transform: translateX(5%);
-        transform: translateX(5%);
-    }
     .videocm_title span {
         font: italic normal 2rem/2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 3rem/3rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 3rem/3rem "PMingLiU", sans-serif;
     }
     /* 線框圖文 */
     .boxline_title .title_s {
@@ -9289,11 +8906,6 @@ input.btn_line:focus {
         font: normal bold 1.5rem/1.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     /* Type2 類型2 */
-    .profile_analysis .type2_main .col_4 {
-        width: calc(100% / 4 - 10px);
-        margin: 0;
-        padding: 0;
-    }
     .type2_main .share_img {
         width: 120px;
     }
@@ -9387,18 +8999,6 @@ input.btn_line:focus {
         align-items: flex-start;
         flex-direction: row;
     }
-    /* .member .share_tab,
-    .password .share_tab,
-    .time_passbook .share_tab,
-    .transfer_log .share_tab,
-    .exchange_log .share_tab,
-    .line .share_tab {
-        width: calc(100% / 2 - 40px);
-        height: 26px;
-        margin: 0 10px 5px 0;
-        padding: 0 5px 0 25px;
-        font: normal normal .95rem/20px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
-    } */
     .share_tab:before {
         content: "";
         height: 20px;
@@ -9411,14 +9011,6 @@ input.btn_line:focus {
     .password .share_tabbox i {
         display: none;
     }
-    /* .mb_info,
-    .pw_info,
-    .log_info,
-    .line_info {
-        width: 96%;
-        margin: 5px auto;
-        padding: 5px 0 4rem 0;
-    } */
     .mb_info .share_inner,
     .pw_info .share_inner,
     .line_info .share_inner {
@@ -9552,15 +9144,29 @@ input.btn_line:focus {
         margin: 0;
     }
     /* 鴛鴦譜 */
-    .share_main.bg_05.profile_analysis {
-        background-size: 250% auto;
+    .profile_analysis .type2_main .col_4 {
+        width: calc(100% / 4 - 5px);
+        margin: 0;
+        padding: 0;
+    }
+    .share_main.profile_analysis {
+        background-size: 200% auto;
     }
     .share_tipbox.match_result,
     .share_tipbox.personal_result {
         width: calc(100% - 15%);
     }
+    .profile_list .col_title {
+        width: 28%;
+    }
+    .profile_list {
+        font: normal bold 15px/18px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_text {
+        font: italic normal 1rem/1.2rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     .sex_img {
-        width: 25px;
+        width: 20px;
     }
     /* 看姻緣 */
     .love_fate_set input.btn50,
@@ -9664,6 +9270,18 @@ input.btn_line:focus {
     .share_popup_l {
         min-width: 250px;
     }
+    /* 共用樣式 */
+    input.input20,
+    input.input33,
+    input.input50,
+    input.input100,
+    input.input_no_width,
+    select.select33,
+    select.select50,
+    select.select100 {
+        padding: 2px;
+        font: normal normal 14px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
     /* 共用元件(按鈕) */
     input.btn33,
     a.btn33 {
@@ -9683,34 +9301,23 @@ input.btn_line:focus {
     .videocm {
         height: 15vh;
     }
-    .videocm_box {
-        -webkit-transform: translateX(10%);
-        -moz-transform: translateX(10%);
-        -ms-transform: translateX(10%);
-        -o-transform: translateX(10%);
-        transform: translateX(10%);
-    }
     .videocm_title span {
         font: italic normal 1.8rem/1.8rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 2.8rem/2.8rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 2.8rem/2.8rem "PMingLiU", sans-serif;
     }
     /* 線框圖文 */
     .boxline_top {
         height: 30px;
         -webkit-border-radius: 20px 20px 0 0;
         -moz-border-radius: 20px 20px 0 0;
-        -ms-border-radius: 20px 20px 0 0;
-        -o-border-radius: 20px 20px 0 0;
         border-radius: 20px 20px 0 0;
     }
     .boxline_bottom {
         height: 30px;
         -webkit-border-radius: 0 0 20px 20px;
         -moz-border-radius: 0 0 20px 20px;
-        -ms-border-radius: 0 0 20px 20px;
-        -o-border-radius: 0 0 20px 20px;
         border-radius: 0 0 20px 20px;
     }
     .boxline_title .title_s {
@@ -9739,6 +9346,16 @@ input.btn_line:focus {
         padding: 10px 0;
         margin: 0 8px 0 0;
         border-right: 0;
+    }
+    /* 鴛鴦譜 */
+    .profile_list {
+        flex-direction: column;
+    }
+    .profile_text {
+        font: italic normal 14px/16px "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    .profile_list .col_item {
+        margin: 5px 0 0 0;
     }
 }
 
@@ -9795,7 +9412,7 @@ input.btn_line:focus {
         font: italic normal 1.5rem/1.5rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
     .videocm_title > span.text_red {
-        font: italic bold 2.5rem/2.5rem "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+        font: italic bold 2.5rem/2.5rem "PMingLiU", sans-serif;
     }
     /* 會員資料 */
     .member .share_tabbox i,
@@ -9859,5 +9476,15 @@ input.btn_line:focus {
     /* 手機版-頁尾 */
     .link_list div {
         font: normal normal 12px/14px "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
+    }
+    /* 鴛鴦譜 */
+    .profile_analysis .share_box {
+        width: 90%;
+    }
+    .profile_analysis .type2_main .col_4 {
+        width: calc(100% / 2 - 5px);
+    }
+    .profile_text {
+        font: italic normal 1.2rem/1.4rem "標楷體", "DFKai-sb", "BiauKa", "Century Gothic", Arial, "Microsoft JhengHei", "PMingLiU", sans-serif;
     }
 }
